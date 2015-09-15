@@ -4,14 +4,15 @@ $tf1/
 BuildProcessTemplates/
 
 
+# ignore all out of the bin folder, except for the VSIX file
+VSIX/DNNTemplates/[Bb]in/
+!VSIX/DNNTemplates/[Bb]in/*.vsix
+
 # Ignore other VS files that the templates project doesn't need in source control
-*/[Oo]bj/*
+[Oo]bj/
 *.obj
 *.[Cc]ache
 *.[Uu]ser
 
 .vs/
-
-# ignore specific files from each project
-VSIX/DNNTemplates/[Bb]in/*.*
-!VSIX/DNNTemplates/[Bb]in/*.vsix
+[Bb]in/
