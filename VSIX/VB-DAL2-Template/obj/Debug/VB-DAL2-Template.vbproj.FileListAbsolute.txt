@@ -1,9 +1,0 @@
-f:\projects\Christoc.com\Templates\VSIX\VB-DAL2-Template\bin\Debug\ProjectTemplates\VisualBasic\DotNetNuke\1033\DNN-VB-DAL2-Module.zip
-f:\projects\Christoc.com\Templates\VSIX\VB-DAL2-Template\obj\Debug\VisualBasic\DotNetNuke\1033\DNN-VB-DAL2-Module.zip
-f:\projects\Christoc.com\Templates\VSIX\VB-DAL2-Template\obj\Debug\VB-DAL2-Template.dll
-f:\projects\Christoc.com\Templates\VSIX\VB-DAL2-Template\obj\Debug\VB-DAL2-Template.pdb
-C:\Projects\Christoc.com\Templates\VSIX\VB-DAL2-Template\bin\Debug\ProjectTemplates\VisualBasic\DotNetNuke\1033\DNN-VB-DAL2-Module.zip
-C:\Projects\Christoc.com\Templates\VSIX\VB-DAL2-Template\obj\Debug\VisualBasic\DotNetNuke\1033\DNN-VB-DAL2-Module.zip
-C:\Projects\Christoc.com\Templates\VSIX\VB-DAL2-Template\obj\Debug\VB-DAL2-Template.dll
-C:\Projects\Christoc.com\Templates\VSIX\VB-DAL2-Template\obj\Debug\VB-DAL2-Template.pdb
-C:\Projects\Christoc.com\Templates\VSIX\VB-DAL2-Template\obj\Debug\VB-DAL2-Template.vbprojResolveAssemblyReference.cache
