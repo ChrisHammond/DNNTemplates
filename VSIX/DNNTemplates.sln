@@ -22,6 +22,13 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VB-DAL2-Template", "VB-DAL2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp-Theme-Template", "CSharp-Theme-Template\CSharp-Theme-Template.csproj", "{6EB7AFAA-F268-40E9-B542-A0F6B9483D3C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration Files", "Configuration Files", "{9FAD90B6-B6A1-495A-8641-B5B2D88583D0}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,29 +62,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 7
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs07
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = CSharp-Template\\CSharp-Template.csproj
-		SccProjectName1 = CSharp-Template
-		SccLocalPath1 = CSharp-Template
-		SccProjectUniqueName2 = DNNTemplates\\DNNTemplates.csproj
-		SccProjectName2 = DNNTemplates
-		SccLocalPath2 = DNNTemplates
-		SccProjectUniqueName3 = VB-Template\\VB-Template.vbproj
-		SccProjectName3 = VB-Template
-		SccLocalPath3 = VB-Template
-		SccProjectUniqueName4 = CSharp-DAL2-Template\\CSharp-DAL2-Template.csproj
-		SccProjectName4 = CSharp-DAL2-Template
-		SccLocalPath4 = CSharp-DAL2-Template
-		SccProjectUniqueName5 = VB-DAL2-Template\\VB-DAL2-Template.vbproj
-		SccProjectName5 = VB-DAL2-Template
-		SccLocalPath5 = VB-DAL2-Template
-		SccProjectUniqueName6 = CSharp-Theme-Template\\CSharp-Theme-Template.csproj
-		SccProjectName6 = CSharp-Theme-Template
-		SccLocalPath6 = CSharp-Theme-Template
 	EndGlobalSection
 EndGlobal
