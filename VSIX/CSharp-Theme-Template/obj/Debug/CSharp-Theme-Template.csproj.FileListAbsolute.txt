@@ -1,8 +1,0 @@
-F:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\obj\Debug\CSharp\DotNetNuke\1033\DNN-C-Theme.zip
-F:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\obj\Debug\CSharp-Theme-Template.dll
-F:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\obj\Debug\CSharp-Theme-Template.pdb
-F:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\bin\Debug\ProjectTemplates\CSharp\DotNetNuke\1033\DNN-C-Theme.zip
-C:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\bin\Debug\ProjectTemplates\CSharp\DotNetNuke\1033\DNN-C-Theme.zip
-C:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\obj\Debug\CSharp\DotNetNuke\1033\DNN-C-Theme.zip
-C:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\obj\Debug\CSharp-Theme-Template.dll
-C:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\obj\Debug\CSharp-Theme-Template.pdb
