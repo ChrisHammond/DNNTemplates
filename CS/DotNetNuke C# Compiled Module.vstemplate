@@ -1,0 +1,101 @@
+<VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+	<TemplateData>
+<!-- change the template name here -->
+		<Name>DotNetNuke C# Compiled Module</Name>
+<!-- change the template description here -->
+		<Description>Creates a DNN compiled module for DotNetNuke Module Projects.  </Description>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType></ProjectSubType>
+		<SortOrder>10</SortOrder>
+    <!--disabled to turn off solution folder option -->
+		<CreateNewFolder>false</CreateNewFolder>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<LocationField>Enabled</LocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<Icon>DotNetNuke.ico</Icon>
+	</TemplateData>
+	<TemplateContent>
+		<CustomParameters>
+<!-- change the following fields to customize this template to fit your needs -->
+<!-- change DotNetNuke Corporation to a name that fits you or your company -->
+      <CustomParameter Name="$YourCompany$" Value="DotNetNuke Corporation" />
+<!-- customize the default namespace your projects will use -->
+			<CustomParameter Name="$NameSpace$" Value="DotNetNuke.Modules." />
+<!-- this URL will be used in a variety of places, including the default manifest file for your module -->
+			<CustomParameter Name="$YourWebsite$" Value="http://www.dotnetnuke.com" />
+<!-- this email address will be used as the support email for your DNN manifest file -->
+			<CustomParameter Name="$YourEmail$" Value="training@dotnetnuke.com" />
+<!-- this year will be used in the copyright statements throughout the project, you could also do multiple years ex: 2002-2011 -->
+      <CustomParameter Name="$CopyrightYear$" Value="2012" />
+<!-- By default the template assumes you are using a dev environment located at http://dnndev you can change the path below -->
+      <CustomParameter Name="$DevEnvironment$" Value="dnndev" />
+
+
+    </CustomParameters>
+		<Project TargetFileName="$safeprojectname$.csproj" File="ModuleName.csproj" ReplaceParameters="true">
+			<Folder Name="App_LocalResources" TargetFolderName="App_LocalResources">
+				<ProjectItem ReplaceParameters="true" TargetFileName="Edit.ascx.resx">Edit.ascx.resx</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="Settings.ascx.resx">Settings.ascx.resx</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="View.ascx.resx">View.ascx.resx</ProjectItem>
+        
+			</Folder>
+
+			<Folder Name="bin" TargetFolderName="bin">
+			</Folder>
+			<Folder Name="BuildScripts" TargetFolderName="BuildScripts">
+				<ProjectItem ReplaceParameters="false" TargetFileName="ModulePackage.targets">ModulePackage.targets</ProjectItem>
+				<ProjectItem ReplaceParameters="false" TargetFileName="MSBuild.Community.Tasks.Targets">MSBuild.Community.Tasks.Targets</ProjectItem>
+			</Folder>
+
+			<Folder Name="Components" TargetFolderName="Components">
+				<ProjectItem ReplaceParameters="true" TargetFileName="FeatureController.cs">FeatureController.cs</ProjectItem>
+			</Folder>
+
+			<Folder Name="Data" TargetFolderName="Data">
+				<ProjectItem ReplaceParameters="true" TargetFileName="DataProvider.cs">DataProvider.cs</ProjectItem>
+			</Folder>
+
+			<Folder Name="Documentation" TargetFolderName="Documentation">
+				<ProjectItem ReplaceParameters="true" TargetFileName="Documentation.css">Documentation.css</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="Documentation.html" OpenInWebBrowser="true">Documentation.html</ProjectItem>
+			</Folder>
+
+
+			<Folder Name="Properties" TargetFolderName="Properties">
+				<ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+			</Folder>
+
+			<Folder Name="Providers" TargetFolderName="Providers">
+				<Folder Name="DataProviders" TargetFolderName="DataProviders">
+					<Folder Name="SqlDataProvider" TargetFolderName="SqlDataProvider">
+						<ProjectItem ReplaceParameters="true" TargetFileName="SqlDataProvider.cs">SqlDataProvider.cs</ProjectItem>
+						<ProjectItem ReplaceParameters="true" TargetFileName="00.00.01.SqlDataProvider">00.00.01.SqlDataProvider</ProjectItem>
+						<ProjectItem ReplaceParameters="true" TargetFileName="Uninstall.SqlDataProvider">Uninstall.SqlDataProvider</ProjectItem>
+					</Folder>
+				</Folder>
+			</Folder>
+
+			<ProjectItem ReplaceParameters="true" TargetFileName="Edit.ascx">Edit.ascx</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="Edit.ascx.designer.cs">Edit.ascx.designer.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="Edit.ascx.cs">Edit.ascx.cs</ProjectItem>
+
+			<ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$.dnn">ModuleName.dnn</ProjectItem>
+
+			<ProjectItem ReplaceParameters="true" TargetFileName="Settings.ascx">Settings.ascx</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="Settings.ascx.designer.cs">Settings.ascx.designer.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="Settings.ascx.cs">Settings.ascx.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$SettingsBase.cs">SettingsBase.cs</ProjectItem>
+
+
+			<ProjectItem ReplaceParameters="true" TargetFileName="View.ascx">View.ascx</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="View.ascx.designer.cs">View.ascx.designer.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="View.ascx.cs">View.ascx.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$ModuleBase.cs">ModuleBase.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Module.css">Module.css</ProjectItem>
+
+      <ProjectItem ReplaceParameters="true" TargetFileName="ReleaseNotes.txt">ReleaseNotes.txt</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="License.txt">License.txt</ProjectItem>
+
+    </Project>
+	</TemplateContent>
+</VSTemplate>

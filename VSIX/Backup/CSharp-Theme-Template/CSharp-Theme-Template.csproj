@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{6EB7AFAA-F268-40E9-B542-A0F6B9483D3C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSharp_Theme_Template</RootNamespace>
+    <AssemblyName>CSharp-Theme-Template</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <GeneratePkgDefFile>false</GeneratePkgDefFile>
+    <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
+    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
+    <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
+    <CreateVsixContainer>false</CreateVsixContainer>
+    <DeployExtension>false</DeployExtension>
+    <DeployVSTemplates>false</DeployVSTemplates>
+    <CopyVsixManifestToOutput>false</CopyVsixManifestToOutput>
+    <CopyBuildOutputToOutputDirectory>false</CopyBuildOutputToOutputDirectory>
+    <CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.CoreUtility">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="css\bootstrap-theme.css.map" />
+    <None Include="css\bootstrap.css.map" />
+    <None Include="Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </None>
+    <None Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Home.ascx.cs">
+      <DependentUpon>Home.ascx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PopupSkin.ascx.cs">
+      <DependentUpon>PopupSkin.ascx</DependentUpon>
+    </None>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="SkinBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bootstrapNav\BootStrapNav.js" />
+    <None Include="bootstrapNav\BootStrapNav.txt" />
+    <None Include="bootstrapNav\menudef.xml" />
+    <None Include="Containers\Blank.ascx" />
+    <None Include="Containers\Main.ascx" />
+    <None Include="css\bootstrap-theme.css" />
+    <None Include="css\bootstrap-theme.min.css" />
+    <None Include="css\bootstrap.css" />
+    <None Include="css\bootstrap.min.css" />
+    <None Include="Edit.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="Edit.doctype.xml" />
+    <None Include="fonts\glyphicons-halflings-regular.svg" />
+    <None Include="DnnTemplate.csproj" />
+    <None Include="Home.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="Home.doctype.xml" />
+    <None Include="img\error.png" />
+    <None Include="img\error.svg" />
+    <None Include="img\loading.gif" />
+    <None Include="img\play-pause.png" />
+    <None Include="img\play-pause.svg" />
+    <None Include="img\video-play.png" />
+    <None Include="img\video-play.svg" />
+    <None Include="i\icon_message.png" />
+    <None Include="i\icon_message_active.png" />
+    <None Include="i\icon_notification.png" />
+    <None Include="i\icon_notification_active.png" />
+    <None Include="js\bootstrap-image-gallery.min.js" />
+    <None Include="js\bootstrap.js" />
+    <None Include="js\bootstrap.min.js" />
+    <None Include="js\jquery.blueimp-gallery.min.js" />
+    <None Include="License.txt" />
+    <None Include="PopupSkin.ascx" />
+    <None Include="ReleaseNotes.txt" />
+    <None Include="skin.css" />
+    <None Include="__TemplateIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Documentation\Documentation.css" />
+    <None Include="Documentation\Documentation.html" />
+    <VSTemplate Include="DNN-C-Theme.vstemplate">
+      <OutputSubPath>DotNetNuke</OutputSubPath>
+      <SubType>Designer</SubType>
+    </VSTemplate>
+    <None Include="BuildScripts\MSBuild.Community.Tasks.Targets" />
+    <None Include="BuildScripts\SkinPackage.targets" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="DnnTemplate.dnn" />
+    <None Include="LICENSE" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

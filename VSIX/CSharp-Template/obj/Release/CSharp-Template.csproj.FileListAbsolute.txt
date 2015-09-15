@@ -1,0 +1,10 @@
+F:\Projects\Christoc.com\Templates\VSIX\CSharp-Template\bin\Release\ProjectTemplates\CSharp\DotNetNuke\1033\DNN-C-Module.zip
+F:\Projects\Christoc.com\Templates\VSIX\CSharp-Template\obj\Release\CSharp-Template.csprojResolveAssemblyReference.cache
+F:\Projects\Christoc.com\Templates\VSIX\CSharp-Template\obj\Release\CSharp\DotNetNuke\1033\DNN-C-Module.zip
+F:\Projects\Christoc.com\Templates\VSIX\CSharp-Template\obj\Release\CSharp-Template.dll
+F:\Projects\Christoc.com\Templates\VSIX\CSharp-Template\obj\Release\CSharp-Template.pdb
+C:\Projects\Christoc.com\Templates\VSIX\CSharp-Template\bin\Release\ProjectTemplates\CSharp\DotNetNuke\1033\DNN-C-Module.zip
+C:\Projects\Christoc.com\Templates\VSIX\CSharp-Template\obj\Release\CSharp-Template.csprojResolveAssemblyReference.cache
+C:\Projects\Christoc.com\Templates\VSIX\CSharp-Template\obj\Release\CSharp\DotNetNuke\1033\DNN-C-Module.zip
+C:\Projects\Christoc.com\Templates\VSIX\CSharp-Template\obj\Release\CSharp-Template.dll
+C:\Projects\Christoc.com\Templates\VSIX\CSharp-Template\obj\Release\CSharp-Template.pdb

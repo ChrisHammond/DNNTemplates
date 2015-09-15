@@ -1,0 +1,86 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>DotNetNuke 7 VB.Net DAL2 Compiled Module</Name>
+    <Description>A Visual Studio template for DotNetNuke 7 Module Development using DAL2, designed for Visual Studio 2012</Description>
+    <ProjectType>VisualBasic</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>DNNModule</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <!--
+      You can customize the parameters below if you want to make changes to the templates for your own environments.
+      
+      After changing these parameter values you should rebuild the DNNTemplates project in RELEASE mode and then install the VSIX file found in the bin/release folder
+    -->
+    <CustomParameters>
+      <CustomParameter Name="$rootnamespace$" Value="Christoc.Modules."/>
+      <CustomParameter Name="$ownername$" Value="Christoc.com"/>
+      <CustomParameter Name="$owneremail$" Value="modules@christoc.com"/>
+      <CustomParameter Name="$ownerwebsite$" Value="http://www.christoc.com"/>
+      <CustomParameter Name="$devenvironmenturl$" Value="dnndev.me" />
+    </CustomParameters>
+    <Project TargetFileName="$safeprojectname$.vbproj" File="vbtemplate.vbproj" ReplaceParameters="true">
+      <Folder Name="App_LocalResources" TargetFolderName="App_LocalResources">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Edit.ascx.resx">Edit.ascx.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Settings.ascx.resx">Settings.ascx.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="View.ascx.resx">View.ascx.resx</ProjectItem>
+      </Folder>
+      <Folder Name="BuildScripts" TargetFolderName="BuildScripts">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ModulePackage.targets">ModulePackage.targets</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MSBuild.Community.Tasks.Targets">MSBuild.Community.Tasks.Targets</ProjectItem>
+      </Folder>
+      <Folder Name="Components" TargetFolderName="Components">
+        <ProjectItem ReplaceParameters="true" TargetFileName="FeatureController.vb">FeatureController.vb</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Item.vb">Item.vb</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ItemController.vb">ItemController.vb</ProjectItem>
+      </Folder>
+      <Folder Name="Documentation" TargetFolderName="Documentation">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Documentation.css">Documentation.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Documentation.html" OpenInWebBrowser="true">Documentation.html</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Edit.ascx">Edit.ascx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Edit.ascx.designer.vb">Edit.ascx.designer.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Edit.ascx.vb">Edit.ascx.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="License.txt">License.txt</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="module.css">module.css</ProjectItem>
+      <Folder Name="My Project" TargetFolderName="My Project">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.vb">AssemblyInfo.vb</ProjectItem>
+      </Folder>
+      <Folder Name="Providers" TargetFolderName="Providers">
+        <Folder Name="DataProviders" TargetFolderName="DataProviders">
+          <Folder Name="SqlDataProvider" TargetFolderName="SqlDataProvider">
+            <ProjectItem ReplaceParameters="true" TargetFileName="00.00.01.sqldataprovider">00.00.01.sqldataprovider</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="UnInstall.sqldataprovider">UnInstall.sqldataprovider</ProjectItem>
+          </Folder>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ReleaseNotes.txt">ReleaseNotes.txt</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Settings.ascx">Settings.ascx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Settings.ascx.designer.vb">Settings.ascx.designer.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Settings.ascx.vb">Settings.ascx.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$.dnn">vbtemplate.dnn</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$ModuleBase.vb">VBTemplateModuleBase.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$SettingsBase.vb">VBTemplateSettingsBase.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="View.ascx">View.ascx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="View.ascx.designer.vb">View.ascx.designer.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="View.ascx.vb">View.ascx.vb</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="extension" repositoryId="e48e838a-c708-4d43-b822-4d5de0d13eed">
+      <package id="MSBuildTasks" version="1.4.0.88" />
+    </packages>
+  </WizardData>
+</VSTemplate>

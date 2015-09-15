@@ -1,0 +1,88 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>DotNetNuke 7 C# Compiled Module</Name>
+    <Description>A Visual Studio template for DotNetNuke 7 Module Development, designed for Visual Studio 2012</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>DNNModule</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <!--
+      You can customize the parameters below if you want to make changes to the templates for your own environments.
+      
+      After changing these parameter values you should rebuild the DNNTemplates project in RELEASE mode and then install the VSIX file found in the bin/release folder
+    -->
+    <CustomParameters>
+      <CustomParameter Name="$rootnamespace$" Value="Christoc.Modules."/>
+      <CustomParameter Name="$ownername$" Value="Christoc.com"/>
+      <CustomParameter Name="$owneremail$" Value="modules@christoc.com"/>
+      <CustomParameter Name="$ownerwebsite$" Value="http://www.christoc.com"/>
+      <CustomParameter Name="$devenvironmenturl$" Value="dnndev.me" />
+    </CustomParameters>
+    <Project TargetFileName="$safeprojectname$.csproj" File="DnnTemplate.csproj" ReplaceParameters="true">
+      <Folder Name="App_LocalResources" TargetFolderName="App_LocalResources">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Edit.ascx.resx">Edit.ascx.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Settings.ascx.resx">Settings.ascx.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="View.ascx.resx">View.ascx.resx</ProjectItem>
+      </Folder>
+      <Folder Name="BuildScripts" TargetFolderName="BuildScripts">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ModulePackage.targets">ModulePackage.targets</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MSBuild.Community.Tasks.Targets">MSBuild.Community.Tasks.Targets</ProjectItem>
+      </Folder>
+      <Folder Name="Components" TargetFolderName="Components">
+        <ProjectItem ReplaceParameters="true" TargetFileName="FeatureController.cs">FeatureController.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Data" TargetFolderName="Data">
+        <ProjectItem ReplaceParameters="true" TargetFileName="DataProvider.cs">DataProvider.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$.dnn">DnnTemplate.dnn</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$ModuleBase.cs">ModuleBase.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$ModuleSettingsBase.cs">ModuleSettingsBase.cs</ProjectItem>
+      <Folder Name="Documentation" TargetFolderName="Documentation">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Documentation.css">Documentation.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Documentation.html" OpenInWebBrowser="true">Documentation.html</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Edit.ascx">Edit.ascx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Edit.ascx.cs">Edit.ascx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Edit.ascx.designer.cs">Edit.ascx.designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="License.txt">License.txt</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="module.css">module.css</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Providers" TargetFolderName="Providers">
+        <Folder Name="DataProviders" TargetFolderName="DataProviders">
+          <Folder Name="SqlDataProvider" TargetFolderName="SqlDataProvider">
+            <ProjectItem ReplaceParameters="true" TargetFileName="00.00.01.SqlDataProvider">00.00.01.SqlDataProvider</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="SqlDataProvider.cs">SqlDataProvider.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="Uninstall.SqlDataProvider">Uninstall.SqlDataProvider</ProjectItem>
+          </Folder>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ReleaseNotes.txt">ReleaseNotes.txt</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Settings.ascx">Settings.ascx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Settings.ascx.cs">Settings.ascx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Settings.ascx.designer.cs">Settings.ascx.designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="View.ascx">View.ascx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="View.ascx.cs">View.ascx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="View.ascx.designer.cs">View.ascx.designer.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="extension" repositoryId="e48e838a-c708-4d43-b822-4d5de0d13eed">
+      <package id="MSBuildTasks" version="1.4.0.88" />
+    </packages>
+  </WizardData>
+</VSTemplate>

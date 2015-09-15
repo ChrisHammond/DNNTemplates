@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="e48e838a-c708-4d43-b822-4d5de0d13eed" Version="5.0" Language="en-US" Publisher="Chris Hammond" />
+    <DisplayName>DotNetNuke Project Templates</DisplayName>
+    <Description xml:space="preserve">This Visual Studio Package contains Project Templates to aid in your DotNetNuke Extension development.</Description>
+    <MoreInfo>http://www.christoc.com/Products/Module-Development-Templates</MoreInfo>
+    <License>License.txt</License>
+    <GettingStartedGuide>http://www.christoc.com/tutorials/aid/4</GettingStartedGuide>
+    <ReleaseNotes>ReleaseNotes.txt</ReleaseNotes>
+    <Icon>Resources\Package.ico</Icon>
+    <PreviewImage>Resources\Package.ico</PreviewImage>
+    <Tags>DotNetNuke, DNN, CMS, "Content Management System", "Open Source", OpenSource,Skin,Theme,DNNCMS</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.Community" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="4.0" />
+    <Dependency Id="Microsoft.VisualStudio.MPF.12.0" DisplayName="Visual Studio MPF 12.0" d:Source="Installed" Version="12.0" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="CSharp-Template" d:TargetPath="|CSharp-Template;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="VB-Template" d:TargetPath="|VB-Template;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="VB-DAL2-Template" d:TargetPath="|VB-DAL2-Template;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="CSharp-DAL2-Template" d:TargetPath="|CSharp-DAL2-Template;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="CSharp-Theme-Template" d:TargetPath="|CSharp-Theme-Template;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <!--
+    <CustomExtension Type="Company.Product.Type">Path\File.ext</CustomExtension>
+    -->
+  </Assets>
+</PackageManifest>

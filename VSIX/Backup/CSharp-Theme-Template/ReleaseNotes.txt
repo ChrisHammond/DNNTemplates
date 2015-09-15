@@ -1,0 +1,14 @@
+﻿<h3>$safeprojectname$</h3>
+	$ownername$ <br />
+	<a href="mailto:$owneremail$">$owneremail$</a><br />
+	<a href=$ownerwebsite$>$ownerwebsite$</a><br />
+<hr/>
+	<h3>About the $safeprojectname$</h3>
+
+	<h4>Version 00.00.01</h4><br />
+	Initial release of the theme
+	<h5>Bug Fixes</h5>
+	<ul>
+			<li>None, first release</li>
+	</ul>
+</div>

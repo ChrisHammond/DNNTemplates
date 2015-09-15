@@ -1,0 +1,28 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="e48e838a-c708-4d43-b822-4d5de0d13eed" Version="5.0" Language="en-US" Publisher="Chris Hammond" />
+    <DisplayName>DotNetNuke Project Templates</DisplayName>
+    <Description xml:space="preserve">This Visual Studio Package contains Project Templates to aid in your DotNetNuke Extension development.</Description>
+    <MoreInfo>http://www.christoc.com/Products/Module-Development-Templates</MoreInfo>
+    <License>License.txt</License>
+    <GettingStartedGuide>http://www.christoc.com/tutorials/aid/4</GettingStartedGuide>
+    <ReleaseNotes>ReleaseNotes.txt</ReleaseNotes>
+    <Icon>Resources\Package.ico</Icon>
+    <PreviewImage>Resources\Package.ico</PreviewImage>
+    <Tags>DotNetNuke, DNN, CMS, "Content Management System", "Open Source", OpenSource,Skin,Theme,DNNCMS</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.Community" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="4.0" />
+    <Dependency Id="Microsoft.VisualStudio.MPF.12.0" DisplayName="Visual Studio MPF 12.0" Version="12.0" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="DNNTemplates.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="ProjectTemplates" />
+    <!--
+    <CustomExtension Type="Company.Product.Type">Path\File.ext</CustomExtension>
+    -->
+  </Assets>
+</PackageManifest>

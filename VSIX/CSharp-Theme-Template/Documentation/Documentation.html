@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>$ownername$ Template</title>
+    <link rel="stylesheet" type="text/css" href="Documentation.css" />
+</head>
+<body>
+    <div>
+        <h1>$ownername$ $safeprojectname$ Theme</h1>
+        <hr />
+        <h2>* Important *</h2>
+        <p>
+            When creating a project using this template, you should have named your project
+            simply "ThemeName", not "$ownername$ThemeName". If you didn&#39;t do this, the
+            easiest thing to do is close the solution, delete the folder from your /portals/_default/skins 
+            folder, then create a new project.
+        </p>
+        <p>
+            Due to limitations in the templating capabilities of Visual Studio, you will need
+            to make some minor changes, and double check a few things, before you package this theme.
+        </p>
+        <ol>
+            <li>
+                <strong>Open up IIS Manager (start>run>INETMGR), go to your DNNDEV.ME website and make sure that /portals/_default/skins/ is NOT a Virtual Directory/Application, if so, remove that.</strong>
+            </li>
+            <li>
+                <strong>If you change the TARGET framework for the project, remove the WEB.CONFIG file that Visual Studio will add to your project.</strong>
+            </li>
+            <li><strong>BEFORE</strong> checking the
+                theme into your source control environment check the following.</li>
+            <li>Edit the Project properties by double-clicking on the Properties folder in Solution
+                Explorer</li>
+            <li>On the Web tab:
+                <ol>
+                    <li>Under 'Start Action', make sure to set your Start URL to the correct site (ex: http://dnndev.me/).</li>
+                    <li>Under 'Servers', make sure to "Use IIS Web Server" with a project url of http://dnndev.me/portals/_default/skins/$safeprojectname$
+                        and an Override application root URL of http://dnndev.me/</li>
+                </ol>
+            </li>
+        </ol>
+
+        <h2>DotNetNuke Development Tutorials
+        </h2>
+
+        <ul>
+            <li><a href="http://www.christoc.com/tutorials">Check out our free Theme and Module development tutorials</a>.
+            </li>
+        </ul>
+
+        <h2>Steps after your project is setup.</h2>
+        <ol>
+            <li>To Build and Package your Theme you need to change to <b>Release</b> mode and then
+                simply choose Build from the Build menu. The MSBuild scripts will do the packaging
+                process for you. The packaging process creates an INSTALL and a SOURCE package in
+                the INSTALL folder within your portals/_default/skins/themename folder. </li>
+            <li>Installing your Theme in your development DotNetNuke instance is easy.Take the
+               <strong>INSTALL</strong> ZIP file that is created in the INSTALL folder, upload that using the Host/Extensions
+                page, Installation Wizard. Using the INSTALL ZIP file will overwrite the files already in this folder, 
+                but that shouldn't cause any problems as long as you install a recent build.</li>
+            <li>After you've done a release for your theme (typically deploying to an environment
+                outside of your development environment) you should change the Version number, you
+                need to do this in two places, the assemblyinfo file, and the .DNN manifest file.
+                Next time you build the theme in release mode you will get a new package (using
+                the version number) created.</li>
+            <li>For more information visit our <a href="http://www.christoc.com/dotnetnuke">DotNetNuke Consulting page</a>.</li>
+        </ol>
+        <p>
+            After you are finished reading this Documentation you can delete the Documentation directory
+            from your project.
+        </p>
+        <hr />
+        <br />
+    </div>
+</body>
+</html>

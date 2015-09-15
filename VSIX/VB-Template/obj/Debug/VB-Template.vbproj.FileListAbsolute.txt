@@ -1,0 +1,9 @@
+f:\projects\Christoc.com\Templates\VSIX\VB-Template\bin\Debug\ProjectTemplates\VisualBasic\DotNetNuke\1033\DNN-VB-Module.zip
+f:\projects\Christoc.com\Templates\VSIX\VB-Template\obj\Debug\VisualBasic\DotNetNuke\1033\DNN-VB-Module.zip
+f:\projects\Christoc.com\Templates\VSIX\VB-Template\obj\Debug\VB-Template.dll
+f:\projects\Christoc.com\Templates\VSIX\VB-Template\obj\Debug\VB-Template.pdb
+C:\Projects\Christoc.com\Templates\VSIX\VB-Template\bin\Debug\ProjectTemplates\VisualBasic\DotNetNuke\1033\DNN-VB-Module.zip
+C:\Projects\Christoc.com\Templates\VSIX\VB-Template\obj\Debug\VisualBasic\DotNetNuke\1033\DNN-VB-Module.zip
+C:\Projects\Christoc.com\Templates\VSIX\VB-Template\obj\Debug\VB-Template.dll
+C:\Projects\Christoc.com\Templates\VSIX\VB-Template\obj\Debug\VB-Template.pdb
+C:\Projects\Christoc.com\Templates\VSIX\VB-Template\obj\Debug\VB-Template.vbprojResolveAssemblyReference.cache

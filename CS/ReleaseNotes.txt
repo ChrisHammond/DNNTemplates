@@ -1,0 +1,23 @@
+﻿<h3>$safeprojectname$</h3>
+<p class="Contributor">
+	$YourCompany$ <br />
+	<a href="mailto:$YourEmail$">$YourEmail$</a><br />
+	<a href=$YourWebsite$>$YourWebsite$</a><br />
+</p>
+<hr/>
+<div class="License">
+	<h3>About the $safeprojectname$</h3>
+	<p class="Owner">
+		<b>Version CHANGEME</b><br /><br />
+	</p>
+	<p>Description about version.</p>
+	
+	<h4>Bug Fixes</h4>
+	<ul>
+			<li>List</li>
+			<li>of</li>
+			<li>bug</li>
+			<li>fixes</li>
+	</ul>
+	
+</div>

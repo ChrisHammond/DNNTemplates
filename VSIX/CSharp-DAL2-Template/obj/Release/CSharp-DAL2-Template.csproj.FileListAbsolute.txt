@@ -1,0 +1,10 @@
+F:\Projects\Christoc.com\Templates\VSIX\CSharp-DAL2-Template\bin\Release\ProjectTemplates\CSharp\DotNetNuke\1033\DNN-C-DAL2-Module.zip
+F:\Projects\Christoc.com\Templates\VSIX\CSharp-DAL2-Template\obj\Release\CSharp-DAL2-Template.csprojResolveAssemblyReference.cache
+F:\Projects\Christoc.com\Templates\VSIX\CSharp-DAL2-Template\obj\Release\CSharp\DotNetNuke\1033\DNN-C-DAL2-Module.zip
+F:\Projects\Christoc.com\Templates\VSIX\CSharp-DAL2-Template\obj\Release\CSharp-DAL2-Template.dll
+F:\Projects\Christoc.com\Templates\VSIX\CSharp-DAL2-Template\obj\Release\CSharp-DAL2-Template.pdb
+C:\Projects\Christoc.com\Templates\VSIX\CSharp-DAL2-Template\bin\Release\ProjectTemplates\CSharp\DotNetNuke\1033\DNN-C-DAL2-Module.zip
+C:\Projects\Christoc.com\Templates\VSIX\CSharp-DAL2-Template\obj\Release\CSharp-DAL2-Template.csprojResolveAssemblyReference.cache
+C:\Projects\Christoc.com\Templates\VSIX\CSharp-DAL2-Template\obj\Release\CSharp\DotNetNuke\1033\DNN-C-DAL2-Module.zip
+C:\Projects\Christoc.com\Templates\VSIX\CSharp-DAL2-Template\obj\Release\CSharp-DAL2-Template.dll
+C:\Projects\Christoc.com\Templates\VSIX\CSharp-DAL2-Template\obj\Release\CSharp-DAL2-Template.pdb

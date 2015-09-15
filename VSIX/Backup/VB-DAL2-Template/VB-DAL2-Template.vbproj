@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{F184B08F-C81C-45f6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <ProjectGuid>{1F09CEAC-9593-4583-9E40-E5FBCFD3D036}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VB_DAL2_Template</RootNamespace>
+    <AssemblyName>VB-DAL2-Template</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <GeneratePkgDefFile>false</GeneratePkgDefFile>
+    <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
+    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
+    <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
+    <CreateVsixContainer>false</CreateVsixContainer>
+    <DeployExtension>false</DeployExtension>
+    <DeployVSTemplates>false</DeployVSTemplates>
+    <CopyVsixManifestToOutput>false</CopyVsixManifestToOutput>
+    <CopyBuildOutputToOutputDirectory>false</CopyBuildOutputToOutputDirectory>
+    <CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BuildScripts\ModulePackage.targets" />
+    <None Include="BuildScripts\MSBuild.Community.Tasks.Targets" />
+    <None Include="My Project\AssemblyInfo.vb" />
+    <None Include="Providers\DataProviders\SqlDataProvider\00.00.01.sqldataprovider" />
+    <None Include="Providers\DataProviders\SqlDataProvider\UnInstall.sqldataprovider" />
+    <None Include="VBTemplate.dnn" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_LocalResources\Edit.ascx.resx" />
+    <None Include="App_LocalResources\Settings.ascx.resx" />
+    <None Include="App_LocalResources\View.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Components\FeatureController.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Documentation\Documentation.css" />
+    <None Include="Documentation\Documentation.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="__TemplateIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <VSTemplate Include="DNN-VB-DAL2-Module.vstemplate">
+      <OutputSubPath>DotNetNuke</OutputSubPath>
+      <SubType>Designer</SubType>
+    </VSTemplate>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Edit.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="License.txt" />
+    <None Include="module.css" />
+    <None Include="ReleaseNotes.txt" />
+    <None Include="Settings.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="VBTemplate.vbproj">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="View.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Edit.ascx.designer.vb">
+      <DependentUpon>Edit.ascx.vb</DependentUpon>
+    </None>
+    <None Include="Edit.ascx.vb">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </None>
+    <None Include="Settings.ascx.designer.vb">
+      <DependentUpon>Settings.ascx.vb</DependentUpon>
+    </None>
+    <None Include="Settings.ascx.vb">
+      <DependentUpon>Settings.ascx</DependentUpon>
+    </None>
+    <None Include="VBTemplateModuleBase.vb" />
+    <None Include="VBTemplateSettingsBase.vb" />
+    <None Include="View.ascx.designer.vb">
+      <DependentUpon>View.ascx.vb</DependentUpon>
+    </None>
+    <None Include="View.ascx.vb">
+      <DependentUpon>View.ascx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Components\Item.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Components\ItemController.vb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

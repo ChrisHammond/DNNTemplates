@@ -1,0 +1,10 @@
+F:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\bin\Release\ProjectTemplates\CSharp\DotNetNuke\1033\DNN-C-Theme.zip
+F:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\obj\Release\CSharp-Theme-Template.csprojResolveAssemblyReference.cache
+F:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\obj\Release\CSharp\DotNetNuke\1033\DNN-C-Theme.zip
+F:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\obj\Release\CSharp-Theme-Template.dll
+F:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\obj\Release\CSharp-Theme-Template.pdb
+C:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\bin\Release\ProjectTemplates\CSharp\DotNetNuke\1033\DNN-C-Theme.zip
+C:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\obj\Release\CSharp-Theme-Template.csprojResolveAssemblyReference.cache
+C:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\obj\Release\CSharp\DotNetNuke\1033\DNN-C-Theme.zip
+C:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\obj\Release\CSharp-Theme-Template.dll
+C:\Projects\Christoc.com\Templates\VSIX\CSharp-Theme-Template\obj\Release\CSharp-Theme-Template.pdb
