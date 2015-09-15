@@ -2,3 +2,8 @@
 $tf/
 $tf1/
 BuildProcessTemplates/
+
+
+# Ignore other VS files that the templates project doesn't need in source control
+*.obj
+*.cache
