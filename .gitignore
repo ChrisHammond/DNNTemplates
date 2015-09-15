@@ -1,11 +1,21 @@
-# Ignore file, currently only ignores CodePlex specific items
 $tf/
 $tf1/
+obj/
 BuildProcessTemplates/
 
+# Visual Studio 2015 cache/options directory
+.vs/
 
 # Ignore other VS files that the templates project doesn't need in source control
+*.suo
 *.obj
-*.cache
+*.vs/
 
-.vs/
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+
+*.cache
