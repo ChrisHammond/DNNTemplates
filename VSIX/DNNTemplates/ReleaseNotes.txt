@@ -7,6 +7,12 @@ This VSIX extension package is an offshoot of the ChristocTemplates project,
 the source code for these templates, as well as older templates are
 available there. http://christoctemplate.codeplex.com
 
+V5.0 - Release Date 7/31/2015
+Description: 
+	Upgraded to BootStrap V3.3.5
+	Visual Studio 2015 support
+
+
 V4.1 - Release Date 4/19/2015
 Description: 
 	Fix for Bootstrap loading priority that was causing problems with DNNDropDown Lists
