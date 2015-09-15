@@ -9,8 +9,8 @@ The latest release (5.0) of the templates are for Visual Studio 2015. If you nee
 
 The latest release (5.0) of the templates are for Visual Studio 2015. If you need a VS2008/10/12/13 support check out the older releases.
 
-Blog Announcement for the 2.0 release of the templates project|http://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot.aspx
-For instructions on how to modify the templates read this post|http://www.christoc.com/tutorials/aid/3
+Blog Announcement for the 2.0 release of the templates project http://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot.aspx
+For instructions on how to modify the templates read this post http://www.christoc.com/tutorials/aid/3
 
 *After you build in Release Mode the installable packages (source/install) can be found in the INSTALL folder now, within your module's folder, not the packages folder anymore*
 
@@ -56,7 +56,7 @@ This release addresses an issue with the release build location, and changes def
 Changes for V2.1 (1/28/2013)
 -----------
 This release addresses an issue with template modification and namespace problems.
-[url:For instructions on how to modify the templates read this post|http://www.christoc.com/tutorials/aid/3]
+For instructions on how to modify the templates read this post http://www.christoc.com/tutorials/aid/3
 
 Changes for V2.0 (1/24/2013)
 -----------
