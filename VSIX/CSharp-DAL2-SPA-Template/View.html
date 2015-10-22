@@ -1,0 +1,33 @@
+﻿[JavaScript:{ jsname: "JQuery" }]
+[JavaScript:{ jsname: "Knockout" }]
+[JavaScript:{ path: "~/Resources/Shared/scripts/dnn.jquery.js"}]
+[JavaScript:{ path: "~/DesktopModules/$safeprojectname$/scripts/ItemView.js"}]
+
+[ModuleAction:{controlKey : "Edit", securityAccessLevel : "Edit",  titleKey: "EditModule", localResourceFile: "~/DesktopModules/$safeprojectname$/App_LocalResources/View.resx" }]
+
+<div id="Items-[ModuleContext:ModuleId]">
+    <ul class="tm_tl" data-bind="foreach: itemList">
+        <li class="tm_t">
+            <h3 data-bind="text: name"></h3>
+            <div class="tm_td" data-bind="text: description"></div>
+            <div data-bind="visible: $parent.editMode()">
+                <a data-bind="attr: {href: editUrl}">[Resx:{key:"EditItem"}]</a>
+                <a data-bind="click: $parent.deleteItem" href="#">[Resx:{key:"DeleteItem"}]</a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script language="javascript" type="text/javascript">
+    jQuery(function ($) {
+        var moduleId = parseInt("[ModuleContext:ModuleId]");
+
+        var localizedSettings = {};
+
+        var viewmodel = new dnnspamodule.itemListViewModel(moduleId, localizedSettings);
+        viewmodel.init();
+
+        ko.applyBindings(viewmodel, $("#Items-" + moduleId)[0]);
+
+    });
+</script>
