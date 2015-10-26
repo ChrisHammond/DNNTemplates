@@ -78,6 +78,7 @@ namespace Dnn.Modules.$safeprojectname$.Services
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public HttpResponseMessage Upsert(ItemViewModel item)
         {
             if (item.Id > 0)
