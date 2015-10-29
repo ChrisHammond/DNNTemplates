@@ -1,0 +1,94 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>DotNetNuke 8 C# DAL2 SPA Module</Name>
+    <Description>A Visual Studio template for DotNetNuke 8 Module Development using the new SPA module type.</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>DNNModule</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <!--
+              You can customize the parameters below if you want to make changes to the templates for your own environments.
+      
+              After changing these parameter values you should rebuild the DNNTemplates project in RELEASE mode and then install the VSIX file found in the bin/release folder
+            -->
+    <CustomParameters>
+      <CustomParameter Name="$rootnamespace$" Value="Dnn.Modules."/>
+      <CustomParameter Name="$ownername$" Value="dnnsoftware.com"/>
+      <CustomParameter Name="$owneremail$" Value="modules@dnnsoftware.com"/>
+      <CustomParameter Name="$ownerwebsite$" Value="http://www.dnnsoftware.com"/>
+      <CustomParameter Name="$devenvironmenturl$" Value="dnndev.me" />
+    </CustomParameters>
+    <Project TargetFileName="$safeprojectname$.csproj" File="CSharp-DAL2-SPA-Template.csproj" ReplaceParameters="true">
+      <Folder Name="App_LocalResources" TargetFolderName="App_LocalResources">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Edit.resx">Edit.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Settings.resx">Settings.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="View.resx">View.resx</ProjectItem>
+      </Folder>
+      <Folder Name="BuildScripts" TargetFolderName="BuildScripts">
+        <ProjectItem ReplaceParameters="false" TargetFileName="ModulePackage.targets">ModulePackage.targets</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="MSBuild.Community.Tasks.Targets">MSBuild.Community.Tasks.Targets</ProjectItem>
+      </Folder>
+      <Folder Name="Components" TargetFolderName="Components">
+        <ProjectItem ReplaceParameters="true" TargetFileName="FeatureController.cs">FeatureController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IItemRepository.cs">IItemRepository.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Item.cs">Item.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ItemRepository.cs">ItemRepository.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$.dnn">DnnSpaModule.dnn</ProjectItem>
+      <Folder Name="Documentation" TargetFolderName="Documentation">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Documentation.css">Documentation.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Documentation.html">Documentation.html</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Edit.html">Edit.html</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="License.txt">License.txt</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="module.css">module.css</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Providers" TargetFolderName="Providers">
+        <Folder Name="DataProviders" TargetFolderName="DataProviders">
+          <Folder Name="SqlDataProvider" TargetFolderName="SqlDataProvider">
+            <ProjectItem ReplaceParameters="true" TargetFileName="00.00.01.SqlDataProvider">00.00.01.SqlDataProvider</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="Uninstall.SqlDataProvider">Uninstall.SqlDataProvider</ProjectItem>
+          </Folder>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ReleaseNotes.txt">ReleaseNotes.txt</ProjectItem>
+      <Folder Name="Scripts" TargetFolderName="Scripts">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ItemEdit.js">ItemEdit.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ItemView.js">ItemView.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="QuickSettings.js">QuickSettings.js</ProjectItem>
+      </Folder>
+      <Folder Name="Services" TargetFolderName="Services">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ItemController.cs">ItemController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ServiceRouteMapper.cs">ServiceRouteMapper.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserController.cs">UserController.cs</ProjectItem>
+        <Folder Name="ViewModels" TargetFolderName="ViewModels">
+          <ProjectItem ReplaceParameters="true" TargetFileName="ItemViewModel.cs">ItemViewModel.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="UserViewModel.cs">UserViewModel.cs</ProjectItem>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Settings.html">Settings.html</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="View.html">View.html</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="extension" repositoryId="e48e838a-c708-4d43-b822-4d5de0d13eed">
+      <package id="MSBuildTasks" version="1.4.0.88" />
+    </packages>
+  </WizardData>
+</VSTemplate>

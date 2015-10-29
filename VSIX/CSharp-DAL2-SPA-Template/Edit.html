@@ -1,0 +1,59 @@
+﻿[JavaScript:{ jsname: "JQuery" }]
+[JavaScript:{ jsname: "Knockout" }]
+[JavaScript:{ path: "~/Resources/Shared/scripts/dnn.jquery.js"}]
+[JavaScript:{ path: "~/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js"}]
+[JavaScript:{ path: "~/DesktopModules/$safeprojectname$/scripts/ItemEdit.js"}]
+
+<div id="Item-[ModuleContext:ModuleId]">
+    <div class="dnnForm dnnEditBasicSettings" id="dnnEditBasicSettings">
+        <div class="dnnFormExpandContent dnnRight "><a href="#">[Resx:{key:"ExpandAll"}]</a></div>
+
+        <h2 id="dnnSitePanel-BasicSettings" class="dnnFormSectionHead dnnClear">
+            <a href="#" class="dnnSectionExpanded">[Resx:{key:"BasicSettings"}]</a>
+        </h2>
+        <fieldset>
+            <div class="dnnFormItem">
+                <div><label for="itemName">[Resx:{key:"lblName"}]</label></div>
+                <input id="itemName" type="text" data-bind="textInput: name" />
+            </div>
+            <div class="dnnFormItem">
+                <div><label for="itemDescription">[Resx:{key:"lblDescription"}]</label></div>
+                <textarea id="itemDescription" data-bind="value: description" cols="20" rows="5"></textarea>
+            </div>
+            <div class="dnnFormItem">
+                <div><label for="itemUser">[Resx:{key:"lblAssignedUser"}]</label></div>
+                <select data-bind="options: userList,
+                                    optionsText: 'name',
+                                    optionsValue: 'id',
+                                    value: assignedUser,
+                                    optionsCaption: 'Choose...'"></select>
+            </div>
+        </fieldset>
+    </div>
+    <a data-bind="click: save" href="#" class="dnnPrimaryAction">[Resx:{key:"btnSubmit"}]</a>
+    <a data-bind="click: cancel" href="#" class="dnnSecondaryAction">[Resx:{key:"btnCancel"}]</a>
+</div>
+
+<script type="text/javascript">
+
+        jQuery(function ($) {
+            var moduleId = parseInt("[ModuleContext:ModuleId]");
+
+            var localizedSettings = {};
+
+            var viewmodel = new $safeprojectname$.itemViewModel(moduleId, localizedSettings);
+            viewmodel.init();
+
+            ko.applyBindings(viewmodel, $("#Item-" + moduleId)[0]);
+
+            function dnnEditBasicSettings() {
+                $('#dnnEditBasicSettings').dnnPanels();
+                $('#dnnEditBasicSettings .dnnFormExpandContent a').dnnExpandAll({ expandText: '[Resx:{key:"ExpandAll"}]', collapseText: '[Resx:{key:"CollapseAll"}]', targetArea: '#dnnEditBasicSettings' });
+            }
+
+            dnnEditBasicSettings();
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+                dnnEditBasicSettings();
+            });
+        });
+</script>
