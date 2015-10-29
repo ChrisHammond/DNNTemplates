@@ -122,7 +122,7 @@
     <Content Include="Scripts\QuickSettings.js" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DnnSpaModule.dnn" />
+    <Content Include="DnnTemplate.dnn" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="BuildScripts\ModulePackage.targets" />

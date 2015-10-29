@@ -7,6 +7,15 @@ This VSIX extension package is an offshoot of the ChristocTemplates project,
 the source code for these templates, as well as older templates are
 available there. http://christoctemplate.codeplex.com
 
+
+V5.1 - Release Date TBD
+Description: 
+	Added SPA template  (PR from Joe Brinkman)
+	Gitignore Cleanup (PR from Will Strohl)
+	SQL script cleanup for Azure (PR from Will Strohl)
+	IPortable, IUpgradeable, ISearchable implementation (PR from Will Strohl)
+
+
 V5.0 - Release Date 7/31/2015
 Description: 
 	Upgraded to BootStrap V3.3.5
