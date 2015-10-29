@@ -46,8 +46,12 @@
           <desktopModule>
             <moduleName>$safeprojectname$</moduleName>
             <foldername>$safeprojectname$</foldername>
-            <businessControllerClass>$rootnamespace$$safeprojectname$.Components.FeatureController</businessControllerClass>
-            <supportedFeatures />
+            <businessControllerClass>$rootnamespace$$safeprojectname$.Components.FeatureController, $safeprojectname$</businessControllerClass>
+            <supportedFeatures>
+              <supportedFeature>IPortable</supportedFeature>
+              <supportedFeature>ISearchable</supportedFeature>
+              <supportedFeature>IUpgradeable</supportedFeature>
+            </supportedFeatures>
             <moduleDefinitions>
               <moduleDefinition>
                 <friendlyName>$safeprojectname$</friendlyName>
@@ -88,6 +92,15 @@
               </moduleDefinition>
             </moduleDefinitions>
           </desktopModule>
+          <eventMessage>
+            <processorType>DotNetNuke.Entities.Modules.EventMessageProcessor, DotNetNuke</processorType>
+            <processorCommand>UpgradeModule</processorCommand>
+            <attributes>
+              <businessControllerClass>$rootnamespace$$safeprojectname$.Components.FeatureController, $safeprojectname$</businessControllerClass>
+              <desktopModuleID>[DESKTOPMODULEID]</desktopModuleID>
+              <upgradeVersionsList>00.00.01</upgradeVersionsList>
+            </attributes>
+          </eventMessage>
         </component>
         <component type="Assembly">
           <assemblies>
