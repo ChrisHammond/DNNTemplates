@@ -72,6 +72,7 @@
       <Folder Name="Services" TargetFolderName="Services">
         <ProjectItem ReplaceParameters="true" TargetFileName="ServiceRouteMapper.cs">ServiceRouteMapper.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="UserController.cs">UserController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ItemController.cs">ItemController.cs</ProjectItem>
         <Folder Name="ViewModels" TargetFolderName="ViewModels">
           <ProjectItem ReplaceParameters="true" TargetFileName="ItemViewModel.cs">ItemViewModel.cs</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="UserViewModel.cs">UserViewModel.cs</ProjectItem>

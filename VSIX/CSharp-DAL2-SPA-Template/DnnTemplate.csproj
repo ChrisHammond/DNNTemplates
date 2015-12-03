@@ -65,7 +65,7 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.CoreUtility">
       <Private>False</Private>
@@ -100,6 +100,16 @@
     <None Include="Scripts\QuickSettings.js" />
     <None Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="Services\ItemController.cs" />
+    <None Include="Services\ServiceRouteMapper.cs" />
+    <None Include="Services\UserController.cs" />
+    <None Include="Services\ViewModels\ItemViewModel.cs" />
+    <None Include="Services\ViewModels\UserViewModel.cs" />
+  </ItemGroup>
+
   <ItemGroup>
     <None Include="Documentation\Documentation.css" />
     <None Include="Documentation\Documentation.html" />
