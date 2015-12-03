@@ -184,6 +184,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CSharp-DAL2-SPA-Template\CSharp-DAL2-SPA-Template.csproj">
+      <Project>{7D61A32C-0F21-453F-A981-BD8E5A3A5304}</Project>
+      <Name>CSharp-DAL2-SPA-Template</Name>
+      <VSIXSubPath>ProjectTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
     <ProjectReference Include="..\CSharp-DAL2-Template\CSharp-DAL2-Template.csproj">
       <Project>{050F84AF-35A1-4218-B33C-752BE340B4C7}</Project>
       <Name>CSharp-DAL2-Template</Name>

@@ -46,7 +46,7 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$.dnn">DnnTemplate.dnn</ProjectItem>
       <Folder Name="Documentation" TargetFolderName="Documentation">
         <ProjectItem ReplaceParameters="true" TargetFileName="Documentation.css">Documentation.css</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="Documentation.html">Documentation.html</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Documentation.html" OpenInWebBrowser="true">Documentation.html</ProjectItem>
       </Folder>
       <ProjectItem ReplaceParameters="true" TargetFileName="Edit.html">Edit.html</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="License.txt">License.txt</ProjectItem>
@@ -70,7 +70,6 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="QuickSettings.js">QuickSettings.js</ProjectItem>
       </Folder>
       <Folder Name="Services" TargetFolderName="Services">
-        <ProjectItem ReplaceParameters="true" TargetFileName="ItemController.cs">ItemController.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="ServiceRouteMapper.cs">ServiceRouteMapper.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="UserController.cs">UserController.cs</ProjectItem>
         <Folder Name="ViewModels" TargetFolderName="ViewModels">

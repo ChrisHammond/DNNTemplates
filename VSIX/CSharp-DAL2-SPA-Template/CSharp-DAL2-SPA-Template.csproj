@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <VSTemplate Include="DNN-C-DAL2-SPA-Module.vstemplate">
+      <OutputSubPath>DotNetNuke</OutputSubPath>
       <SubType>Designer</SubType>
     </VSTemplate>
   </ItemGroup>
