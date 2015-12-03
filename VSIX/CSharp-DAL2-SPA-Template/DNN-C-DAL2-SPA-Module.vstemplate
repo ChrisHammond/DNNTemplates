@@ -27,7 +27,7 @@
       <CustomParameter Name="$ownerwebsite$" Value="http://www.dnnsoftware.com"/>
       <CustomParameter Name="$devenvironmenturl$" Value="dnndev.me" />
     </CustomParameters>
-    <Project TargetFileName="$safeprojectname$.csproj" File="CSharp-DAL2-SPA-Template.csproj" ReplaceParameters="true">
+    <Project TargetFileName="$safeprojectname$.csproj" File="DnnTemplate.csproj" ReplaceParameters="true">
       <Folder Name="App_LocalResources" TargetFolderName="App_LocalResources">
         <ProjectItem ReplaceParameters="true" TargetFileName="Edit.resx">Edit.resx</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="Settings.resx">Settings.resx</ProjectItem>
@@ -43,7 +43,7 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="Item.cs">Item.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="ItemRepository.cs">ItemRepository.cs</ProjectItem>
       </Folder>
-      <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$.dnn">DnnSpaModule.dnn</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$.dnn">DnnTemplate.dnn</ProjectItem>
       <Folder Name="Documentation" TargetFolderName="Documentation">
         <ProjectItem ReplaceParameters="true" TargetFileName="Documentation.css">Documentation.css</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="Documentation.html">Documentation.html</ProjectItem>
