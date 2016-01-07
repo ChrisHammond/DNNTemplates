@@ -19,6 +19,7 @@
       <InstallInclude Include="**\*.asmx" Exclude="packages\**" />
       <InstallInclude Include="**\*.css" Exclude="packages\**" />
       <InstallInclude Include="**\*.html" Exclude="packages\**" />
+      <InstallInclude Include="**\*.cshtml" Exclude="packages\**" />
       <InstallInclude Include="**\*.htm" Exclude="packages\**" />
       <InstallInclude Include="**\*.resx" Exclude="packages\**" />
       <InstallInclude Include="**\*.aspx" Exclude="packages\**" />
@@ -34,6 +35,7 @@
       <SourceInclude Include="**\*.css" />
       <SourceInclude Include="**\*.xsl" />
       <SourceInclude Include="**\*.html" />
+      <SourceInclude Include="**\*.cshtml" />
       <SourceInclude Include="**\*.htm" />
       <SourceInclude Include="**\*.resx" />
       <SourceInclude Include="**\*.xml" Exclude="**\obj\**;**\_ReSharper*\**;**\.git\**;" />
