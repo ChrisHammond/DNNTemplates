@@ -21,10 +21,10 @@
               After changing these parameter values you should rebuild the DNNTemplates project in RELEASE mode and then install the VSIX file found in the bin/release folder
             -->
     <CustomParameters>
-      <CustomParameter Name="$rootnamespace$" Value="Dnn.Modules."/>
-      <CustomParameter Name="$ownername$" Value="dnnsoftware.com"/>
-      <CustomParameter Name="$owneremail$" Value="modules@dnnsoftware.com"/>
-      <CustomParameter Name="$ownerwebsite$" Value="http://www.dnnsoftware.com"/>
+      <CustomParameter Name="$rootnamespace$" Value="Christoc.Modules."/>
+      <CustomParameter Name="$ownername$" Value="Christoc.com"/>
+      <CustomParameter Name="$owneremail$" Value="modules@christoc.com"/>
+      <CustomParameter Name="$ownerwebsite$" Value="http://www.christoc.com"/>
       <CustomParameter Name="$devenvironmenturl$" Value="dnndev.me" />
     </CustomParameters>
     <Project TargetFileName="$safeprojectname$.csproj" File="DnnTemplate.csproj" ReplaceParameters="true">

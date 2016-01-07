@@ -17,6 +17,7 @@ namespace Dnn.Modules.$safeprojectname$.Services
 {
     [Supporte$rootnamespace$dModules("$safeprojectname$")]
     [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.View)]
+
     public class ItemController : DnnApiController
     {
         private readonly IItemRepository _repository;
