@@ -13,9 +13,9 @@ using DotNetNuke.Common.Utilities;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 
-namespace Dnn.Modules.$safeprojectname$.Services
+namespace $rootnamespace$$safeprojectname$.Services
 {
-    [Supporte$rootnamespace$dModules("$safeprojectname$")]
+    [SupportedModules("$safeprojectname$")]
     [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.View)]
 
     public class ItemController : DnnApiController

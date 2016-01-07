@@ -3,7 +3,7 @@
     <package name="$safeprojectname$" type="Module" version="00.00.01">
       <friendlyName>$safeprojectname$</friendlyName>
       <description>$ownername$ $safeprojectname$ module</description>
-      <iconFile>Images/icon_extensions.gif</iconFile>
+      <iconFile>/Images/icon_extensions.gif</iconFile>
       <owner>
         <name>$ownername$</name>
         <organization>$ownername$</organization>
@@ -47,7 +47,9 @@
           <desktopModule>
             <moduleName>$safeprojectname$</moduleName>
             <foldername>$safeprojectname$</foldername>
-            <businessControllerClass>$rootnamespace$$safeprojectname$.Components.FeatureController</businessControllerClass>
+            <!--<businessControllerClass>$rootnamespace$$safeprojectname$.Components.FeatureController</businessControllerClass>-->
+            <businessControllerClass/>
+           
             <supportedFeatures />
             <moduleDefinitions>
               <moduleDefinition>
