@@ -24,7 +24,7 @@
 
         var localizedSettings = {};
 
-        var viewmodel = new dnnspamodule.itemListViewModel(moduleId, localizedSettings);
+        var viewmodel = new $safeprojectname$.itemListViewModel(moduleId, localizedSettings);
         viewmodel.init();
 
         ko.applyBindings(viewmodel, $("#Items-" + moduleId)[0]);

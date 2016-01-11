@@ -59,7 +59,7 @@ $safeprojectname$.itemListViewModel = function (moduleId, resx) {
         var underlyingArray = itemList();
         for (var i = 0; i < data.length; i++) {
             var result = data[i];
-            var item = new dnnspamodule.itemViewModel();
+            var item = new $safeprojectname$.itemViewModel();
             item.load(result);
             underlyingArray.push(item);
         }
@@ -77,7 +77,7 @@ $safeprojectname$.itemListViewModel = function (moduleId, resx) {
     }
 };
 
-dnnspamodule.itemViewModel = function () {
+$safeprojectname$.itemViewModel = function () {
     var id = ko.observable('');
     var name = ko.observable('');
     var description = ko.observable('');

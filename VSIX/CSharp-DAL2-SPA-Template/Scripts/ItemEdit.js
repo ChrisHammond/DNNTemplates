@@ -135,7 +135,7 @@ $safeprojectname$.itemViewModel = function (moduleId, resx) {
         var underlyingArray = userList();
         for (var i = 0; i < data.length; i++) {
             var result = data[i];
-            var user = new dnnspamodule.user(result.id, result.name);
+            var user = new $safeprojectname$.user(result.id, result.name);
             underlyingArray.push(user);
         }
         userList.valueHasMutated();
@@ -166,7 +166,7 @@ $safeprojectname$.itemViewModel = function (moduleId, resx) {
     };
 }
 
-dnnspamodule.user = function (id, name) {
+$safeprojectname$.user = function (id, name) {
     this.id = id;
     this.name = name;
 }

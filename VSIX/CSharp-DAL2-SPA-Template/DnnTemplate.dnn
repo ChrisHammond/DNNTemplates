@@ -47,9 +47,7 @@
           <desktopModule>
             <moduleName>$safeprojectname$</moduleName>
             <foldername>$safeprojectname$</foldername>
-            <!--<businessControllerClass>$rootnamespace$$safeprojectname$.Components.FeatureController</businessControllerClass>-->
-            <businessControllerClass/>
-           
+            <businessControllerClass>$rootnamespace$$safeprojectname$.Components.FeatureController</businessControllerClass>
             <supportedFeatures />
             <moduleDefinitions>
               <moduleDefinition>
