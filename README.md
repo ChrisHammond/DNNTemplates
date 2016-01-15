@@ -3,21 +3,22 @@
 
 Project Description
 -----------
-Quick and easy to use Module and Theme (skin) Development templates for DotNetNuke 7.0.2+ and Visual Studio 2012/2013/2015.
+Quick and easy to use Module and Theme (skin) Development templates for DotNetNuke 7.0.2+ and DNN 8 and Visual Studio 2012/2013/2015.
 
-The latest release (5.0) of the templates are for Visual Studio 2015. If you need a VS2008/10/12/13 support check out the older releases on Codeplex. https://christoctemplate.codeplex.com/releases/
-
-The latest release (5.0) of the templates are for Visual Studio 2015. If you need a VS2008/10/12/13 support check out the older releases.
+The latest release (6.0) of the templates are for Visual Studio 2015. If you need a VS2008/10/12/13 support check out the older releases on Codeplex. https://christoctemplate.codeplex.com/releases/
 
 Blog Announcement for the 2.0 release of the templates project http://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot.aspx
 For instructions on how to modify the templates read this post http://www.christoc.com/tutorials/aid/3
 
 *After you build in Release Mode the installable packages (source/install) can be found in the INSTALL folder now, within your module's folder, not the packages folder anymore*
 
+V6 Beta for Visual Studio 2015 (1/13/2016)
+-----------
+Initial Release of the DNN8 SPA Template
+
 V5 for Visual Studio 2015 (7/31/2015)
 -----------
 Initial release with Visual Studio 2015 support. 
-
 
 V4.1 - Release Date 4/20/2015
 -----------
