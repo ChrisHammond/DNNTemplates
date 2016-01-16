@@ -3,12 +3,10 @@ These templates are designed for DotNetNuke 7+ (references are currently for 7.0
 managed by Chris Hammond, owner Christoc.com Software Solutions
 http://www.christoc.com
 
-This VSIX extension package is an offshoot of the ChristocTemplates project, 
-the source code for these templates, as well as older templates are
-available there. http://christoctemplate.codeplex.com
+The Source Code can be found at https://github.com/ChrisHammond/DNNTemplates
 
 
-V5.1 - Release Date TBD
+V6.0 - Release Date 1/13/2016
 Description: 
 	Added SPA template  (PR from Joe Brinkman)
 	Gitignore Cleanup (PR from Will Strohl)

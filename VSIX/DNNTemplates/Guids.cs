@@ -2,7 +2,7 @@
 // MUST match guids.h
 using System;
 
-namespace DotNetNukeCorporation.DNNTemplates
+namespace Christoc.DNNTemplates
 {
     static class GuidList
     {

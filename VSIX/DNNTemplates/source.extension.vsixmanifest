@@ -27,6 +27,7 @@
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="CSharp-DAL2-Template" d:TargetPath="|CSharp-DAL2-Template;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="CSharp-Theme-Template" d:TargetPath="|CSharp-Theme-Template;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="CSharp-DAL2-SPA-Template" d:TargetPath="|CSharp-DAL2-SPA-Template;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="CSharp-DAL2-MVC-Template" d:TargetPath="|CSharp-DAL2-MVC-Template;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
     <!--
     <CustomExtension Type="Company.Product.Type">Path\File.ext</CustomExtension>
     -->

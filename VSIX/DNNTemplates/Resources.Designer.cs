@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DotNetNukeCorporation.DNNTemplates {
+namespace Christoc.DNNTemplates {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace DotNetNukeCorporation.DNNTemplates {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DotNetNukeCorporation.DNNTemplates.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Christoc.DNNTemplates.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
