@@ -75,7 +75,7 @@
       <Folder Name="Views" TargetFolderName="Views">
         <Folder Name="Item" TargetFolderName="Item">
           <ProjectItem ReplaceParameters="true" TargetFileName="Edit.cshtml">Edit.cshtml</ProjectItem>
-          <ProjectItem ReplaceParameters="true" TargetFileName="Edit.cshtml">Edit.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Index.cshtml">Index.cshtml</ProjectItem>
         </Folder>
         <Folder Name="Settings" TargetFolderName="Settings">
           <ProjectItem ReplaceParameters="true" TargetFileName="Settings.cshtml">Settings.cshtml</ProjectItem>
