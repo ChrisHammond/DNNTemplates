@@ -33,7 +33,7 @@ namespace $rootnamespace$$safeprojectname$.Components
         {
             using (IDataContext ctx = DataContext.Instance())
             {
-                var rep = ctx.GetRepository<Item>();
+                var rep = ctx.GetRepository<Item > ();
                 rep.Insert(t);
             }
         }
@@ -48,28 +48,28 @@ namespace $rootnamespace$$safeprojectname$.Components
         {
             using (IDataContext ctx = DataContext.Instance())
             {
-                var rep = ctx.GetRepository<Item>();
+                var rep = ctx.GetRepository<Item > ();
                 rep.Delete(t);
             }
         }
 
         public IEnumerable<Item> GetItems(int moduleId)
         {
-            IEnumerable<Item> t;
+            IEnumerable<Item > t;
             using (IDataContext ctx = DataContext.Instance())
             {
-                var rep = ctx.GetRepository<Item>();
+                var rep = ctx.GetRepository<Item > ();
                 t = rep.Get(moduleId);
             }
             return t;
         }
 
-        public Item GetItem(int itemId, int moduleId)
-        {
+    public Item GetItem(int itemId, int moduleId)
+    {
             Item t;
             using (IDataContext ctx = DataContext.Instance())
             {
-                var rep = ctx.GetRepository<Item>();
+                var rep = ctx.GetRepository<Item > ();
                 t = rep.GetById(itemId, moduleId);
             }
             return t;
@@ -79,7 +79,7 @@ namespace $rootnamespace$$safeprojectname$.Components
         {
             using (IDataContext ctx = DataContext.Instance())
             {
-                var rep = ctx.GetRepository<Item>();
+                var rep = ctx.GetRepository<Item > ();
                 rep.Update(t);
             }
         }
