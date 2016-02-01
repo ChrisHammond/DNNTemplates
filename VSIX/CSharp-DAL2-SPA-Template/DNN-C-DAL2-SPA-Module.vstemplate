@@ -88,7 +88,7 @@
   </WizardExtension>
   <WizardData>
     <packages repository="extension" repositoryId="e48e838a-c708-4d43-b822-4d5de0d13eed">
-      <package id="MSBuildTasks" version="1.4.0.88" />
+      <package id="MSBuildTasks" version="1.4.0.128" />
     </packages>
   </WizardData>
 </VSTemplate>

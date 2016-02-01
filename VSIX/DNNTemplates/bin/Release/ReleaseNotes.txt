@@ -5,6 +5,15 @@ http://www.christoc.com
 
 The Source Code can be found at https://github.com/ChrisHammond/DNNTemplates
 
+V6.2 - Release Date TBD
+Description: 
+	MVC Template fixes
+
+V6.1 - Release Date 1/18/2016
+Description: 
+	Added MVC template  (originally located at https://github.com/dnnsoftware/DNN.Templates)
+
+
 
 V6.0 - Release Date 1/13/2016
 Description: 
