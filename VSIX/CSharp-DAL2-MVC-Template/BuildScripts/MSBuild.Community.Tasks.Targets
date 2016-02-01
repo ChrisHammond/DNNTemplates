@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="windows-1252" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
  <PropertyGroup>
    <MSBuildCommunityTasksPath Condition="'$(MSBuildCommunityTasksPath)' == ''">$(MSBuildProjectDirectory)\BuildScripts</MSBuildCommunityTasksPath>
-   <MSBuildDnnBinPath Condition="'$(MSBuildDnnBinPath)' == ''">$(MSBuildProjectDirectory)\..\..\bin</MSBuildDnnBinPath>
+   <MSBuildDnnBinPath Condition="'$(MSBuildDnnBinPath)' == ''">$(MSBuildProjectDirectory)\..\..\..\bin</MSBuildDnnBinPath>
    <MSBuildCommunityTasksLib>$(SolutionDir)\packages\MSBuildTasks.1.4.0.88\tools\MSBuild.Community.Tasks.dll</MSBuildCommunityTasksLib>
  </PropertyGroup>
  <UsingTask AssemblyFile="$(MSBuildCommunityTasksLib)" TaskName="MSBuild.Community.Tasks.AspNet.InstallAspNet" />
