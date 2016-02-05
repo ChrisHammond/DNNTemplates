@@ -150,4 +150,7 @@
   <data name="Submit.Text" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="NoItems.Text" xml:space="preserve">
+    <value>No items defined.</value>
+  </data>
 </root>
