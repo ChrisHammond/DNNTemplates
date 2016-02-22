@@ -78,6 +78,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -140,12 +141,6 @@
   <ItemGroup>
     <Compile Include="DnnTemplatesWizard.cs" />
     <Compile Include="Guids.cs" />
-    <Compile Include="ProjectCreation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProjectCreation.Designer.cs">
-      <DependentUpon>ProjectCreation.cs</DependentUpon>
-    </Compile>
     <Compile Include="ProjectProperty.cs" />
     <Compile Include="Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -160,9 +155,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ProjectCreation.resx">
-      <DependentUpon>ProjectCreation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

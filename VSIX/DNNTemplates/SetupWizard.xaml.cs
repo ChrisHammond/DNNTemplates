@@ -41,6 +41,7 @@ namespace Christoc.DNNTemplates
             txtOwnerEmail.Text = OwnerEmail;
             txtOwnerWebsite.Text = OwnerWebsite;
             txtDevUrl.Text = DevEnvironmentUrl;
+            
         }
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
@@ -50,6 +51,7 @@ namespace Christoc.DNNTemplates
             OwnerEmail = txtOwnerEmail.Text;
             OwnerWebsite = txtOwnerWebsite.Text;
             DevEnvironmentUrl = txtDevUrl.Text;
+            Close();
         }
     }
 }

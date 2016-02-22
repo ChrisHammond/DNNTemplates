@@ -5,20 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Christoc.DNNTemplates"
         mc:Ignorable="d"
-        Title="SetupWizard" Height="300" Width="300">
+        Title="SetupWizard" Height="377.737" Width="337.226">
     <Grid>
         <Label x:Name="lblRootnamespace" Content="Root Namespace" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtRootnamespace" HorizontalAlignment="Left" Height="23" Margin="132,55,0,0" TextWrapping="Wrap" Text="Christoc.Modules." VerticalAlignment="Top" Width="150"/>
-        <Label x:Name="lblOwnerName" Content="Owner Name" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtOwnerName" HorizontalAlignment="Left" Height="23" Margin="132,94,0,0" TextWrapping="Wrap" Text="Christoc.com" VerticalAlignment="Top" Width="150"/>
-        <Label x:Name="lblOwnerEmail" Content="Owner Email" HorizontalAlignment="Left" Margin="10,128,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtOwnerEmail" HorizontalAlignment="Left" Height="23" Margin="132,131,0,0" TextWrapping="Wrap" Text="modules@christoc.com" VerticalAlignment="Top" Width="150"/>
-        <Label x:Name="lblOwnerWebsite" Content="Local Dev URL" HorizontalAlignment="Left" Margin="10,163,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtOwnerWebsite" HorizontalAlignment="Left" Height="23" Margin="132,166,0,0" TextWrapping="Wrap" Text="http://www.christoc.com/" VerticalAlignment="Top" Width="150"/>
-        <Button x:Name="btnOk" Content="OK" HorizontalAlignment="Left" Margin="207,240,0,0" VerticalAlignment="Top" Width="75" Click="btnOk_Click"/>
+        <TextBox x:Name="txtRootnamespace" HorizontalAlignment="Left" Height="23" Margin="132,55,0,0" TextWrapping="Wrap" Text="Christoc.Modules." VerticalAlignment="Top" Width="187"/>
+        <Label x:Name="lblOwnerName" Content="Owner Name" HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtOwnerName" HorizontalAlignment="Left" Height="23" Margin="132,92,0,0" TextWrapping="Wrap" Text="Christoc.com" VerticalAlignment="Top" Width="187"/>
+        <Label x:Name="lblOwnerEmail" Content="Owner Email" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtOwnerEmail" HorizontalAlignment="Left" Height="23" Margin="132,129,0,0" TextWrapping="Wrap" Text="modules@christoc.com" VerticalAlignment="Top" Width="187"/>
+        <Label x:Name="lblOwnerWebsite" Content="Local Dev URL" HorizontalAlignment="Left" Margin="10,162,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtOwnerWebsite" HorizontalAlignment="Left" Height="23" Margin="132,165,0,0" TextWrapping="Wrap" Text="http://www.christoc.com/" VerticalAlignment="Top" Width="187"/>
+        <Button x:Name="btnOk" Content="OK" HorizontalAlignment="Left" Margin="244,317,0,0" VerticalAlignment="Top" Width="75" Click="btnOk_Click"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Here you can make some basic changed to the configuration of your DNN projects." VerticalAlignment="Top"/>
         <Label x:Name="lblDevUrl" Content="Local Dev URL" HorizontalAlignment="Left" Margin="10,197,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtDevUrl" HorizontalAlignment="Left" Height="23" Margin="132,200,0,0" TextWrapping="Wrap" Text="http://dnndev.me/" VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="txtDevUrl" HorizontalAlignment="Left" Height="23" Margin="132,200,0,0" TextWrapping="Wrap" Text="http://dnndev.me/" VerticalAlignment="Top" Width="187">
+            <TextBox.ToolTip>
+                <StackPanel>
+                    <TextBlock FontWeight="Bold">Local Dev URL</TextBlock>
+                    <TextBlock>If you aren't using DNNDEV.ME as your local DNN development URL, put your URL here. This needs to be a local IIS website.</TextBlock>
+                </StackPanel>
+            </TextBox.ToolTip>
+        </TextBox>
 
 
     </Grid>
