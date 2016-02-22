@@ -16,6 +16,9 @@ namespace Christoc.DNNTemplates
 {
     ///http://www.kendar.org/?p=/tutorials/vsextensions/part03
 
+        //TODO: See why VS crashes on debug load of template project
+
+
     /// <summary>
     /// Interaction logic for SetupWizard.xaml
     /// </summary>
