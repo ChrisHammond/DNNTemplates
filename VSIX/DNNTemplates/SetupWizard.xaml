@@ -15,7 +15,7 @@
         <TextBox x:Name="txtOwnerEmail" HorizontalAlignment="Left" Height="23" Margin="132,131,0,0" TextWrapping="Wrap" Text="modules@christoc.com" VerticalAlignment="Top" Width="150"/>
         <Label x:Name="lblOwnerWebsite" Content="Local Dev URL" HorizontalAlignment="Left" Margin="10,163,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtOwnerWebsite" HorizontalAlignment="Left" Height="23" Margin="132,166,0,0" TextWrapping="Wrap" Text="http://www.christoc.com/" VerticalAlignment="Top" Width="150"/>
-        <Button x:Name="btnOk" Content="OK" HorizontalAlignment="Left" Margin="207,240,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnOk" Content="OK" HorizontalAlignment="Left" Margin="207,240,0,0" VerticalAlignment="Top" Width="75" Click="btnOk_Click"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Here you can make some basic changed to the configuration of your DNN projects." VerticalAlignment="Top"/>
         <Label x:Name="lblDevUrl" Content="Local Dev URL" HorizontalAlignment="Left" Margin="10,197,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtDevUrl" HorizontalAlignment="Left" Height="23" Margin="132,200,0,0" TextWrapping="Wrap" Text="http://dnndev.me/" VerticalAlignment="Top" Width="150"/>

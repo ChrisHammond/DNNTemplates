@@ -43,17 +43,13 @@ namespace Christoc.DNNTemplates
             txtDevUrl.Text = DevEnvironmentUrl;
         }
 
-        private void ButtonOkClick(object sender, RoutedEventArgs e)
+        private void btnOk_Click(object sender, RoutedEventArgs e)
         {
-            SelectedCulture = ComboBoxCulture.SelectedValue.ToString();
-            Close();
+            RootNameSpace = txtRootnamespace.Text;
+            OwnerName = txtOwnerName.Text;
+            OwnerEmail = txtOwnerEmail.Text;
+            OwnerWebsite = txtOwnerWebsite.Text;
+            DevEnvironmentUrl = txtDevUrl.Text;
         }
-
-        private void ButtonCancelClick(object sender, RoutedEventArgs e)
-        {
-            SelectedCulture = null;
-            Close();
-        }
-
     }
 }
