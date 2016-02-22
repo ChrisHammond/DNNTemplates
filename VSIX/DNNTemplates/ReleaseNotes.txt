@@ -8,6 +8,7 @@ The Source Code can be found at https://github.com/ChrisHammond/DNNTemplates
 V6.2 - Release Date TBD
 Description: 
 	MVC Template fixes
+	Upgraded to MSBuildTasks V1.4.0.128
 
 V6.1 - Release Date 1/18/2016
 Description: 
