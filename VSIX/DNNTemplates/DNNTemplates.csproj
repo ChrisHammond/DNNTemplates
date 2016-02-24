@@ -173,6 +173,7 @@
     <None Include="bin\Release\DNNTemplates.vsix" />
     <Content Include="packages\MSBuildTasks.1.4.0.128.nupkg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="packages.config" />
     <None Include="source.extension.vsixmanifest">

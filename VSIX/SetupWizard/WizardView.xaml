@@ -41,7 +41,7 @@
     </Hyperlink>.
         </TextBlock>
         <Label x:Name="lblDevUrl" Content="Local Dev URL" HorizontalAlignment="Left" Margin="4,268,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="117" Foreground="White"/>
-        <TextBox x:Name="txtDevUrl" HorizontalAlignment="Left" Height="23" Margin="31,271,0,0" TextWrapping="Wrap" Text="http://dnndev.me/" VerticalAlignment="Top" Width="187" Grid.Column="2">
+        <TextBox x:Name="txtDevUrl" HorizontalAlignment="Left" Height="23" Margin="31,271,0,0" TextWrapping="Wrap" Text="dnndev.me" VerticalAlignment="Top" Width="187" Grid.Column="2">
             <TextBox.ToolTip>
                 <StackPanel>
                     <TextBlock FontWeight="Bold">Local Dev URL</TextBlock>

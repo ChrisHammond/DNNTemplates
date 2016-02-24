@@ -105,6 +105,10 @@
     <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
     <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
   </WizardExtension>
+  <WizardExtension>
+    <Assembly>SetupWizard, Version=6.5.0.0, Culture=neutral, PublicKeyToken=null</Assembly>
+    <FullClassName>Christoc.DNNTemplates.SetupWizard.SetupWizard</FullClassName>
+  </WizardExtension>
   <WizardData>
     <packages repository="extension" repositoryId="e48e838a-c708-4d43-b822-4d5de0d13eed">
       <package id="MSBuildTasks" version="1.4.0.128" />
