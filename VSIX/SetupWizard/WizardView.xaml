@@ -28,7 +28,7 @@
         <TextBox x:Name="txtOwnerName" HorizontalAlignment="Left" Height="23" Margin="31,163,0,0" TextWrapping="Wrap" Text="Christoc.com" VerticalAlignment="Top" Width="187" Grid.Column="2"/>
         <Label x:Name="lblOwnerEmail" Content="Owner Email" HorizontalAlignment="Left" Margin="4,197,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="117" Foreground="White"/>
         <TextBox x:Name="txtOwnerEmail" HorizontalAlignment="Left" Height="23" Margin="31,200,0,0" TextWrapping="Wrap" Text="modules@christoc.com" VerticalAlignment="Top" Width="187" Grid.Column="2"/>
-        <Label x:Name="lblOwnerWebsite" Content="Local Dev URL" HorizontalAlignment="Left" Margin="4,233,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="117" Foreground="White"/>
+        <Label x:Name="lblOwnerWebsite" Content="Owner Website" HorizontalAlignment="Left" Margin="4,233,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="117" Foreground="White"/>
         <TextBox x:Name="txtOwnerWebsite" HorizontalAlignment="Left" Height="23" Margin="31,236,0,0" TextWrapping="Wrap" Text="http://www.christoc.com/" VerticalAlignment="Top" Width="187" Grid.Column="2"/>
         <Button x:Name="btnOk" Content="OK" HorizontalAlignment="Left" Margin="143,317,0,0" VerticalAlignment="Top" Width="75" Click="btnOk_Click" Grid.Column="2" Background="White"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="4,62,0,0" 
@@ -49,6 +49,6 @@
                 </StackPanel>
             </TextBox.ToolTip>
         </TextBox>
-        <Image x:Name="image" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="137" Margin="10,5,0,0" VerticalAlignment="Top" Width="137" Source="Christoc-Logo-2014-51h.png"/>
+        <Image x:Name="image" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="137" Margin="10,5,0,0" VerticalAlignment="Top" Width="137" Source="http://www.christoc.com/Portals/0/Christoc-Logo-2014-51h.png?ver=2014-02-25-100231-820"/>
     </Grid>
 </Window>
