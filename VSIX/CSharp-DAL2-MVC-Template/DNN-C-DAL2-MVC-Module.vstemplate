@@ -92,8 +92,8 @@
     <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
   </WizardExtension>
   <WizardExtension>
-    <Assembly>DNNTemplates, Version=6.5.0.0, Culture=neutral, PublicKeyToken=fe2cffb2788a2fb4</Assembly>
-    <FullClassName>Christoc.DNNTemplates.DnnTemplatesWizard</FullClassName>
+    <Assembly>SetupWizard, Version=6.5.0.0, Culture=neutral, PublicKeyToken=fe2cffb2788a2fb4</Assembly>
+    <FullClassName>Christoc.DNNTemplates.SetupWizard.SetupWizard</FullClassName>
   </WizardExtension>
   <WizardData>
     <packages repository="extension" repositoryId="e48e838a-c708-4d43-b822-4d5de0d13eed">

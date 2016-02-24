@@ -3,9 +3,32 @@ These templates are designed for DotNetNuke 7+ (references are currently for 7.0
 managed by Chris Hammond, owner Christoc.com Software Solutions
 http://www.christoc.com
 
-This VSIX extension package is an offshoot of the ChristocTemplates project, 
-the source code for these templates, as well as older templates are
-available there. http://christoctemplate.codeplex.com
+The Source Code can be found at https://github.com/ChrisHammond/DNNTemplates
+
+V6.2 - Release Date TBD
+Description: 
+	MVC Template fixes
+	Upgraded to MSBuildTasks V1.4.0.128
+
+V6.1 - Release Date 1/18/2016
+Description: 
+	Added MVC template  (originally located at https://github.com/dnnsoftware/DNN.Templates)
+
+
+
+V6.0 - Release Date 1/13/2016
+Description: 
+	Added SPA template  (PR from Joe Brinkman)
+	Gitignore Cleanup (PR from Will Strohl)
+	SQL script cleanup for Azure (PR from Will Strohl)
+	IPortable, IUpgradeable, ISearchable implementation (PR from Will Strohl)
+
+
+V5.0 - Release Date 7/31/2015
+Description: 
+	Upgraded to BootStrap V3.3.5
+	Visual Studio 2015 support
+
 
 V4.1 - Release Date 4/19/2015
 Description: 

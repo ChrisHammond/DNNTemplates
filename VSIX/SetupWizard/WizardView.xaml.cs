@@ -10,19 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Christoc.DNNTemplates
+namespace Christoc.DNNTemplates.SetupWizard
 {
     ///http://www.kendar.org/?p=/tutorials/vsextensions/part03
-
-        //TODO: See why VS crashes on debug load of template project
-
 
     /// <summary>
     /// Interaction logic for SetupWizard.xaml
     /// </summary>
-    public partial class SetupWizard : Window
+    public partial class WizardView : Window
     {
 
         public string RootNameSpace = "Christoc.Modules.";
@@ -31,7 +29,7 @@ namespace Christoc.DNNTemplates
         public string OwnerWebsite = "http://www.christoc.com/";
         public string DevEnvironmentUrl = "dnndev.me";
 
-        public SetupWizard()
+        public WizardView()
         {
             InitializeComponent();
         }
@@ -45,6 +43,12 @@ namespace Christoc.DNNTemplates
             txtOwnerWebsite.Text = OwnerWebsite;
             txtDevUrl.Text = DevEnvironmentUrl;
             
+        }
+
+
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            System.Diagnostics.Process.Start(e.Uri.ToString());
         }
 
         private void btnOk_Click(object sender, RoutedEventArgs e)

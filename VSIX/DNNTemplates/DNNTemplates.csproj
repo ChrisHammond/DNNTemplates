@@ -30,8 +30,8 @@
     <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
-    <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
-    <IncludeDebugSymbolsInVSIXContainer>true</IncludeDebugSymbolsInVSIXContainer>
+    <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
+    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
     <IncludeDebugSymbolsInLocalVSIXDeployment>true</IncludeDebugSymbolsInLocalVSIXDeployment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -139,7 +139,6 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DnnTemplatesWizard.cs" />
     <Compile Include="Guids.cs" />
     <Compile Include="ProjectProperty.cs" />
     <Compile Include="Resources.Designer.cs">
@@ -150,9 +149,6 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="DNNTemplatesPackage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SetupWizard.xaml.cs">
-      <DependentUpon>SetupWizard.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources.resx">
@@ -167,12 +163,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DNN_LOGO_big.png" />
+    <Content Include="DNN_LOGO_big.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="License.txt">
       <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="bin\Release\DNNTemplates.vsix" />
-    <Content Include="packages\MSBuildTasks.1.4.0.128.nupkg" />
+    <Content Include="packages\MSBuildTasks.1.4.0.128.nupkg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
@@ -184,9 +185,11 @@
   <ItemGroup>
     <Content Include="ReleaseNotes.txt">
       <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Package.ico">
       <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -225,6 +228,12 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <VSIXSubPath>ProjectTemplates</VSIXSubPath>
     </ProjectReference>
+    <ProjectReference Include="..\SetupWizard\SetupWizard.csproj">
+      <Project>{FD52D928-B4C1-46AD-9D3A-07AF8EB9A9A1}</Project>
+      <Name>SetupWizard</Name>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
     <ProjectReference Include="..\VB-DAL2-Template\VB-DAL2-Template.vbproj">
       <Project>{1F09CEAC-9593-4583-9E40-E5FBCFD3D036}</Project>
       <Name>VB-DAL2-Template</Name>
@@ -242,12 +251,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ProjectTemplates\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="SetupWizard.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <PropertyGroup>
     <UseCodebase>true</UseCodebase>

@@ -2,7 +2,7 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
     <Identity Id="e48e838a-c708-4d43-b822-4d5de0d13eed" Version="6.5" Language="en-US" Publisher="Chris Hammond" />
-    <DisplayName>DotNetNuke Project Templates</DisplayName>
+    <DisplayName>;</DisplayName>
     <Description xml:space="preserve">This Visual Studio Package contains Project Templates to aid in your DotNetNuke Extension development.</Description>
     <MoreInfo>http://www.christoc.com/Products/Module-Development-Templates</MoreInfo>
     <License>License.txt</License>
@@ -27,8 +27,8 @@
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="CSharp-Theme-Template" d:TargetPath="|CSharp-Theme-Template;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="CSharp-DAL2-SPA-Template" d:TargetPath="|CSharp-DAL2-SPA-Template;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="CSharp-DAL2-MVC-Template" d:TargetPath="|CSharp-DAL2-MVC-Template;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
-    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" AssemblyName="|%CurrentProject%;AssemblyName|" />
     <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="SetupWizard" Path="|SetupWizard|" AssemblyName="|SetupWizard;AssemblyName|" />
     <!--
     <CustomExtension Type="Company.Product.Type">Path\File.ext</CustomExtension>
     -->

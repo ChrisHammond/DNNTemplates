@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using EnvDTE;
 using Microsoft.VisualStudio.TemplateWizard;
 
-namespace Christoc.DNNTemplates
+namespace Christoc.DNNTemplates.SetupWizard
 {
-    public class DnnTemplatesWizard : IWizard
+    public class SetupWizard : IWizard
     {
         private DTE _dte;
         private bool _shouldAddProjectItem;
@@ -21,7 +21,7 @@ namespace Christoc.DNNTemplates
 
 
             _shouldAddProjectItem = false;
-            var inputForm = new SetupWizard();
+            var inputForm = new WizardView();
             inputForm.ShowDialog();
             if (inputForm.OwnerEmail == null || inputForm.RootNameSpace == null || inputForm.OwnerName == null || inputForm.OwnerWebsite == null || inputForm.DevEnvironmentUrl == null) return;
             _shouldAddProjectItem = true;

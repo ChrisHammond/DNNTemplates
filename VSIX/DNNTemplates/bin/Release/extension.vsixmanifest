@@ -21,7 +21,6 @@
   <Assets>
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="ProjectTemplates" />
     <Asset Type="Microsoft.VisualStudio.Assembly" Path="DNNTemplates.dll" AssemblyName="DNNTemplates, Version=6.5.0.0, Culture=neutral, PublicKeyToken=fe2cffb2788a2fb4" />
-    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="DNNTemplates.pkgdef" />
     <!--
     <CustomExtension Type="Company.Product.Type">Path\File.ext</CustomExtension>
     -->
