@@ -21,7 +21,7 @@
         </p>
         <ol>
             <li>
-                <strong>Open up IIS Manager (start>run>INETMGR), go to your DNNDEV.ME website and make sure that /portals/_default/skins/ is NOT a Virtual Directory/Application, if so, remove that.</strong>
+                <strong>Open up IIS Manager (start>run>INETMGR), go to your $devenvironmenturl$ website and make sure that /portals/_default/skins/ is NOT a Virtual Directory/Application, if so, remove that.</strong>
             </li>
             <li>
                 <strong>If you change the TARGET framework for the project, remove the WEB.CONFIG file that Visual Studio will add to your project.</strong>
@@ -32,9 +32,9 @@
                 Explorer</li>
             <li>On the Web tab:
                 <ol>
-                    <li>Under 'Start Action', make sure to set your Start URL to the correct site (ex: http://dnndev.me/).</li>
-                    <li>Under 'Servers', make sure to "Use IIS Web Server" with a project url of http://dnndev.me/portals/_default/skins/$safeprojectname$
-                        and an Override application root URL of http://dnndev.me/</li>
+                    <li>Under 'Start Action', make sure to set your Start URL to the correct site (ex: http://$devenvironmenturl$/).</li>
+                    <li>Under 'Servers', make sure to "Use IIS Web Server" with a project url of http://$devenvironmenturl$/portals/_default/skins/$safeprojectname$
+                        and an Override application root URL of http://$devenvironmenturl$/</li>
                 </ol>
             </li>
         </ol>

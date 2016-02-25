@@ -159,7 +159,7 @@
           </DevelopmentServerVPath>
           <IISUrl>http://dnndev.me/portals/_default/skins/$safeprojectname$</IISUrl>
           <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
-          <IISAppRootUrl>http://dnndev.me</IISAppRootUrl>
+          <IISAppRootUrl>http://$devenvironmenturl$</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
