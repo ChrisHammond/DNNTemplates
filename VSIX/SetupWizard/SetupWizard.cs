@@ -25,6 +25,7 @@ namespace Christoc.DNNTemplates.SetupWizard
             inputForm.ShowDialog();
             if (inputForm.OwnerEmail == null || inputForm.RootNameSpace == null || inputForm.OwnerName == null || inputForm.OwnerWebsite == null || inputForm.DevEnvironmentUrl == null) return;
             _shouldAddProjectItem = true;
+            /* remove them first so there isn't any conflict, they get added by the project templates themselves originally */
             replacementsDictionary.Remove("$rootnamespace$");
             replacementsDictionary.Remove("$ownername$");
             replacementsDictionary.Remove("$owneremail$");
@@ -36,13 +37,7 @@ namespace Christoc.DNNTemplates.SetupWizard
             replacementsDictionary.Add("$owneremail$", inputForm.OwnerEmail);
             replacementsDictionary.Add("$ownerwebsite$", inputForm.OwnerWebsite);
             replacementsDictionary.Add("$devenvironmenturl$", inputForm.DevEnvironmentUrl);
-
-            //// add an entry to the dictionary to specify the string used for the $rootnamespace$ token 
-            //replacementsDictionary.Add("$rootnamespace2$", "Christoc.Dnn.Modules");
-            //replacementsDictionary.Add("$ownername2$", "Christoc.com");
-            //replacementsDictionary.Add("$owneremail2$", "modules@christoc.com");
-            //replacementsDictionary.Add("$ownerwebsite2$", "http://www.christoc.com");
-            //replacementsDictionary.Add("$devenvironmenturl2$", "dnndev.me");
+            
         }
 
         public bool ShouldAddProjectItem(string filePath) { return true; }

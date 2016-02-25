@@ -3,7 +3,7 @@
     <package name="$safeprojectname$" type="Module" version="00.00.01">
       <friendlyName>$safeprojectname$</friendlyName>
       <description>$ownername$ $safeprojectname$ module</description>
-      <iconFile>Images/icon_extensions.gif</iconFile>
+      <iconFile>~/Images/icon_extensions_32px.png</iconFile>
       <owner>
         <name>$ownername$</name>
         <organization>$ownername$</organization>
@@ -76,7 +76,7 @@
                     <supportsPopUps>True</supportsPopUps>
                   </moduleControl>
                   <moduleControl>
-                    <controlKey>Settings</controlKey>
+                    <controlKey>QuickSettings</controlKey>
                     <controlSrc>DesktopModules/$safeprojectname$/Settings.html</controlSrc>
                     <supportsPartialRendering>False</supportsPartialRendering>
                     <controlTitle>$safeprojectname$ Settings</controlTitle>

@@ -1,20 +1,23 @@
 DotNetNuke Visual Studio Gallery Templates
-These templates are designed for DotNetNuke 7+ (references are currently for 7.0.2),
+These templates are designed for DotNetNuke 7 and 8 (references are currently for 7.0.2 and 8.0.3),
 managed by Chris Hammond, owner Christoc.com Software Solutions
 http://www.christoc.com
 
 The Source Code can be found at https://github.com/ChrisHammond/DNNTemplates
 
-V6.2 - Release Date TBD
+V7.0 - Release Date TBD
 Description: 
 	MVC Template fixes
 	Upgraded to MSBuildTasks V1.4.0.128
+	Fixed SPA Settings manifest to QuickSettings
+	Added Wizard interface for configuring "owner" and "dev" information for Projects
+	Upgraded Target Framework to 4.5.1 for all projects
+	Upgraded to Bootstrap 3.3.6 for Theme template
 
 V6.1 - Release Date 1/18/2016
 Description: 
 	Added MVC template  (originally located at https://github.com/dnnsoftware/DNN.Templates)
-
-
+	
 
 V6.0 - Release Date 1/13/2016
 Description: 
