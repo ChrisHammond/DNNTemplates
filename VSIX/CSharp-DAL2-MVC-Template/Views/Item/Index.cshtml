@@ -1,4 +1,8 @@
-﻿@model IEnumerable<$rootnamespace$$safeprojectname$.Models.Item>
+﻿@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<IEnumerable< $rootnamespace$$safeprojectname$.Models.Item >>
+
+@using System.Text.RegularExpressions
+@using DotNetNuke.Web.Mvc.Helpers
+
 
 <div id="Items-@Dnn.ModuleContext.ModuleId">
     @if (Model.Count() == 0)

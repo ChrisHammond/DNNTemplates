@@ -1,7 +1,7 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
-    <Identity Id="e48e838a-c708-4d43-b822-4d5de0d13eed" Version="6.5" Language="en-US" Publisher="Chris Hammond" />
-    <DisplayName>;</DisplayName>
+    <Identity Id="e48e838a-c708-4d43-b822-4d5de0d13eed" Version="7.1" Language="en-US" Publisher="Chris Hammond" />
+    <DisplayName>DotNetNuke (DNN) Development Project Templates</DisplayName>
     <Description xml:space="preserve">This Visual Studio Package contains Project Templates to aid in your DotNetNuke Extension development.</Description>
     <MoreInfo>http://www.christoc.com/Products/Module-Development-Templates</MoreInfo>
     <License>License.txt</License>
@@ -9,7 +9,7 @@
     <ReleaseNotes>ReleaseNotes.txt</ReleaseNotes>
     <Icon>Resources\Package.ico</Icon>
     <PreviewImage>Resources\Package.ico</PreviewImage>
-    <Tags>DotNetNuke, DNN, CMS, "Content Management System", "Open Source", OpenSource,Skin,Theme,DNNCMS</Tags>
+    <Tags>DotNetNuke, DNN, CMS, "Content Management System", "Open Source", OpenSource,Skin,Theme,DNNCMS, </Tags>
   </Metadata>
   <Installation>
     <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.Community" />
