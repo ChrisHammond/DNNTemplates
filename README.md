@@ -16,6 +16,11 @@ Installation instructions
 -----------
 * Download the VSIX from GitHub, or find the Project in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/bdd506ef-d5c3-4274-bf1d-9e673fb23484)
 
+V7.1 DNN 7/8 Visual Studio 2015 (3/9/2016)
+-----------
+MVC Fix for better Intellisense management in the CSHTML files.
+
+
 V7 DNN 7/8 Visual Studio 2015 (2/24/2016)
 -----------
 Added Wizard interface for configuring "owner" and "dev" information for Projects
