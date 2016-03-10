@@ -16,11 +16,18 @@ Installation instructions
 -----------
 * Download the VSIX from GitHub, or find the Project in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/bdd506ef-d5c3-4274-bf1d-9e673fb23484)
 
+V7 DNN 7/8 Visual Studio 2015 (2/24/2016)
+-----------
+Added Wizard interface for configuring "owner" and "dev" information for Projects
+MVC Template fixes
+Upgraded to MSBuildTasks V1.4.0.128
+Fixed SPA Settings manifest to QuickSettings
+Upgraded Target Framework to 4.5.1 for all projects
+Upgraded to Bootstrap 3.3.6 for Theme template
 
 V6.1 Beta for Visual Studio 2015 (1/16/2016)
 -----------
 Initial Release of the DNN8 MVC Template
-
 
 V6 Beta for Visual Studio 2015 (1/13/2016)
 -----------
