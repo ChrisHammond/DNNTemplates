@@ -5,6 +5,20 @@ http://www.christoc.com
 
 The Source Code can be found at https://github.com/ChrisHammond/DNNTemplates
 
+
+V7.2 - Release Date 8/21/2016
+Description: 
+	MVC Template fixes
+	Upgraded to Bootstrap 3.3.7 for Theme template
+	Fixed White link problem
+
+
+V7.1 - Release Date 3/9/2016
+Description: 
+	MVC Intellisense Template fixes
+
+
+
 V7.0 - Release Date 2/24/2016
 Description: 
 	MVC Template fixes
