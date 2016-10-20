@@ -16,6 +16,13 @@ Installation instructions
 -----------
 * Download the VSIX from GitHub, or find the Project in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/bdd506ef-d5c3-4274-bf1d-9e673fb23484)
 
+V7.2 DNN 7/8 Visual Studio 2015 (10/19/2016)
+-----------
+MVC Template fixes
+Upgraded to Bootstrap 3.3.7 for Theme template
+Fixed White link problem
+Upgraded to MSBuildTasks 1.5.0.196
+
 V7.1 DNN 7/8 Visual Studio 2015 (3/9/2016)
 -----------
 MVC Fix for better Intellisense management in the CSHTML files.

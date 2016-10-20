@@ -187,7 +187,7 @@
     <Extension>zip</Extension>
     <DNNFileName>$safeprojectname$</DNNFileName>
     <PackageName>$safeprojectname$</PackageName>
-    <MSBuildCommunityTasksPath>$(SolutionDir)\packages\MSBuildTasks.1.4.0.128\tools</MSBuildCommunityTasksPath>
+    <MSBuildCommunityTasksPath>$(SolutionDir)\packages\MSBuildTasks.1.5.0.196\tools</MSBuildCommunityTasksPath>
   </PropertyGroup>
   <Import Project="BuildScripts\ModulePackage.targets" />
   <Target Name="AfterBuild" DependsOnTargets="PackageModule">
