@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Christoc.Modules.TestMVC1026.App_LocalResources {
+namespace $rootnamespace$$safeprojectname$.App_LocalResources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Christoc.Modules.TestMVC1026.App_LocalResources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Christoc.Modules.TestMVC1026.App_LocalResources.Settings", typeof(Settings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("$rootnamespace$$safeprojectname$.App_LocalResources.Settings", typeof(Settings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -59,20 +59,20 @@ namespace Christoc.Modules.TestMVC1026.App_LocalResources {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
-        ///   Looks up a localized string similar to TestMVC1026 Item Basic Settings.
+        ///   Looks up a localized string similar to $safeprojectname$ Item Basic Settings.
         /// </summary>
         public static string BasicSettings_Text {
             get {
                 return ResourceManager.GetString("BasicSettings.Text", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to TestMVC1026 Settings.
-        /// </summary>
-        public static string ControlTitle_settings_Text {
+
+    /// <summary>
+    ///   Looks up a localized string similar to $safeprojectname$ Settings.
+    /// </summary>
+    public static string ControlTitle_settings_Text {
             get {
                 return ResourceManager.GetString("ControlTitle_settings.Text", resourceCulture);
             }
