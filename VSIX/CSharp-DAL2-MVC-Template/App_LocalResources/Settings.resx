@@ -118,21 +118,21 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BasicSettings.Text" xml:space="preserve">
-    <value>$safeprojectname$ Item Basic Settings</value>
+    <value>TestMVC1026 Item Basic Settings</value>
   </data>
   <data name="ControlTitle_settings.Text" xml:space="preserve">
-    <value>$safeprojectname$ Settings</value>
+    <value>TestMVC1026 Settings</value>
+  </data>
+  <data name="lblSetting1" xml:space="preserve">
+    <value>Setting One</value>
   </data>
   <data name="lblSetting1.Help" xml:space="preserve">
     <value>Put your value for Setting 1 here.</value>
   </data>
-  <data name="lblSetting1.Text" xml:space="preserve">
-    <value>Setting One</value>
+  <data name="lblSetting2" xml:space="preserve">
+    <value>Setting Two</value>
   </data>
   <data name="lblSetting2.Help" xml:space="preserve">
     <value>Put your value for Setting 2 here.</value>
-  </data>
-  <data name="lblSetting2.Text" xml:space="preserve">
-    <value>Setting Two</value>
   </data>
 </root>
