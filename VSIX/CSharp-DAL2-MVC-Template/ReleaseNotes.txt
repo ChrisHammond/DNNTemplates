@@ -3,6 +3,7 @@
 	$ownername$ <br />
 	<a href="mailto:$owneremail$">$owneremail$</a><br />
 	<a href=$ownerwebsite$>$ownerwebsite$</a><br />
+	This extension was created using <a href="http://www.christoc.com">Christoc's</a> Module Development Templates for DNN.
 </p>
 <hr/>
 <div class="License">

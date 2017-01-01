@@ -6,12 +6,13 @@ http://www.christoc.com
 The Source Code can be found at https://github.com/ChrisHammond/DNNTemplates
 
 
-V7.2 - Release Date 10/19/2016
+V8.0 - Release Date 1/1/2017
 Description: 
 	MVC Template fixes
 	Upgraded to Bootstrap 3.3.7 for Theme template
 	Fixed White link problem
-	Upgraded to MSBuildTasks 1.5.0.196
+	Upgraded to MSBuildTasks 1.5.0.214
+	Tested against DNN 9
 
 V7.1 - Release Date 3/9/2016
 Description: 

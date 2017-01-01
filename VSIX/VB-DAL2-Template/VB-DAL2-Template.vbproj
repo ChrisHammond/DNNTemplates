@@ -79,6 +79,7 @@
     <None Include="BuildScripts\ModulePackage.targets" />
     <None Include="BuildScripts\MSBuild.Community.Tasks.Targets" />
     <None Include="My Project\AssemblyInfo.vb" />
+    <None Include="packages.config" />
     <None Include="Providers\DataProviders\SqlDataProvider\00.00.01.sqldataprovider" />
     <None Include="Providers\DataProviders\SqlDataProvider\UnInstall.sqldataprovider" />
     <None Include="VBTemplate.dnn" />

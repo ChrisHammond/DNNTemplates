@@ -50,6 +50,7 @@
       </Folder>
       <ProjectItem ReplaceParameters="true" TargetFileName="Edit.html">Edit.html</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="License.txt">License.txt</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="module.css">module.css</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
       <Folder Name="Properties" TargetFolderName="Properties">
@@ -92,7 +93,7 @@
   </WizardExtension>
   <WizardData>
     <packages repository="extension" repositoryId="e48e838a-c708-4d43-b822-4d5de0d13eed">
-      <package id="MSBuildTasks" version="1.5.0.196" />
+      <package id="MSBuildTasks" version="1.5.0.214" />
     </packages>
   </WizardData>
 </VSTemplate>
