@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="MSBuild.Community.Tasks.Targets" />
+
+  <Target Name="PackageSkin" Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <!-- XML read for xpath doesn't work because we have two version numbers in the DNN file, so we need to get it and split it. -->
+
+    <XmlRead Prefix="n"
+                    Namespace="http://schemas.microsoft.com/developer/msbuild/2003"
+                    XPath="dotnetnuke/packages/package[1]/@version"
+                    XmlFileName="$(DNNFileName).dnn">
+      <Output TaskParameter="Value" PropertyName="Version" />
+    </XmlRead>
+
+    <Message Text="Version: $(Version)" Importance="Normal"></Message>
+
+    <ItemGroup>
+      <ContainerInclude Include="**\Containers\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(ContainerInclude)" DestinationFolder="$(MSBuildProjectDirectory)\..\..\containers\$(DNNFileName)\" />
+
+    
+    <ItemGroup>
+      <InstallInclude Include="**\*.ascx" Exclude="**\Containers\*.ascx;**\MobileHome.ascx" />
+      <InstallInclude Include="**\*.asmx" />
+      <InstallInclude Include="**\*.css" Exclude="**\min\**" />
+      <InstallInclude Include="**\*.html" />
+      <InstallInclude Include="**\*.htm" />
+      <InstallInclude Include="**\*.xml" Exclude="**\obj\**;**\_ReSharper*\**;**\bin\**;**\packages\**;**\.git\**" />
+      <InstallInclude Include="**\*.resx" />
+      <InstallInclude Include="**\*.aspx" />
+      <InstallInclude Include="**\*.js" />
+      <InstallInclude Include="**\*.txt"  Exclude="**\obj\**;**\_ReSharper*\**;**\.git\**" />
+      <InstallInclude Include="**\i\*.*" />
+      <InstallInclude Include="**\img\*.*" />
+      <InstallInclude Include="**\fonts\*.*" />
+      <InstallInclude Include="**\*.jpg" Exclude="**\containers\*.jpg" />
+      <InstallInclude Include="**\*.png" Exclude="**\containers\*.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <SourceInclude Include="**\*.ascx" />
+      <SourceInclude Include="**\*.asmx" />
+      <SourceInclude Include="**\*.css" />
+      <SourceInclude Include="**\*.exe" />
+      <SourceInclude Include="**\*.config" />
+
+      <SourceInclude Include="**\*.xsl" />
+      <SourceInclude Include="**\*.html" />
+      <SourceInclude Include="**\*.htm" />
+      <SourceInclude Include="**\*.resx" />
+      <SourceInclude Include="**\*.xml" Exclude="**\obj\**;**\_ReSharper*\**;**\bin\**;**\.git\**;" />
+      <SourceInclude Include="**\*.aspx" />
+      <SourceInclude Include="**\*.js" />
+      <SourceInclude Include="**\*.txt" Exclude="**\obj\**;**\_ReSharper*\**;**\.git\**;" />
+      <SourceInclude Include="**\i\*.*" />
+      <SourceInclude Include="**\img\*.*" />
+      <SourceInclude Include="**\fonts\*.*" />
+      <SourceInclude Include="**\*.cs" />
+      <SourceInclude Include="**\*.cs.designer" />
+      <SourceInclude Include="**\*.csproj" />
+      <SourceInclude Include="**\*.targets" />
+      <SourceInclude Include="**\*.sln" />
+      <SourceInclude Include="**\*.psd" />
+      <SourceInclude Include="**\*.jpg" />
+      <SourceInclude Include="**\*.png" />
+    </ItemGroup>
+
+
+    <!-- used to copy the container from our project folder to the containers folder -->
+    <ItemGroup>
+      <ContainerInclude Include="**\Containers\*.*" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(ContainerInclude)" DestinationFolder="$(MSBuildProjectDirectory)\..\..\containers\$(DNNFileName)\" />
+
+
+    <!-- we need the JPG file for the container in the root of the package in order to properly install in DNN-->
+    <ItemGroup>
+      <ContainerJpgInclude Include="**\containers\*.jpg" />
+      <ContainerJpgInclude Include="**\containers\*.png" />
+    </ItemGroup>
+
+
+    <!-- we need all the ASCX files in the root of the package in order to properly install in DNN-->
+    <ItemGroup>
+      <AscxInclude Include="**\*.ascx" Exclude="**\MobileHome.ascx" />
+    </ItemGroup>
+
+
+    <Copy SourceFiles="@(AscxInclude)" DestinationFolder="package/" />
+    <Copy SourceFiles="@(ContainerJpgInclude)" DestinationFolder="package/" />
+
+    <CreateItem Include="**\License.txt">
+      <Output TaskParameter="Include" ItemName="PackageTxtFiles" />
+    </CreateItem>
+
+    <CreateItem Include="**\ReleaseNotes.txt">
+      <Output TaskParameter="Include" ItemName="PackageTxtFiles" />
+    </CreateItem>
+
+    <CreateItem Include="$(DNNFileName).dnn">
+      <Output TaskParameter="Include" ItemName="PackageManifestFiles" />
+    </CreateItem>
+
+    <Copy SourceFiles="$(MSBuildDnnBinPath)\$(AssemblyName).dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin"/>
+    <Copy SourceFiles="@(PackageManifestFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package" />
+
+    <Copy SourceFiles="@(PackageTxtFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package" />
+
+    <!-- create the INSTALL RESOURCES.ZIP file -->
+    <Copy SourceFiles="@(InstallInclude)" DestinationFolder="$(MSBuildProjectDirectory)\ResourcesZip\%(RecursiveDir)" />
+    <!-- copy/rename skin.min.css from the MIN folder-->
+    <!--<Copy SourceFiles="$(MSBuildProjectDirectory)\min\skin.min.css" DestinationFiles="ResourcesZip/skin.css"/>-->
+
+    <CreateItem Include="$(MSBuildProjectDirectory)\ResourcesZip\**\*.*">
+      <Output TaskParameter="Include" ItemName="ResourcesContent" />
+    </CreateItem>
+
+    <Zip Files="@(ResourcesContent)" WorkingDirectory="$(MSBuildProjectDirectory)\ResourcesZip" ZipFileName="Resources.$(Extension)" />
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\Resources.$(Extension)" DestinationFolder="package/" />
+
+    <CreateItem Include="$(MSBuildProjectDirectory)\Package\**\*.*">
+      <Output TaskParameter="Include" ItemName="OutputContent" />
+    </CreateItem>
+    <!-- Create the Install package -->
+    <Zip Files="@(OutputContent)" WorkingDirectory="$(MSBuildProjectDirectory)\Package" ZipFileName="$(PackageName)_$(Version)_Install.$(Extension)" />
+    <!-- Copy the Install package to the Packages folder -->
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\$(PackageName)_$(Version)_Install.$(Extension)" DestinationFolder="install/" />
+
+    <RemoveDir Directories ="$(MSBuildProjectDirectory)\Package" />
+    <RemoveDir Directories ="$(MSBuildProjectDirectory)\ResourcesZip" />
+
+
+    <Copy SourceFiles="$(MSBuildDnnBinPath)\$(AssemblyName).dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin"/>
+    <Copy SourceFiles="@(PackageManifestFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package" />
+
+
+    <Copy SourceFiles="@(AscxInclude)" DestinationFolder="package/" />
+    <Copy SourceFiles="@(ContainerJpgInclude)" DestinationFolder="package/" />
+
+    <CreateItem Include="**\License.txt">
+      <Output TaskParameter="Include" ItemName="PackageTxtFiles" />
+    </CreateItem>
+
+    <CreateItem Include="**\ReleaseNotes.txt">
+      <Output TaskParameter="Include" ItemName="PackageTxtFiles" />
+    </CreateItem>
+
+    <CreateItem Include="$(DNNFileName).dnn">
+      <Output TaskParameter="Include" ItemName="PackageManifestFiles" />
+    </CreateItem>
+
+    <Copy SourceFiles="@(PackageTxtFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package" />
+
+    <!-- create the SOURCE RESOURCES.ZIP file -->
+    <Copy SourceFiles="@(SourceInclude)" DestinationFolder="$(MSBuildProjectDirectory)\ResourcesZip\%(RecursiveDir)" />
+
+    <CreateItem Include="$(MSBuildProjectDirectory)\ResourcesZip\**\*.*">
+      <Output TaskParameter="Include" ItemName="SourceContent" />
+    </CreateItem>
+
+    <Zip Files="@(SourceContent)" WorkingDirectory="$(MSBuildProjectDirectory)\ResourcesZip" ZipFileName="Resources.$(Extension)" />
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\Resources.$(Extension)" DestinationFolder="package/" />
+
+    <CreateItem Include="$(MSBuildProjectDirectory)\Package\**\*.*">
+      <Output TaskParameter="Include" ItemName="OutputSource" />
+    </CreateItem>
+
+    <Zip Files="@(OutputSource)" WorkingDirectory="$(MSBuildProjectDirectory)\Package" ZipFileName="$(PackageName)_$(Version)_Source.$(Extension)" />
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\$(PackageName)_$(Version)_Source.$(Extension)" DestinationFolder="install/" />
+
+    <Delete Files="$(MSBuildProjectDirectory)\$(PackageName)_$(Version)_Install.$(Extension)" />
+    <Delete Files="$(MSBuildProjectDirectory)\$(PackageName)_$(Version)_Source.$(Extension)" />
+
+    <RemoveDir Directories ="$(MSBuildProjectDirectory)\Package" />
+
+    <RemoveDir Directories ="$(MSBuildProjectDirectory)\ResourcesZip" />
+
+  </Target>
+</Project>

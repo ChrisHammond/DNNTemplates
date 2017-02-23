@@ -1,0 +1,91 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{302CA8B9-6529-4924-8D86-DA986BE24E89}"
+	ProjectSection(SolutionItems) = preProject
+		Build.proj = Build.proj
+		.build\MSBuild.Community.Tasks.dll = .build\MSBuild.Community.Tasks.dll
+		.build\MSBuild.Community.Tasks.targets = .build\MSBuild.Community.Tasks.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNNTemplates", "DNNTemplates\DNNTemplates.csproj", "{C9E0FB3C-6693-43FB-AC32-ACAF6A6011D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp-Template", "CSharp-Template\CSharp-Template.csproj", "{A7EE0F38-C70B-47D8-AEE7-AF8E684B6EA7}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VB-Template", "VB-Template\VB-Template.vbproj", "{29B249D0-6D61-44C2-9857-419A1B43B7A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp-DAL2-Template", "CSharp-DAL2-Template\CSharp-DAL2-Template.csproj", "{050F84AF-35A1-4218-B33C-752BE340B4C7}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VB-DAL2-Template", "VB-DAL2-Template\VB-DAL2-Template.vbproj", "{1F09CEAC-9593-4583-9E40-E5FBCFD3D036}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp-Theme-Template", "CSharp-Theme-Template\CSharp-Theme-Template.csproj", "{6EB7AFAA-F268-40E9-B542-A0F6B9483D3C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration Files", "Configuration Files", "{9FAD90B6-B6A1-495A-8641-B5B2D88583D0}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp-DAL2-SPA-Template", "CSharp-DAL2-SPA-Template\CSharp-DAL2-SPA-Template.csproj", "{7D61A32C-0F21-453F-A981-BD8E5A3A5304}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp-DAL2-MVC-Template", "CSharp-DAL2-MVC-Template\CSharp-DAL2-MVC-Template.csproj", "{59EDCE83-9518-4115-A8AF-EA68B321212D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F683E70C-8EBF-465D-A392-E77EFD3C3D26}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetupWizard", "SetupWizard\SetupWizard.csproj", "{FD52D928-B4C1-46AD-9D3A-07AF8EB9A9A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9E0FB3C-6693-43FB-AC32-ACAF6A6011D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9E0FB3C-6693-43FB-AC32-ACAF6A6011D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9E0FB3C-6693-43FB-AC32-ACAF6A6011D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9E0FB3C-6693-43FB-AC32-ACAF6A6011D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7EE0F38-C70B-47D8-AEE7-AF8E684B6EA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7EE0F38-C70B-47D8-AEE7-AF8E684B6EA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7EE0F38-C70B-47D8-AEE7-AF8E684B6EA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7EE0F38-C70B-47D8-AEE7-AF8E684B6EA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29B249D0-6D61-44C2-9857-419A1B43B7A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29B249D0-6D61-44C2-9857-419A1B43B7A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29B249D0-6D61-44C2-9857-419A1B43B7A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29B249D0-6D61-44C2-9857-419A1B43B7A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{050F84AF-35A1-4218-B33C-752BE340B4C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{050F84AF-35A1-4218-B33C-752BE340B4C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{050F84AF-35A1-4218-B33C-752BE340B4C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{050F84AF-35A1-4218-B33C-752BE340B4C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F09CEAC-9593-4583-9E40-E5FBCFD3D036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F09CEAC-9593-4583-9E40-E5FBCFD3D036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F09CEAC-9593-4583-9E40-E5FBCFD3D036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F09CEAC-9593-4583-9E40-E5FBCFD3D036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EB7AFAA-F268-40E9-B542-A0F6B9483D3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EB7AFAA-F268-40E9-B542-A0F6B9483D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EB7AFAA-F268-40E9-B542-A0F6B9483D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EB7AFAA-F268-40E9-B542-A0F6B9483D3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D61A32C-0F21-453F-A981-BD8E5A3A5304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D61A32C-0F21-453F-A981-BD8E5A3A5304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D61A32C-0F21-453F-A981-BD8E5A3A5304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D61A32C-0F21-453F-A981-BD8E5A3A5304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59EDCE83-9518-4115-A8AF-EA68B321212D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59EDCE83-9518-4115-A8AF-EA68B321212D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59EDCE83-9518-4115-A8AF-EA68B321212D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59EDCE83-9518-4115-A8AF-EA68B321212D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD52D928-B4C1-46AD-9D3A-07AF8EB9A9A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD52D928-B4C1-46AD-9D3A-07AF8EB9A9A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD52D928-B4C1-46AD-9D3A-07AF8EB9A9A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD52D928-B4C1-46AD-9D3A-07AF8EB9A9A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
