@@ -168,7 +168,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="C-DAL2-MVC-Mod.vstemplate">
+    <VSTemplate Include="CS-DAL2-MVC-Mod.vstemplate">
       <OutputSubPath>DotNetNuke</OutputSubPath>
       <SubType>Designer</SubType>
     </VSTemplate>
