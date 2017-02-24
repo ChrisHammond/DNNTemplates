@@ -3464,6 +3464,11 @@
           </xs:attribute>
           <xs:attribute name="StandardErrorImportance" type="xs:string" />
           <xs:attribute name="StandardOutputImportance" type="xs:string" />
+          <xs:attribute name="Suffix" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>[Optional] Appends a pre-release suffix to the internally generated version number.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
           <xs:attribute name="Symbols" type="msb:non_empty_string">
             <xs:annotation>
               <xs:documentation>[Optional] Determines if a package containing sources and symbols should be created. When specified with a nuspec, 
@@ -7522,7 +7527,12 @@
           </xs:attribute>
           <xs:attribute name="FileName" type="msb:non_empty_string" use="required">
             <xs:annotation>
-              <xs:documentation>Gets or sets the name of the local file that is to receive the data.</xs:documentation>
+              <xs:documentation>Gets or sets the name of the local file to upload to the specified URI.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="Method" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>[Optional] Gets or sets the HTTP method to use when uploading data to the speficied URI.</xs:documentation>
             </xs:annotation>
           </xs:attribute>
           <xs:attribute name="Password" type="xs:string">
@@ -7532,7 +7542,7 @@
           </xs:attribute>
           <xs:attribute name="RemoteUri" type="msb:non_empty_string" use="required">
             <xs:annotation>
-              <xs:documentation>Gets or sets the URI from which to upload data to.</xs:documentation>
+              <xs:documentation>Gets or sets the URI to which to upload data to.</xs:documentation>
             </xs:annotation>
           </xs:attribute>
           <xs:attribute name="UseDefaultCredentials" type="msb:non_empty_string">

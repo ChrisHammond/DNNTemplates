@@ -2697,6 +2697,14 @@
             Only available starting in version 2.5.
             </remarks>
         </member>
+        <member name="P:MSBuild.Community.Tasks.NuGet.NuGetPack.ForceEnglishOutput">
+            <summary>
+            (v3.5) Forces NuGet to run using an invariant, English-based culture.
+            </summary>
+            <remarks>
+            Only available starting in version 3.5.
+            </remarks>
+        </member>
         <member name="P:MSBuild.Community.Tasks.NuGet.NuGetPack.OutputFilePath">
             <summary>
             The full file path of the NuGet package created by the NuGetPack task
@@ -2732,6 +2740,11 @@
             The API key to use for push to the server.
             </summary>
         </member>
+        <member name="P:MSBuild.Community.Tasks.NuGet.NuGetPush.ConfigFile">
+            <summary>
+            The NuGet configuation file. If not specified, file %AppData%\NuGet\NuGet.config is used as configuration file.
+            </summary>
+        </member>
         <member name="P:MSBuild.Community.Tasks.NuGet.NuGetPush.Source">
             <summary>
             Specifies the server URL.
@@ -2744,6 +2757,11 @@
             <value>
               <c>true</c> if create only; otherwise, <c>false</c>.
             </value>
+        </member>
+        <member name="P:MSBuild.Community.Tasks.NuGet.NuGetPush.Verbosity">
+            <summary>
+            Display this amount of details in the output: normal, quiet, detailed.
+            </summary>
         </member>
         <member name="M:MSBuild.Community.Tasks.NuGet.NuGetPush.GenerateCommandLineCommands">
             <summary>
@@ -12160,6 +12178,25 @@
             <value>Whether or not the files will be compressed in parallel.</value>
             <remarks>
             This is true by default
+            </remarks>
+        </member>
+        <member name="P:MSBuild.Community.Tasks.Zip.CodecBufferSize">
+            <summary>
+            Gets or sets Size of the work buffer to use for the ZLIB codec
+            during compression.
+            </summary>
+            <value>Decimal value of the size of the buffer.</value>
+            <remarks>
+            Not set if value is 0
+            </remarks>
+        </member>
+        <member name="P:MSBuild.Community.Tasks.Zip.BufferSize">
+            <summary>
+            Gets or sets Size of the IO buffer used while saving.
+            </summary>
+            <value>Decimal value of the size of the buffer.</value>
+            <remarks>
+            Not set if value is 0
             </remarks>
         </member>
         <member name="P:MSBuild.Community.Tasks.Zip.MinimalLogging">

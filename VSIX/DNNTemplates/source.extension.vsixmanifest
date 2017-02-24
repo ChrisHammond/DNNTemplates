@@ -37,6 +37,6 @@
   <Prerequisites>
     <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,16.0)"/>
     <Prerequisite Id="Microsoft.VisualStudio.Component.DiagnosticTools" Version="[15.0.25814.0,16.0)" />
-    <Prerequisite Id="Microsoft.VisualStudio.Shell.12.0" Version="[12.0]" />
+<!--    <Prerequisite Id="Microsoft.VisualStudio.Shell.12.0" Version="[12.0]" />-->
   </Prerequisites>
 </PackageManifest>

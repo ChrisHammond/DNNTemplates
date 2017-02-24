@@ -1,10 +1,13 @@
 DotNetNuke Visual Studio Gallery Templates
-These templates are designed for DotNetNuke 7 and 8 (references are currently for 7.0.2 and 8.0.3),
-managed by Chris Hammond, owner Christoc.com Software Solutions
+These templates are designed for DotNetNuke 7 / 8 / 9managed by Chris Hammond, owner Christoc.com Software Solutions
 http://www.christoc.com
 
 The Source Code can be found at https://github.com/ChrisHammond/DNNTemplates
 
+V9.0 - Release Date 2/**/2017
+Description: 
+	Upgraded templates for Visual Studio 2017 Support
+	Upgraded to MSBuildTasks 1.5.0.235
 
 V8.0 - Release Date 1/1/2017
 Description: 
