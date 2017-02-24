@@ -4,7 +4,7 @@ http://www.christoc.com
 
 The Source Code can be found at https://github.com/ChrisHammond/DNNTemplates
 
-V9.0 - Release Date 2/**/2017
+V9.0 - Release Date 2/23/2017
 Description: 
 	Upgraded templates for Visual Studio 2017 Support
 	Upgraded to MSBuildTasks 1.5.0.235
