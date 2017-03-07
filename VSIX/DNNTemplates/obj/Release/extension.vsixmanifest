@@ -1,6 +1,6 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
-    <Identity Id="e48e838a-c708-4d43-b822-4d5de0d13eed" Version="9.0" Language="en-US" Publisher="Chris Hammond" />
+    <Identity Id="e48e838a-c708-4d43-b822-4d5de0d13eed" Version="9.0.1" Language="en-US" Publisher="Chris Hammond" />
     <DisplayName>DotNetNuke (DNN) Development Project Templates</DisplayName>
     <Description xml:space="preserve">This Visual Studio Package contains Project Templates to aid in your (DNN) DotNetNuke Extension development.</Description>
     <MoreInfo>http://www.christoc.com/Products/Module-Development-Templates</MoreInfo>
