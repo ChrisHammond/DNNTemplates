@@ -34,7 +34,17 @@ namespace Christoc.DNNTemplates.SetupWizard
             InitializeComponent();
         }
 
+        public WizardView(string rootNameSpace, string ownerName, string ownerEmail, string ownerWebsite, string devEnvironmentUrl)
+            :base()
+        {
+            txtRootnamespace.Text = rootNameSpace;
+            txtOwnerName.Text = ownerName;
+            txtOwnerEmail.Text = ownerEmail;
+            txtOwnerWebsite.Text = ownerWebsite;
+            txtDevUrl.Text = devEnvironmentUrl;
+        }
 
+        // Note: No references exist to this method, can we remove it?
         private void InitializeForm()
         {
             txtRootnamespace.Text = RootNameSpace;
@@ -42,7 +52,6 @@ namespace Christoc.DNNTemplates.SetupWizard
             txtOwnerEmail.Text = OwnerEmail;
             txtOwnerWebsite.Text = OwnerWebsite;
             txtDevUrl.Text = DevEnvironmentUrl;
-            
         }
 
 
