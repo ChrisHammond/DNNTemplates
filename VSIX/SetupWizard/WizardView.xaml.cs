@@ -20,14 +20,31 @@ namespace Christoc.DNNTemplates.SetupWizard
     /// <summary>
     /// Interaction logic for SetupWizard.xaml
     /// </summary>
-    public partial class WizardView : Window
+    internal partial class WizardView : Window
     {
 
-        public string RootNameSpace = "Christoc.Modules.";
-        public string OwnerName = "Christoc.com";
-        public string OwnerEmail = "modules@christoc.com";
-        public string OwnerWebsite = "http://www.christoc.com/";
-        public string DevEnvironmentUrl = "dnndev.me";
+
+        public string RootNameSpace
+        {
+            get { return txtRootnamespace.Text; }
+        }
+        public string OwnerName
+        {
+            get { return txtOwnerName.Text; }
+        }
+        public string OwnerEmail
+        {
+            get { return txtOwnerEmail.Text; }
+        }
+        public string OwnerWebsite
+        {
+            get { return txtOwnerWebsite.Text; }
+        }
+        public string DevEnvironmentUrl
+        {
+            get { return txtDevUrl.Text; }
+        }
+
 
         public WizardView()
         {
@@ -35,7 +52,7 @@ namespace Christoc.DNNTemplates.SetupWizard
         }
 
         public WizardView(string rootNameSpace, string ownerName, string ownerEmail, string ownerWebsite, string devEnvironmentUrl)
-            :this()
+            : this()
         {
             txtRootnamespace.Text = rootNameSpace;
             txtOwnerName.Text = ownerName;
@@ -62,11 +79,6 @@ namespace Christoc.DNNTemplates.SetupWizard
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
-            RootNameSpace = txtRootnamespace.Text;
-            OwnerName = txtOwnerName.Text;
-            OwnerEmail = txtOwnerEmail.Text;
-            OwnerWebsite = txtOwnerWebsite.Text;
-            DevEnvironmentUrl = txtDevUrl.Text;
             this.DialogResult = true;
             Close();
         }
