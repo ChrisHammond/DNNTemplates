@@ -35,7 +35,7 @@ namespace Christoc.DNNTemplates.SetupWizard
         }
 
         public WizardView(string rootNameSpace, string ownerName, string ownerEmail, string ownerWebsite, string devEnvironmentUrl)
-            :base()
+            :this()
         {
             txtRootnamespace.Text = rootNameSpace;
             txtOwnerName.Text = ownerName;
