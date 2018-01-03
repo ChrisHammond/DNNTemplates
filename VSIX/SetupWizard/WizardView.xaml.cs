@@ -67,7 +67,23 @@ namespace Christoc.DNNTemplates.SetupWizard
             OwnerEmail = txtOwnerEmail.Text;
             OwnerWebsite = txtOwnerWebsite.Text;
             DevEnvironmentUrl = txtDevUrl.Text;
+            this.DialogResult = true;
             Close();
+        }
+
+        internal bool PassesValidation()
+        {
+            // If the dialog was cancelled, it cannot pass.
+            if (this.DialogResult == false) return false;
+
+            // If any of our values are null or white space, it cannot pass.
+            if (string.IsNullOrWhiteSpace(RootNameSpace)) return false;
+            if (string.IsNullOrWhiteSpace(OwnerName)) return false;
+            if (string.IsNullOrWhiteSpace(OwnerEmail)) return false;
+            if (string.IsNullOrWhiteSpace(OwnerWebsite)) return false;
+            if (string.IsNullOrWhiteSpace(DevEnvironmentUrl)) return false;
+
+            return true;
         }
     }
 }

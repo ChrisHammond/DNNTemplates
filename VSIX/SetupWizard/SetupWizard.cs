@@ -8,7 +8,6 @@ namespace Christoc.DNNTemplates.SetupWizard
     public class SetupWizard : IWizard
     {
         private DTE _dte;
-        private bool _shouldAddProjectItem;
 
         public void BeforeOpeningFile(ProjectItem projectItem) { }
         public void ProjectFinishedGenerating(Project project) { }
@@ -20,11 +19,29 @@ namespace Christoc.DNNTemplates.SetupWizard
             _dte = (DTE)automationObject;
 
 
-            _shouldAddProjectItem = false;
-            var inputForm = new WizardView();
-            inputForm.ShowDialog();
-            if (inputForm.OwnerEmail == null || inputForm.RootNameSpace == null || inputForm.OwnerName == null || inputForm.OwnerWebsite == null || inputForm.DevEnvironmentUrl == null) return;
-            _shouldAddProjectItem = true;
+            WizardView inputForm = null;
+
+            while (inputForm == null || inputForm.PassesValidation() == false)
+            {
+                // If this is our first time in the loop, init with default parameters.
+                if (inputForm == null)
+                {
+                    inputForm = new WizardView();
+                }
+                // Otherwise, init with the parameters the user entered last time.
+                else
+                {
+                    inputForm = new WizardView(inputForm.RootNameSpace, inputForm.OwnerName, inputForm.OwnerEmail, inputForm.OwnerWebsite, inputForm.DevEnvironmentUrl);
+                }
+
+                // ShowDialog will return false when the user cancels the dialog.
+                if (inputForm.ShowDialog() == false)
+                {
+                    throw new WizardCancelledException("Action was cancelled by the user.");
+                }
+            }
+
+            
             /* remove them first so there isn't any conflict, they get added by the project templates themselves originally */
             replacementsDictionary.Remove("$rootnamespace$");
             replacementsDictionary.Remove("$ownername$");
