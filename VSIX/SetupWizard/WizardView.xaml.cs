@@ -72,7 +72,7 @@ namespace Christoc.DNNTemplates.SetupWizard
             Close();
         }
 
-        internal protected bool PassesValidation()
+        internal bool PassesValidation()
         {
             // If the dialog was cancelled, it cannot pass.
             if (this.DialogResult == false) return false;
