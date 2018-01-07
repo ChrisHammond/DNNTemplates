@@ -23,13 +23,13 @@
             <ColumnDefinition Width="228*"/>
         </Grid.ColumnDefinitions>
         <Label x:Name="lblRootnamespace" Content="Namespace" HorizontalAlignment="Left" Margin="4,123,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1" Foreground="White"/>
-        <TextBox x:Name="txtRootnamespace" HorizontalAlignment="Left" Height="23" Margin="31,126,0,0" TextWrapping="Wrap" Text="Christoc.Modules." VerticalAlignment="Top" Width="187" Grid.Column="2"/>
+        <TextBox x:Name="txtRootnamespace" HorizontalAlignment="Left" Height="23" Margin="31,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187" Grid.Column="2"/>
         <Label x:Name="lblOwnerName" Content="Owner Name" HorizontalAlignment="Left" Margin="4,160,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="117" Foreground="White"/>
-        <TextBox x:Name="txtOwnerName" HorizontalAlignment="Left" Height="23" Margin="31,163,0,0" TextWrapping="Wrap" Text="Christoc.com" VerticalAlignment="Top" Width="187" Grid.Column="2"/>
+        <TextBox x:Name="txtOwnerName" HorizontalAlignment="Left" Height="23" Margin="31,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187" Grid.Column="2"/>
         <Label x:Name="lblOwnerEmail" Content="Owner Email" HorizontalAlignment="Left" Margin="4,197,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="117" Foreground="White"/>
-        <TextBox x:Name="txtOwnerEmail" HorizontalAlignment="Left" Height="23" Margin="31,200,0,0" TextWrapping="Wrap" Text="modules@christoc.com" VerticalAlignment="Top" Width="187" Grid.Column="2"/>
+        <TextBox x:Name="txtOwnerEmail" HorizontalAlignment="Left" Height="23" Margin="31,200,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187" Grid.Column="2"/>
         <Label x:Name="lblOwnerWebsite" Content="Owner Website" HorizontalAlignment="Left" Margin="4,233,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="117" Foreground="White"/>
-        <TextBox x:Name="txtOwnerWebsite" HorizontalAlignment="Left" Height="23" Margin="31,236,0,0" TextWrapping="Wrap" Text="http://www.christoc.com/" VerticalAlignment="Top" Width="187" Grid.Column="2"/>
+        <TextBox x:Name="txtOwnerWebsite" HorizontalAlignment="Left" Height="23" Margin="31,236,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187" Grid.Column="2"/>
         <Button x:Name="btnOk" Content="OK" HorizontalAlignment="Left" Margin="143,316,0,0" VerticalAlignment="Top" Width="75" Click="btnOk_Click" Grid.Column="2" Background="White"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="4,62,0,0" 
                    TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1" Foreground="White">          
@@ -41,7 +41,7 @@
     </Hyperlink>.
         </TextBlock>
         <Label x:Name="lblDevUrl" Content="Local Dev URL" HorizontalAlignment="Left" Margin="4,268,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="117" Foreground="White"/>
-        <TextBox x:Name="txtDevUrl" HorizontalAlignment="Left" Height="23" Margin="31,271,0,0" TextWrapping="Wrap" Text="dnndev.me" VerticalAlignment="Top" Width="187" Grid.Column="2">
+        <TextBox x:Name="txtDevUrl" HorizontalAlignment="Left" Height="23" Margin="31,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187" Grid.Column="2">
             <TextBox.ToolTip>
                 <StackPanel>
                     <TextBlock FontWeight="Bold">Local Dev URL</TextBlock>

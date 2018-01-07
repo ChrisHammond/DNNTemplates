@@ -61,17 +61,6 @@ namespace Christoc.DNNTemplates.SetupWizard
             txtDevUrl.Text = devEnvironmentUrl;
         }
 
-        // Note: No references exist to this method, can we remove it?
-        private void InitializeForm()
-        {
-            txtRootnamespace.Text = RootNameSpace;
-            txtOwnerName.Text = OwnerName;
-            txtOwnerEmail.Text = OwnerEmail;
-            txtOwnerWebsite.Text = OwnerWebsite;
-            txtDevUrl.Text = DevEnvironmentUrl;
-        }
-
-
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
             System.Diagnostics.Process.Start(e.Uri.ToString());
@@ -83,7 +72,7 @@ namespace Christoc.DNNTemplates.SetupWizard
             Close();
         }
 
-        internal bool PassesValidation()
+        internal protected bool PassesValidation()
         {
             // If the dialog was cancelled, it cannot pass.
             if (this.DialogResult == false) return false;
