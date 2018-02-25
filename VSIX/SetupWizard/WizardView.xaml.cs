@@ -20,31 +20,46 @@ namespace Christoc.DNNTemplates.SetupWizard
     /// <summary>
     /// Interaction logic for SetupWizard.xaml
     /// </summary>
-    public partial class WizardView : Window
+    internal partial class WizardView : Window
     {
 
-        public string RootNameSpace = "Christoc.Modules.";
-        public string OwnerName = "Christoc.com";
-        public string OwnerEmail = "modules@christoc.com";
-        public string OwnerWebsite = "http://www.christoc.com/";
-        public string DevEnvironmentUrl = "dnndev.me";
+
+        public string RootNameSpace
+        {
+            get { return txtRootnamespace.Text; }
+        }
+        public string OwnerName
+        {
+            get { return txtOwnerName.Text; }
+        }
+        public string OwnerEmail
+        {
+            get { return txtOwnerEmail.Text; }
+        }
+        public string OwnerWebsite
+        {
+            get { return txtOwnerWebsite.Text; }
+        }
+        public string DevEnvironmentUrl
+        {
+            get { return txtDevUrl.Text; }
+        }
+
 
         public WizardView()
         {
             InitializeComponent();
         }
 
-
-        private void InitializeForm()
+        public WizardView(string rootNameSpace, string ownerName, string ownerEmail, string ownerWebsite, string devEnvironmentUrl)
+            : this()
         {
-            txtRootnamespace.Text = RootNameSpace;
-            txtOwnerName.Text = OwnerName;
-            txtOwnerEmail.Text = OwnerEmail;
-            txtOwnerWebsite.Text = OwnerWebsite;
-            txtDevUrl.Text = DevEnvironmentUrl;
-            
+            txtRootnamespace.Text = rootNameSpace;
+            txtOwnerName.Text = ownerName;
+            txtOwnerEmail.Text = ownerEmail;
+            txtOwnerWebsite.Text = ownerWebsite;
+            txtDevUrl.Text = devEnvironmentUrl;
         }
-
 
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
@@ -53,12 +68,23 @@ namespace Christoc.DNNTemplates.SetupWizard
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
-            RootNameSpace = txtRootnamespace.Text;
-            OwnerName = txtOwnerName.Text;
-            OwnerEmail = txtOwnerEmail.Text;
-            OwnerWebsite = txtOwnerWebsite.Text;
-            DevEnvironmentUrl = txtDevUrl.Text;
+            this.DialogResult = true;
             Close();
+        }
+
+        internal bool PassesValidation()
+        {
+            // If the dialog was cancelled, it cannot pass.
+            if (this.DialogResult == false) return false;
+
+            // If any of our values are null or white space, it cannot pass.
+            if (string.IsNullOrWhiteSpace(RootNameSpace)) return false;
+            if (string.IsNullOrWhiteSpace(OwnerName)) return false;
+            if (string.IsNullOrWhiteSpace(OwnerEmail)) return false;
+            if (string.IsNullOrWhiteSpace(OwnerWebsite)) return false;
+            if (string.IsNullOrWhiteSpace(DevEnvironmentUrl)) return false;
+
+            return true;
         }
     }
 }

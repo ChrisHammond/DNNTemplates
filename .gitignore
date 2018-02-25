@@ -26,3 +26,5 @@ VSIX/DNNTemplates/[Bb]in/
 
 
 *.cache
+/VSIX/CSharp-DAL2-SPA-Template/packages
+/VSIX/CSharp-DAL2-MVC-Template/packages
