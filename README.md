@@ -16,6 +16,13 @@ Installation instructions
 -----------
 * Download the VSIX from GitHub, or find the Project in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/bdd506ef-d5c3-4274-bf1d-9e673fb23484)
 
+V9.1 DNN 7/8/9 Visual Studio 2017 (TBD)
+-----------
+Pull Request: Shane Walker, Updates to support multiple namespaces for defaults (SKIN and MODULE), fixes for Project Dialog bugs if closing before completion.
+
+
+
+
 V9.0 DNN 7/8/9 Visual Studio 2017 (2/23/2017)
 -----------
 Upgraded templates for Visual Studio 2017 Support

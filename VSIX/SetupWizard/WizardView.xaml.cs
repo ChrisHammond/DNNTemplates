@@ -20,7 +20,7 @@ namespace Christoc.DNNTemplates.SetupWizard
     /// <summary>
     /// Interaction logic for SetupWizard.xaml
     /// </summary>
-    internal partial class WizardView : Window
+    partial class WizardView : Window
     {
 
 
