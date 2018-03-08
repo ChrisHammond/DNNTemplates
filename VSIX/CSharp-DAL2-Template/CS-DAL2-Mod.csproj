@@ -124,7 +124,7 @@
     <None Include="Documentation\Documentation.css" />
     <None Include="Documentation\Documentation.html" />
     <VSTemplate Include="C-DAL2-Mod.vstemplate">
-      <OutputSubPath>DotNetNuke</OutputSubPath>
+      <OutputSubPath>DNN</OutputSubPath>
       <SubType>Designer</SubType>
     </VSTemplate>
     <None Include="Edit.ascx">

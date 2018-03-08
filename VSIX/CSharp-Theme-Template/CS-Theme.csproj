@@ -142,7 +142,7 @@
     <None Include="Documentation\Documentation.css" />
     <None Include="Documentation\Documentation.html" />
     <VSTemplate Include="C-Theme.vstemplate">
-      <OutputSubPath>DotNetNuke</OutputSubPath>
+      <OutputSubPath>DNN</OutputSubPath>
       <SubType>Designer</SubType>
     </VSTemplate>
     <None Include="BuildScripts\MSBuild.Community.Tasks.Targets" />

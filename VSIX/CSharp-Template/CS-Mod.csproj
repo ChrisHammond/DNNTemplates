@@ -125,7 +125,7 @@
     <None Include="Documentation\Documentation.css" />
     <None Include="Documentation\Documentation.html" />
     <VSTemplate Include="C-Mod.vstemplate">
-      <OutputSubPath>DotNetNuke</OutputSubPath>
+      <OutputSubPath>DNN</OutputSubPath>
       <SubType>Designer</SubType>
     </VSTemplate>
     <None Include="Edit.ascx">

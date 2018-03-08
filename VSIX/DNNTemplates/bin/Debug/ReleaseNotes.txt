@@ -5,7 +5,7 @@ If you need DNN help, be sure to check us out at http://www.christoc.com
 The Source Code can be found at https://github.com/ChrisHammond/DNNTemplates
 
 
-V9.1 - Release Date 3/1/2018
+V9.1 - Release Date 3/4/2018
 Description:
 	Pull Request: Shane Walker, Updates to support multiple namespaces for defaults (SKIN and MODULE), fixes for Project Dialog bugs if closing before completion.
 

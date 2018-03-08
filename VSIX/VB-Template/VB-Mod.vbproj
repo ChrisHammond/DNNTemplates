@@ -124,7 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <VSTemplate Include="VB-Mod.vstemplate">
-      <OutputSubPath>DotNetNuke</OutputSubPath>
+      <OutputSubPath>DNN</OutputSubPath>
       <SubType>Designer</SubType>
     </VSTemplate>
   </ItemGroup>
