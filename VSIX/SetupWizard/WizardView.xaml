@@ -35,7 +35,7 @@
                    TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1" Foreground="White">          
             Customize your project configuration. For help , 
             <Hyperlink 
-        NavigateUri="http://www.christoc.com/Tutorials/All-Tutorials/aid/11"
+        NavigateUri="https://www.christoc.com/Tutorials/All-Tutorials/aid/11"
         RequestNavigate="Hyperlink_RequestNavigate" Foreground="White">
         read this tutorial
     </Hyperlink>.
@@ -49,6 +49,6 @@
                 </StackPanel>
             </TextBox.ToolTip>
         </TextBox>
-        <Image x:Name="image" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="137" Margin="10,5,0,0" VerticalAlignment="Top" Width="137" Source="http://www.christoc.com/Portals/0/Christoc-Logo-2014-51h.png?ver=2014-02-25-100231-820"/>
+        <Image x:Name="image" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="137" Margin="10,5,0,0" VerticalAlignment="Top" Width="137" Source="https://www.christoc.com/Portals/0/Christoc-Logo-2014-51h.png?ver=2014-02-25-100231-820"/>
     </Grid>
 </Window>

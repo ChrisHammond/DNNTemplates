@@ -1,6 +1,6 @@
 DotNetNuke Visual Studio Gallery Templates
 These templates are designed for DotNetNuke 7 / 8 / 9 and managed by Chris Hammond, owner Christoc.com Software Solutions
-If you need DNN help, be sure to check us out at http://www.christoc.com
+If you need DNN help, be sure to check us out at https://www.christoc.com
 
 The Source Code can be found at https://github.com/ChrisHammond/DNNTemplates
 
@@ -116,4 +116,4 @@ Configured for DotNetNuke 6.2.2 but should work with all versions of DNN 6.0+
 Instructions For Use 
 To use these templates you can follow the instructions found in the DotNetNuke 
 Wiki on the following page
-http://www.christoc.com/tutorials/aid/4
+https://www.christoc.com/tutorials/aid/4

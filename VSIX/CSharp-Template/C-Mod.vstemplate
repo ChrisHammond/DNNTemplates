@@ -24,7 +24,7 @@
       <CustomParameter Name="$rootnamespace$" Value="Christoc.Modules."/>
       <CustomParameter Name="$ownername$" Value="Christoc.com"/>
       <CustomParameter Name="$owneremail$" Value="modules@christoc.com"/>
-      <CustomParameter Name="$ownerwebsite$" Value="http://www.christoc.com"/>
+      <CustomParameter Name="$ownerwebsite$" Value="https://www.christoc.com"/>
       <CustomParameter Name="$devenvironmenturl$" Value="dnndev.me" />
     </CustomParameters>
     <Project TargetFileName="$safeprojectname$.csproj" File="DnnTemplate.csproj" ReplaceParameters="true">

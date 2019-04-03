@@ -3,7 +3,7 @@ $safeprojectname$
 
 Description
 -----------
-A DNN Theme built using Christoc's DNN Module and Skin Development Templates, based on the HammerFlex(http://www.christoc.com/Products/HammerFlex) skin/theme for DNN.
+A DNN Theme built using Christoc's DNN Module and Skin Development Templates, based on the HammerFlex(https://www.christoc.com/Products/HammerFlex) skin/theme for DNN.
 
 Installation and Customization
 ------------------------------

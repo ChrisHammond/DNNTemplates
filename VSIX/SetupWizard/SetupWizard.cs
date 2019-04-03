@@ -13,7 +13,7 @@ namespace Christoc.DNNTemplates.SetupWizard
         protected internal string RootNameSpace { get; set; } = "Christoc.Modules.";
         protected internal string OwnerName { get; set; } = "Christoc.com";
         protected internal string OwnerEmail { get; set; } = "modules@christoc.com";
-        protected internal string OwnerWebsite { get; set; } = "http://www.christoc.com/";
+        protected internal string OwnerWebsite { get; set; } = "https://www.christoc.com/";
         protected internal string DevEnvironmentUrl { get; set; } = "dnndev.me";
 
         public void BeforeOpeningFile(ProjectItem projectItem) { }
