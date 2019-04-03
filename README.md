@@ -5,7 +5,7 @@ Project Description
 -----------
 Quick and easy to use Module and Theme (skin) Development templates for DotNetNuke 7/8/9 and Visual Studio 2017.
 
-If you need a VS2008/10/12/13/15 support check out the older releases.
+If you need a VS2008/10/12/13/15/17 support check out the older releases.
 
 Blog Announcement for the 2.0 release of the templates project http://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot.aspx
 For instructions on how to modify the templates read this post http://www.christoc.com/tutorials/aid/3
@@ -15,6 +15,11 @@ For instructions on how to modify the templates read this post http://www.christ
 Installation instructions
 -----------
 * Download the VSIX from GitHub, or find the Project in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/bdd506ef-d5c3-4274-bf1d-9e673fb23484)
+
+V10.0 DNN 7/8/9 Visual Studio 2019 (4/4/2019)
+-----------
+Updated to Visual Studio 2019
+
 
 V9.1 DNN 7/8/9 Visual Studio 2017 (3/11/2018)
 -----------

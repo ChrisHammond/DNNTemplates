@@ -4,6 +4,10 @@ If you need DNN help, be sure to check us out at http://www.christoc.com
 
 The Source Code can be found at https://github.com/ChrisHammond/DNNTemplates
 
+V10.0 - Release Date 4/4/2019
+Description:
+	Upgraded support to Visual Studio 2019
+
 
 V9.1 - Release Date 3/11/2018
 Description:
