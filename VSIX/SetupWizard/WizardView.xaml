@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Christoc.DNNTemplates.SetupWizard"
         xmlns:emit="clr-namespace:System.Reflection.Emit;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Project Setup Wizard" Height="414.701" Width="370.226" FontSize="16">
+        Title="Project Setup Wizard" Height="421.099" Width="431.011" FontSize="16">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black" Offset="0"/>
@@ -18,21 +18,22 @@
             <ImageBrush/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="6*"/>
-            <ColumnDefinition Width="95*"/>
-            <ColumnDefinition Width="228*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="105*"/>
+            <ColumnDefinition Width="194*"/>
+            <ColumnDefinition Width="58*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="lblRootnamespace" Content="Namespace" HorizontalAlignment="Left" Margin="4,123,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1" Foreground="White"/>
-        <TextBox x:Name="txtRootnamespace" HorizontalAlignment="Left" Height="23" Margin="31,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187" Grid.Column="2"/>
-        <Label x:Name="lblOwnerName" Content="Owner Name" HorizontalAlignment="Left" Margin="4,160,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="117" Foreground="White"/>
-        <TextBox x:Name="txtOwnerName" HorizontalAlignment="Left" Height="23" Margin="31,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187" Grid.Column="2"/>
-        <Label x:Name="lblOwnerEmail" Content="Owner Email" HorizontalAlignment="Left" Margin="4,197,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="117" Foreground="White"/>
-        <TextBox x:Name="txtOwnerEmail" HorizontalAlignment="Left" Height="23" Margin="31,200,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187" Grid.Column="2"/>
-        <Label x:Name="lblOwnerWebsite" Content="Owner Website" HorizontalAlignment="Left" Margin="4,233,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="117" Foreground="White"/>
-        <TextBox x:Name="txtOwnerWebsite" HorizontalAlignment="Left" Height="23" Margin="31,236,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187" Grid.Column="2"/>
-        <Button x:Name="btnOk" Content="OK" HorizontalAlignment="Left" Margin="143,316,0,0" VerticalAlignment="Top" Width="75" Click="btnOk_Click" Grid.Column="2" Background="White"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="4,62,0,0" 
-                   TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1" Foreground="White">          
+        <Label x:Name="lblRootnamespace" Content="Namespace" HorizontalAlignment="Left" Margin="4.333,123,0,0" VerticalAlignment="Top" Grid.Column="1" Foreground="White"/>
+        <TextBox x:Name="txtRootnamespace" HorizontalAlignment="Left" Height="23" Margin="30.333,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblOwnerName" Content="Owner Name" HorizontalAlignment="Left" Margin="4.333,160,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="117" Foreground="White"/>
+        <TextBox x:Name="txtOwnerName" HorizontalAlignment="Left" Height="23" Margin="30.667,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblOwnerEmail" Content="Owner Email" HorizontalAlignment="Left" Margin="4.333,197,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="117" Foreground="White"/>
+        <TextBox x:Name="txtOwnerEmail" HorizontalAlignment="Left" Height="23" Margin="30.667,200,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblOwnerWebsite" Content="Owner Website" HorizontalAlignment="Left" Margin="4.333,233,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="117" Foreground="White"/>
+        <TextBox x:Name="txtOwnerWebsite" HorizontalAlignment="Left" Height="23" Margin="30.667,236,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnOk" Content="OK" HorizontalAlignment="Left" Margin="142.667,316,0,0" VerticalAlignment="Top" Width="75" Click="btnOk_Click" Grid.Column="2" Background="White" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="4.333,62,0,0" 
+                   TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="3" Grid.Column="1" Foreground="White">          
             Customize your project configuration. For help , 
             <Hyperlink 
         NavigateUri="https://www.christoc.com/Tutorials/All-Tutorials/aid/11"
@@ -40,8 +41,8 @@
         read this tutorial
     </Hyperlink>.
         </TextBlock>
-        <Label x:Name="lblDevUrl" Content="Local Dev URL" HorizontalAlignment="Left" Margin="4,268,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="117" Foreground="White"/>
-        <TextBox x:Name="txtDevUrl" HorizontalAlignment="Left" Height="23" Margin="31,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187" Grid.Column="2">
+        <Label x:Name="lblDevUrl" Content="Local Dev URL" HorizontalAlignment="Left" Margin="4.333,268,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="117" Foreground="White"/>
+        <TextBox x:Name="txtDevUrl" HorizontalAlignment="Left" Height="23" Margin="30.667,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219" Grid.Column="2" Grid.ColumnSpan="2">
             <TextBox.ToolTip>
                 <StackPanel>
                     <TextBlock FontWeight="Bold">Local Dev URL</TextBlock>
@@ -49,6 +50,6 @@
                 </StackPanel>
             </TextBox.ToolTip>
         </TextBox>
-        <Image x:Name="image" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="137" Margin="10,5,0,0" VerticalAlignment="Top" Width="137" Source="https://www.christoc.com/Portals/0/Christoc-Logo-2014-51h.png?ver=2014-02-25-100231-820"/>
+        <Image x:Name="image" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="137" Margin="10.333,5,0,0" VerticalAlignment="Top" Width="137" Source="https://www.christoc.com/Portals/0/Christoc-Logo-2014-51h.png?ver=2014-02-25-100231-820"/>
     </Grid>
 </Window>
