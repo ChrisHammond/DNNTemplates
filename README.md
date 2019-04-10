@@ -16,7 +16,7 @@ Installation instructions
 -----------
 * Download the VSIX from GitHub, or find the Project in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/bdd506ef-d5c3-4274-bf1d-9e673fb23484)
 
-V10.0 DNN 7/8/9 Visual Studio 2019 (4/?/2019)
+V10.0 DNN 7/8/9 Visual Studio 2019 (4/9/2019)
 -----------
 Updated to Visual Studio 2019
 
