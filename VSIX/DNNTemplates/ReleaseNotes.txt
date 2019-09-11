@@ -7,6 +7,7 @@ The Source Code can be found at https://github.com/ChrisHammond/DNNTemplates
 V10.1 - Release Date TBD
 Description:
 	Updated Visual Studio version number in Template files
+	Updated Bootstrap in C# Theme project to V3.4.1
 
 
 
