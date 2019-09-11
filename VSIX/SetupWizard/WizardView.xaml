@@ -39,7 +39,9 @@
         NavigateUri="https://www.christoc.com/Tutorials/All-Tutorials/aid/11"
         RequestNavigate="Hyperlink_RequestNavigate" Foreground="White">
         read this tutorial
-    </Hyperlink>.
+    </Hyperlink>. If you still need help, feel free to <Hyperlink 
+        NavigateUri="http://christoc.com/Contact"
+        RequestNavigate="Hyperlink_RequestNavigate" Foreground="White">reach out for our paid support options</Hyperlink>.
         </TextBlock>
         <Label x:Name="lblDevUrl" Content="Local Dev URL" HorizontalAlignment="Left" Margin="4.333,268,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="117" Foreground="White"/>
         <TextBox x:Name="txtDevUrl" HorizontalAlignment="Left" Height="23" Margin="30.667,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219" Grid.Column="2" Grid.ColumnSpan="2">

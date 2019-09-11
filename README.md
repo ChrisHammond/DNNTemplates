@@ -3,7 +3,7 @@ Christoc's DotNetNuke Module and Theme Development Template
 
 Project Description
 -----------
-Quick and easy to use Module and Theme (skin) Development templates for DotNetNuke 7/8/9 and Visual Studio 2017.
+Quick and easy to use Module and Theme (skin) Development templates for DotNetNuke 7/8/9 and Visual Studio 2019.
 
 If you need a VS2008/10/12/13/15/17 support check out the older releases.
 
