@@ -24,7 +24,7 @@
                 <strong>Open up IIS Manager (start>run>INETMGR), go to your $devenvironmenturl$ website and make sure that /portals/_default/skins/ is NOT a Virtual Directory/Application, if so, remove that.</strong>
             </li>
             <li>
-                <strong>If you change the TARGET framework for the project, remove the WEB.CONFIG file that Visual Studio will add to your project.</strong>
+                You will need to change the TARGET Framework to 4.7.2 if you're compiling against DNN 9.5+. Right click on the project, choose properties, change the target.                <strong>If you change the TARGET framework for the project, remove the WEB.CONFIG file that Visual Studio will add to your project.</strong>
             </li>
             <li><strong>BEFORE</strong> checking the
                 theme into your source control environment check the following.</li>
