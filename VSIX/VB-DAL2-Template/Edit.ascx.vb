@@ -74,7 +74,12 @@ Public Class Edit
         Else
             t.ItemName = txtName.Text.Trim()
             t.ItemDescription = txtDescription.Text.Trim()
-            t.AssignedUserId = Convert.ToInt32(ddlAssignedUser.SelectedValue)
+
+            If ddlAssignedUser.SelectedValue == "" Then
+                t.AssignedUserId = 0
+            Else
+                t.AssignedUserId = Convert.ToInt32(ddlAssignedUser.SelectedValue)
+            End If
 
             t.CreatedByUserId = UserId
             t.CreatedOnDate = DateTime.Now

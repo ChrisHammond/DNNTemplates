@@ -85,7 +85,7 @@ namespace $rootnamespace$$safeprojectname$
             {
                 t = new Item()
                 {
-                    AssignedUserId = Convert.ToInt32(ddlAssignedUser.SelectedValue),
+                    AssignedUserId = (ddlAssignedUser.SelectedValue == "") ? 0 : Convert.ToInt32(ddlAssignedUser.SelectedValue),
                     CreatedByUserId = UserId,
                     CreatedOnDate = DateTime.Now,
                     ItemName = txtName.Text.Trim(),

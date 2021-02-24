@@ -4,7 +4,13 @@ If you need DNN help, be sure to check us out at https://www.christoc.com
 
 The Source Code can be found at https://github.com/ChrisHammond/DNNTemplates
 
-V10.1 - Release Date TBD
+V10.2 - Release Date TBD
+Description:
+	Issue # 63 fix https://github.com/ChrisHammond/DNNTemplates/issues/63
+
+	
+
+V10.1 - 6/16/2020
 Description:
 	Updated Visual Studio version number in Template files
 	Updated Bootstrap in C# Theme project to V3.4.1
