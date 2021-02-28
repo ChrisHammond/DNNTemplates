@@ -13,7 +13,7 @@
       <license src="License.txt"></license>
       <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
       <dependencies>
-        <dependency type="CoreVersion">08.00.00</dependency>
+        <dependency type="CoreVersion">09.08.00</dependency>
       </dependencies>
       <components>
         <component type="Script">
