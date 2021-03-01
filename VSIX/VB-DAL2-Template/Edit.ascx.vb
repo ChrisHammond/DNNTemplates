@@ -51,7 +51,10 @@ Public Class Edit
                     If t IsNot Nothing Then
                         txtName.Text = t.ItemName
                         txtDescription.Text = t.ItemDescription
-                        ddlAssignedUser.Items.FindByValue(t.AssignedUserId.ToString()).Selected = True
+                        Dim it As Item ddlAssignedUser.Items.FindByValue(t.AssignedUserId.ToString())
+                        If it Is Not null Then
+                            it.Selected = True
+                        End If
                     End If
                 End If
             End If
@@ -69,7 +72,11 @@ Public Class Edit
             t = tc.GetItem(ItemId, ModuleId)
             t.ItemName = txtName.Text.Trim()
             t.ItemDescription = txtDescription.Text.Trim()
-            t.AssignedUserId = Convert.ToInt32(ddlAssignedUser.SelectedValue)
+            If ddlAssignedUser.SelectedValue == "" Then
+                t.AssignedUserId = 0
+            Else
+                t.AssignedUserId = Convert.ToInt32(ddlAssignedUser.SelectedValue)
+            End If
 
         Else
             t.ItemName = txtName.Text.Trim()
