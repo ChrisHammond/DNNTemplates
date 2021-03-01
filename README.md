@@ -26,8 +26,8 @@ Upgraded Target Framework to 4.7.2 for all projects, updated other necessary ref
 
 V10.1 DNN 7/8/9 Visual Studio 2019 (6/16/2020)
 -----------
-Updated Visual Studio version number in Template files
-Updated Bootstrap in C# Theme project to V3.4.1
+Updated Visual Studio version number in Template files  
+Updated Bootstrap in C# Theme project to V3.4.1  
 Added additional notes to documentation after new project creation.
 
 
@@ -43,16 +43,16 @@ Pull Request: Shane Walker, Updates to support multiple namespaces for defaults 
 
 V9.0 DNN 7/8/9 Visual Studio 2017 (2/23/2017)
 -----------
-Upgraded templates for Visual Studio 2017 Support
+Upgraded templates for Visual Studio 2017 Support  
 Upgraded to MSBuildTasks 1.5.0.235
 
 
 V8.0 DNN 7/8/9 Visual Studio 2015 (1/1/2017)
 -----------
-MVC Template fixes
-Upgraded to Bootstrap 3.3.7 for Theme template
-Fixed White link problem
-Upgraded to MSBuildTasks 1.5.0.214
+MVC Template fixes  
+Upgraded to Bootstrap 3.3.7 for Theme template  
+Fixed White link problem  
+Upgraded to MSBuildTasks 1.5.0.214  
 Tested against DNN 9
 
 V7.1 DNN 7/8 Visual Studio 2015 (3/9/2016)
@@ -62,11 +62,11 @@ MVC Fix for better Intellisense management in the CSHTML files.
 
 V7 DNN 7/8 Visual Studio 2015 (2/24/2016)
 -----------
-Added Wizard interface for configuring "owner" and "dev" information for Projects
-MVC Template fixes
-Upgraded to MSBuildTasks V1.4.0.128
-Fixed SPA Settings manifest to QuickSettings
-Upgraded Target Framework to 4.5.1 for all projects
+Added Wizard interface for configuring "owner" and "dev" information for Projects  
+MVC Template fixes  
+Upgraded to MSBuildTasks V1.4.0.128  
+Fixed SPA Settings manifest to QuickSettings  
+Upgraded Target Framework to 4.5.1 for all projects  
 Upgraded to Bootstrap 3.3.6 for Theme template
 
 V6.1 Beta for Visual Studio 2015 (1/16/2016)
@@ -83,20 +83,20 @@ Initial release with Visual Studio 2015 support.
 
 V4.1 - Release Date 4/20/2015
 -----------
-Description: Upgraded Bootstrap to V3.3.4
-Fixes for Bootstrap load order causing DNN Dropdown list issues
+Description: Upgraded Bootstrap to V3.3.4  
+Fixes for Bootstrap load order causing DNN Dropdown list issues  
 Fix for DNNRadio button conflict with Bootstrap.
 
 Changes for V4.0 (01/04/2015)
 -----------
-Description: Upgraded to MSBuildTasks V1.4.0.88
-Added a new Theme (skin) template
+Description: Upgraded to MSBuildTasks V1.4.0.88  
+Added a new Theme (skin) template  
 Updates to copyright year
 
 Changes for V3.0 (06/18/2014)
 -----------
-Update to only support VS 2013 (should fix VS 2013 Express issues)
-Updated module package targets file to exclude .git folder
+Update to only support VS 2013 (should fix VS 2013 Express issues)  
+Updated module package targets file to exclude .git folder  
 Updated MSBuildTasks project to v1.4.0.74
 
 Changes for V2.5 (11/13/2013)
