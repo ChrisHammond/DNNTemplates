@@ -4,11 +4,11 @@ If you need DNN help, be sure to check us out at https://www.christoc.com
 
 The Source Code can be found at https://github.com/ChrisHammond/DNNTemplates
 
-V10.2 - Release Date TBD
+V10.2 - 03/01/2021
 Description:
 	Issue # 63 fix https://github.com/ChrisHammond/DNNTemplates/issues/63
 	Updated Module DNN requirement to DNN 9.8.0 if you're using anything less, you are doing it wrong. UPGRADE YOUR SITES PEOPLE
-
+	Upgraded Target Framework to 4.7.2 for all projects, updated other necessary references as well.
 	
 
 V10.1 - 6/16/2020
