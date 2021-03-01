@@ -1,7 +1,7 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
-    <Name>DNN (DotNetNuke) 7/8/9 VB.Net DAL2 Compiled Module</Name>
-    <Description>A Visual Studio template for DotNetNuke 7/8/9 Module Development using DAL2, designed for Visual Studio 2019</Description>
+    <Name>DNN (DotNetNuke) 9 VB.Net DAL2 Compiled Module</Name>
+    <Description>A Visual Studio template for DNN 9 Module Development using DAL2, designed for Visual Studio 2019</Description>
     <ProjectType>VisualBasic</ProjectType>
     <ProjectSubType>
     </ProjectSubType>

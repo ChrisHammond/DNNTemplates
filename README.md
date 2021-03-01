@@ -16,9 +16,9 @@ Installation instructions
 -----------
 * Download the VSIX from GitHub, or find the Project in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/bdd506ef-d5c3-4274-bf1d-9e673fb23484)
 
-V10.2 - Release Date TBD
+V10.2 - DNN 9 Visual Studio 2019 (Date TBD) 
 Description:
-	Issue # 63 fix https://github.com/ChrisHammond/DNNTemplates/issues/63
+	Issue # 63 fix(es) https://github.com/ChrisHammond/DNNTemplates/issues/63
 	Updated Module DNN requirement to DNN 9.8.0 if you're using anything less, you are doing it wrong. UPGRADE YOUR SITES PEOPLE
 	Upgraded Target Framework to 4.7.2 for all projects
 
