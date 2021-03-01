@@ -19,8 +19,8 @@ Installation instructions
 
 V10.2 - DNN 9 Visual Studio 2019 (03/01/2021) 
 -----------
-Issue # 63 fix(es) https://github.com/ChrisHammond/DNNTemplates/issues/63
-Updated Module DNN requirement to DNN 9.8.0 if you're using anything less, you are doing it wrong. UPGRADE YOUR SITES PEOPLE
+Issue # 63 fix(es) https://github.com/ChrisHammond/DNNTemplates/issues/63  
+Updated Module DNN requirement to DNN 9.8.0 if you're using anything less, you are doing it wrong. UPGRADE YOUR SITES PEOPLE  
 Upgraded Target Framework to 4.7.2 for all projects, updated other necessary references as well.
 
 
