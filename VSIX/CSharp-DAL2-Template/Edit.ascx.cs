@@ -55,7 +55,9 @@ namespace $rootnamespace$$safeprojectname$
                         {
                             txtName.Text = t.ItemName;
                             txtDescription.Text = t.ItemDescription;
-                            ddlAssignedUser.Items.FindByValue(t.AssignedUserId.ToString()).Selected = true;
+                            var it = ddlAssignedUser.Items.FindByValue(t.AssignedUserId.ToString());
+                            if(it!=null)
+                                it.Selected = true;
                         }
                     }
                 }
@@ -80,6 +82,7 @@ namespace $rootnamespace$$safeprojectname$
                 t.LastModifiedByUserId = UserId;
                 t.LastModifiedOnDate = DateTime.Now;
                 t.AssignedUserId = Convert.ToInt32(ddlAssignedUser.SelectedValue);
+                t.AssignedUserId = (ddlAssignedUser.SelectedValue == "") ? 0 : Convert.ToInt32(ddlAssignedUser.SelectedValue);
             }
             else
             {
