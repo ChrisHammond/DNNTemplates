@@ -18,7 +18,7 @@ Installation instructions
 
 V10.3 - DNN 9 Visual Studio 2019 (TBD) 
 -----------
-Issue # 64 fix for hardcoded dnndev.me in theme template https://github.com/ChrisHammond/DNNTemplates/issues/64  
+Issue # 65 fix for hardcoded dnndev.me in theme template https://github.com/ChrisHammond/DNNTemplates/issues/66  
 
 
 V10.2 - DNN 9 Visual Studio 2019 (03/01/2021) 
