@@ -157,7 +157,7 @@
           <DevelopmentServerPort>55931</DevelopmentServerPort>
           <DevelopmentServerVPath>
           </DevelopmentServerVPath>
-          <IISUrl>http://dnndev.me/portals/_default/skins/$safeprojectname$</IISUrl>
+          <IISUrl>http://$devenvironmenturl$/portals/_default/skins/$safeprojectname$</IISUrl>
           <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
           <IISAppRootUrl>http://$devenvironmenturl$</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
