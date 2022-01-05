@@ -81,7 +81,6 @@ namespace $rootnamespace$$safeprojectname$
                 t.ItemDescription = txtDescription.Text.Trim();
                 t.LastModifiedByUserId = UserId;
                 t.LastModifiedOnDate = DateTime.Now;
-                t.AssignedUserId = Convert.ToInt32(ddlAssignedUser.SelectedValue);
                 t.AssignedUserId = (ddlAssignedUser.SelectedValue == "") ? 0 : Convert.ToInt32(ddlAssignedUser.SelectedValue);
             }
             else

@@ -16,9 +16,10 @@ Installation instructions
 -----------
 * Download the VSIX from GitHub, or find the Project in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/bdd506ef-d5c3-4274-bf1d-9e673fb23484)
 
-V11.0 - DNN 9 Visual Studio 2022 (TBD) 
+V11.0 - DNN 9 Visual Studio 2022 (1/5/2022) 
 -----------
 Support for Visual Studio 2022
+Fix to C# Dal2 Mod when editing an item without any users assigned
 
 
 V10.3 - DNN 9 Visual Studio 2019 (12/7/2021) 

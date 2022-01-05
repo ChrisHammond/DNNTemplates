@@ -4,9 +4,10 @@ If you need DNN help, be sure to check us out at https://www.christoc.com
 
 The Source Code can be found at https://github.com/ChrisHammond/DNNTemplates
 
-V11.0 - DNN 9 Visual Studio 2022 (TBD) 
+V11.0 - DNN 9 Visual Studio 2022 (1/5/2022) 
 -----------
 Support for Visual Studio 2022
+Fix to C# Dal2 Mod when editing an item without any users assigned
 
 V10.3 - DNN 9 Visual Studio 2019 (12/7/2021) 
 -----------
