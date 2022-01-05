@@ -3,7 +3,7 @@ Christoc's DotNetNuke Module and Theme Development Template
 
 Project Description
 -----------
-Quick and easy to use Module and Theme (skin) Development templates for DNN 9 (DotNetNuke 7 and 8 also possible) and Visual Studio 2019.
+Quick and easy to use Module and Theme (skin) Development templates for DNN 9 and Visual Studio 2022.
 
 If you need support for older versions of Visual Studio check out previous releases.
 
@@ -16,7 +16,12 @@ Installation instructions
 -----------
 * Download the VSIX from GitHub, or find the Project in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/bdd506ef-d5c3-4274-bf1d-9e673fb23484)
 
-V10.3 - DNN 9 Visual Studio 2019 (TBD) 
+V11.0 - DNN 9 Visual Studio 2022 (TBD) 
+-----------
+Support for Visual Studio 2022
+
+
+V10.3 - DNN 9 Visual Studio 2019 (12/7/2021) 
 -----------
 Issue # 65 fix for hardcoded dnndev.me in theme template https://github.com/ChrisHammond/DNNTemplates/issues/65  
 
