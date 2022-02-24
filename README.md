@@ -16,6 +16,11 @@ Installation instructions
 -----------
 * Download the VSIX from GitHub, or find the Project in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/bdd506ef-d5c3-4274-bf1d-9e673fb23484)
 
+V11.1 - DNN 9 Visual Studio 2022 (2/24/2022) 
+-----------
+Correcting support for all editions of Visual Studio 2022
+
+
 V11.0 - DNN 9 Visual Studio 2022 (1/5/2022) 
 -----------
 Support for Visual Studio 2022

@@ -106,7 +106,7 @@
     <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
   </WizardExtension>
   <WizardExtension>
-    <Assembly>SetupWizard, Version=11.0.0.0, Culture=neutral, PublicKeyToken=null</Assembly>
+    <Assembly>SetupWizard, Version=11.1.0.0, Culture=neutral, PublicKeyToken=null</Assembly>
     <FullClassName>Christoc.DNNTemplates.SetupWizard.SetupWizard</FullClassName>
   </WizardExtension>
   <WizardData>
