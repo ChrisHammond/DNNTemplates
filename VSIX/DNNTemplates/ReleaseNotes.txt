@@ -4,6 +4,10 @@ If you need DNN help, be sure to check us out at https://www.christoc.com
 
 The Source Code can be found at https://github.com/ChrisHammond/DNNTemplates
 
+V11.2 - DNN 9 Visual Studio 2022 (6/12/2023) 
+-----------
+Coming soon
+
 V11.1 - DNN 9 Visual Studio 2022 (2/24/2022) 
 -----------
 Correcting support for all editions of Visual Studio 2022
