@@ -5,16 +5,16 @@ Project Description
 -----------
 Quick and easy to use Module and Theme (skin) Development templates for DNN 9 and Visual Studio 2022.
 
-If you need support for older versions of Visual Studio check out previous releases.
+If you need support for older versions of Visual Studio check out previous [releases on GitHub](https://github.com/ChrisHammond/DNNTemplates/releases).
 
-Blog Announcement for the 2.0 release of the templates project http://www.chrishammond.com/blog/itemid/2616/using-the-new-module-development-templates-for-dot.aspx
-For instructions on how to modify the templates read this post https://www.christoc.com/tutorials/aid/3
+[Blog Announcement for the 2.0 release of the templates project](https://www.chrishammond.com/Blog/itemid/2616/using-the-new-module-development-templates-for-dot)
+[For instructions on how to modify the templates read this post](https://christoc.com/Tutorials/All-Tutorials/Customizing-the-latest-DotNetNuke-Module-Development-Project-Templates)
 
 *After you build in Release Mode the installable packages (source/install) can be found in the INSTALL folder now, within your module's folder, not the packages folder anymore*
 
 Installation instructions
 -----------
-* Download the VSIX from GitHub, or find the Project in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/bdd506ef-d5c3-4274-bf1d-9e673fb23484)
+* Download the VSIX from [GitHub Releases](https://github.com/ChrisHammond/DNNTemplates/releases), or find the Project in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/bdd506ef-d5c3-4274-bf1d-9e673fb23484)
 
 V11.1 - DNN 9 Visual Studio 2022 (2/24/2022) 
 -----------
@@ -29,12 +29,12 @@ Fix to C# Dal2 Mod when editing an item without any users assigned
 
 V10.3 - DNN 9 Visual Studio 2019 (12/7/2021) 
 -----------
-Issue # 65 fix for hardcoded dnndev.me in theme template https://github.com/ChrisHammond/DNNTemplates/issues/65  
+[Issue # 65 fix for hardcoded dnndev.me in theme template](https://github.com/ChrisHammond/DNNTemplates/issues/65)  
 
 
 V10.2 - DNN 9 Visual Studio 2019 (03/01/2021) 
 -----------
-Issue # 63 fix(es) https://github.com/ChrisHammond/DNNTemplates/issues/63  
+[Issue # 63 fix(es)](https://github.com/ChrisHammond/DNNTemplates/issues/63)  
 Updated Module DNN requirement to DNN 9.8.0 if you're using anything less, you are doing it wrong. UPGRADE YOUR SITES PEOPLE  
 Upgraded Target Framework to 4.7.2 for all projects, updated other necessary references as well.
 
@@ -133,7 +133,7 @@ This release addresses an issue with the release build location, and changes def
 Changes for V2.1 (1/28/2013)
 -----------
 This release addresses an issue with template modification and namespace problems.
-For instructions on how to modify the templates read this post https://www.christoc.com/tutorials/aid/3
+[For instructions on how to modify the templates read this post](https://christoc.com/Tutorials/All-Tutorials/Customizing-the-latest-DotNetNuke-Module-Development-Project-Templates)
 
 Changes for V2.0 (1/24/2013)
 -----------
@@ -170,4 +170,4 @@ We also created a property in the VS Project file for CopyrightYear.
 The three DotNetNuke interfaces in the Components/FeatureController file are commented out instead of being enabled by default.
 The Manifest File has been updated for DotNetNuke 6, thus 6.0.0 is now a dependency.
 
-This project is maintained by Chris Hammond http://www.chrishammond.com
+This project is maintained by [Chris Hammond](https://www.chrishammond.com)
