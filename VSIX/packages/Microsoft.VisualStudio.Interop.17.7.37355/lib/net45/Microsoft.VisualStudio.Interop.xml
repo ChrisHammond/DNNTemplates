@@ -1,0 +1,1193 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.Interop</name>
+  </assembly>
+  <members>
+    <member name="M:MarshalHelper.ReleaseComObject(System.Object)">
+      <summary>
+            A wrapper for <see cref="M:System.Runtime.InteropServices.Marshal.ReleaseComObject(System.Object)" /> that no-ops when run on .NET on non-Windows platforms.
+            </summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Interop.ExcludeFromIDLAttribute">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Interop.ExcludeFromProxyBuildAttribute">
+      <summary>
+      </summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsProgress.Report(System.Double)">
+      <summary>
+            Reports the progress of an operation.
+            </summary>
+      <param name="value">The progress of the operation.</param>
+      <remarks>
+        <paramref name="value" /> can be in the range [0.0..1.0], where 0.0 is 0%
+            complete and 1.0 is 100% complete.  A value outside that range indicates
+            indeterminate progress.
+            <para>
+            Implementers should be prepared for this method to be called on any thread.
+            </para></remarks>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncSaveResult">
+      <summary>
+            The result of an asynchronous save operation.  This is the value returned from the
+            GetResult method on the asynchronous save's returned <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsTask" />.
+            </summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncSaveResult.DataLossIncurred">
+      <summary>
+            This is set to <c>true</c> if the save was successful but there was data loss.
+            </summary>
+      <remarks>
+            Setting this to <c>true</c> is similar to returning STG_S_DATALOSS from synchronous
+            save operations.
+            </remarks>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncSaveResult.SaveCanceled">
+      <summary>
+            This is set to <c>true</c> if the user canceled the save operation.
+            </summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncSaveResult.FileName">
+      <summary>
+            The name of the saved file.  This can be <c>null</c> or empty if the name of the
+            saved file did not change.
+            </summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Shell.Interop.IVsProvideAsyncSaveState">
+      <summary>
+            Optional interface that can be implemented by docdata objects that need to
+            preserve state data at the beginning of an aync save operation.
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsProvideAsyncSaveState.GetAsyncSaveState">
+      <summary>
+            Returns a state object (such as a checkpoint) for an async save operation.
+            </summary>
+      <remarks>
+            This method is called at the beginning of an asynchronous save. A docdata can
+            implement this interface and supply a state object. It can retrieve the state
+            object in its implementation of <see cref="M:Microsoft.VisualStudio.Shell.Interop.IAsyncPersistFile.SaveAsync(System.String,System.Boolean,Microsoft.VisualStudio.Shell.Interop.IVsProgress)" /> or
+            <see cref="M:Microsoft.VisualStudio.Shell.Interop.IAsyncPersistFileFormat.SaveAsync(System.String,System.Boolean,System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsProgress)" /> by calling
+            IVsAsyncRunningDocumentTable.GetAsyncSaveState.
+            </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncRunningDocumentTable.SaveDocumentsAsync(System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsProgress)">
+      <summary>
+            Saves one or more documents asynchronously.
+            </summary>
+      <param name="saveOpts">The save options</param>
+      <param name="hierarchy">
+            The hierarchy that owns the document to save, or <c>null</c>.  This
+            parameter is only used if <paramref name="docCookie" /> is VSCOOKIE_NIL
+            and <paramref name="itemid" /> is not VSITEMID_SELECTION.  In that case,
+            if this parameter is non-null, then the document identified by
+            <paramref name="itemid" /> is saved.
+            </param>
+      <param name="itemid">
+            The item identifier for the document to save, or VSITEMID_SELECTION.
+            This parameter is only used if <paramref name="docCookie" /> is VSCOOKIE_NIL.
+            In that case, if this value is VSITEMID_SELECTION then all selected documents
+            are saved.  If this value is not VSITEMID_SELECTION and <paramref name="hierarchy" />
+            is non-null, this value must be something other than VSITEMID_NIL.
+            </param>
+      <param name="docCookie">
+            The cookie for the document, or VSCOOKIE_NIL.  If this parameter is not
+            VSCOOKIE_NIL, <paramref name="hierarchy" /> and <paramref name="itemid" /> are
+            ignored and the document identified by the cookie is saved.
+            </param>
+      <param name="progress">The interface through which progress is reported.</param>
+      <returns>A task representing the asynchronous operation</returns>
+      <remarks>
+            If <paramref name="docCookie" /> is VSCOOKIE_NIL, <paramref name="itemid" />
+            is not VSITEMID_SELECTION, and <paramref name="hierarchy" /> is <c>null</c>,
+            all dirty documents are saved.
+            <para>
+            Implementers should be prepared for this method to be called on any thread.
+            </para></remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncRunningDocumentTable.GetAsyncSaveState(Microsoft.VisualStudio.Shell.Interop.IVsProvideAsyncSaveState)">
+      <summary>
+            Retrieves the state object (such as a checkpoint) for an async save operation.
+            </summary>
+      <param name="provider">The provider of the state object.</param>
+      <remarks>
+            This method is called from a docdata's implementation of <see cref="M:Microsoft.VisualStudio.Shell.Interop.IAsyncPersistFile.SaveAsync(System.String,System.Boolean,Microsoft.VisualStudio.Shell.Interop.IVsProgress)" />
+            or <see cref="M:Microsoft.VisualStudio.Shell.Interop.IAsyncPersistFileFormat.SaveAsync(System.String,System.Boolean,System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsProgress)" /> to fetch the state object supplied by
+            <paramref name="provider" /> in its implementation of <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsProvideAsyncSaveState.GetAsyncSaveState" />.
+            </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncRunningDocumentTable2.SaveDocumentsAsync(System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsProgress)">
+      <inheritdoc cref="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncRunningDocumentTable.SaveDocumentsAsync(System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsProgress)" />
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncRunningDocumentTable2.GetAsyncSaveState(Microsoft.VisualStudio.Shell.Interop.IVsProvideAsyncSaveState)">
+      <inheritdoc cref="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncRunningDocumentTable.GetAsyncSaveState(Microsoft.VisualStudio.Shell.Interop.IVsProvideAsyncSaveState)" />
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncRunningDocumentTable2.UpdateAsyncSaveState(Microsoft.VisualStudio.Shell.Interop.IVsProvideAsyncSaveState,System.Object)">
+      <summary>
+            Updates the state object (such as a checkpoint) for an async save operation.
+            </summary>
+      <param name="provider">The provider of the state object.</param>
+      <param name="saveState">The provider's updated state object.</param>
+      <remarks>
+            A provider  might want to do this if the state object changed, say, while processing the
+            OnBeforeSave or OnBeforeSaveAsync event.
+            </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncRunningDocumentTable2.UnlockDocumentAsync(System.UInt32,System.UInt32)">
+      <summary>
+            Removes a lock from a document.
+            </summary>
+      <param name="lockType">The type of lock to remove.</param>
+      <param name="docCookie">The document cookie.</param>
+      <returns>A task representing the asynchronous operation.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncRunningDocumentTable3.SaveDocumentsAsync(System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsProgress)">
+      <inheritdoc cref="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncRunningDocumentTable.SaveDocumentsAsync(System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsProgress)" />
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncRunningDocumentTable3.GetAsyncSaveState(Microsoft.VisualStudio.Shell.Interop.IVsProvideAsyncSaveState)">
+      <inheritdoc cref="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncRunningDocumentTable.GetAsyncSaveState(Microsoft.VisualStudio.Shell.Interop.IVsProvideAsyncSaveState)" />
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncRunningDocumentTable3.UpdateAsyncSaveState(Microsoft.VisualStudio.Shell.Interop.IVsProvideAsyncSaveState,System.Object)">
+      <inheritdoc cref="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncRunningDocumentTable2.UpdateAsyncSaveState(Microsoft.VisualStudio.Shell.Interop.IVsProvideAsyncSaveState,System.Object)" />
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncRunningDocumentTable3.UnlockDocumentAsync(System.UInt32,System.UInt32)">
+      <inheritdoc cref="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncRunningDocumentTable2.UnlockDocumentAsync(System.UInt32,System.UInt32)" />
+    </member>
+    <member name="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncRunningDocumentTable3.IsAsyncSaveEnabled">
+      <summary>
+            Indicates whether asynchronous saves are enabled.
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncShell.SaveDocDataToFileAsync(Microsoft.VisualStudio.Shell.Interop.VSSAVEFLAGS,System.Object,System.String,Microsoft.VisualStudio.Shell.Interop.IVsProgress)">
+      <summary>
+            Saves a docdata to a file asynchronously.
+            </summary>
+      <param name="flags">The save flags.</param>
+      <param name="persistFile">The file in which the docdata is to be saved.</param>
+      <param name="untitledPath">
+            File path to which the doc data for an as-yet unsaved document is to be saved.
+            </param>
+      <param name="progress">The interface through which progress is reported.</param>
+      <returns>
+            A task representing the asynchronous operation.  The result of the returned task
+            will be <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncSaveResult" />.
+            </returns>
+      <remarks>
+            Implementers should be prepared for this method to be called on any thread.
+            </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncSolution.SaveSolutionElementAsync(System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsProgress)">
+      <summary>
+            Saves a solution element asynchronously.
+            </summary>
+      <param name="saveOpts">The save options.</param>
+      <param name="hierarchy">The hierarchy.</param>
+      <param name="docCookie">The document cookie.</param>
+      <param name="progress">The interface through which progress is reported.</param>
+      <returns>
+            A task representing the asynchronous operation.
+            </returns>
+      <remarks>
+            Implementers should be prepared for this method to be called on any thread.
+            </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncPersistHierarchyItem.SaveItemAsync(Microsoft.VisualStudio.Shell.Interop.VSSAVEFLAGS,System.String,System.UInt32,System.Object,Microsoft.VisualStudio.Shell.Interop.IVsProgress)">
+      <summary>
+            Saves a hierarchy item, asynchronously.
+            </summary>
+      <param name="flags">The save flags.</param>
+      <param name="silentSaveAsName">
+            The file name to be applied when <paramref name="flags" /> is set to VSSAVE_SilentSave.
+            </param>
+      <param name="itemid">The ID of the hierarchy item to be saved.</param>
+      <param name="docData">The document data of the item to be saved.</param>
+      <param name="progress">The interface through which progress is reported.</param>
+      <returns>
+            A task representing the asynchronous operation.  The result of the returned task
+            will be <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncSaveResult" />.  The <see cref="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncSaveResult.FileName" />
+            property is unused.
+            </returns>
+      <remarks>
+            Implementers should be prepared for this method to be called on any thread.
+            </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncPersistHierarchyItem.ReloadItemAsync(System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsProgress)">
+      <summary>
+            Reloads a hierarchy item, asynchronously.
+            </summary>
+      <param name="itemid">The ID of the hierarchy item to be reloaded.</param>
+      <param name="progress">The interface through which progress is reported.</param>
+      <returns>
+            A task representing the asynchronous operation.
+            </returns>
+      <remarks>
+            Implementers should be prepared for this method to be called on any thread.
+            </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncPersistDocData.LoadDocDataAsync(System.String,Microsoft.VisualStudio.Shell.Interop.IVsProgress)">
+      <summary>
+            Loads the document data for a given document, asynchronously.
+            </summary>
+      <param name="moniker">The moniker for the document to be loaded.</param>
+      <param name="progress">The interface through which progress is reported.</param>
+      <returns>
+            A task representing the asynchronous operation.
+            </returns>
+      <remarks>
+            Implementers should be prepared for this method to be called on any thread.
+            </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncPersistDocData.SaveDocDataAsync(System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsProgress)">
+      <summary>
+            Saves the document data, asynchronously.
+            </summary>
+      <param name="flags">The save flags</param>
+      <param name="progress">The interface through which progress is reported.</param>
+      <returns>
+            A task representing the asynchronous operation.  The result of the returned task
+            will be <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncSaveResult" />.
+            </returns>
+      <remarks>
+            Implementers should be prepared for this method to be called on any thread.
+            </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncPersistDocData.ReloadDocDataAsync(System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsProgress)">
+      <summary>
+            Reloads the document data asynchronously and in the process determines whether to ignore
+            a subsequent file change.
+            </summary>
+      <param name="flags">
+            Flag indicating whether to ignore the next file change when reloading the document data.
+            </param>
+      <param name="progress">The interface through which progress is reported.</param>
+      <returns>
+            A task representing the asynchronous operation.
+            </returns>
+      <remarks>
+            Implementers should be prepared for this method to be called on any thread.
+            </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IAsyncPersistFile.LoadAsync(System.String,System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsProgress)">
+      <summary>
+            Opens a specified file asynchronously and initializes an object from the file contents.
+            </summary>
+      <param name="filename">The name of the file to load.</param>
+      <param name="grfMode">
+            File format mode. If zero, the object uses the usual defaults as if the user had opened the file.
+            </param>
+      <param name="progress">The interface through which progress is reported.</param>
+      <returns>
+            A task representing the asynchronous operation.
+            </returns>
+      <remarks>
+            Implementers should be prepared for this method to be called on any thread.
+            </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IAsyncPersistFile.SaveAsync(System.String,System.Boolean,Microsoft.VisualStudio.Shell.Interop.IVsProgress)">
+      <summary>
+            Saves a copy of the object to the specified file, asynchronously.
+            </summary>
+      <param name="filename">
+            The file name. This parameter can be <c>null</c>, in which case the object is saved to its
+            current file. If the object is in the untitled state and <paramref name="filename" /> is <c>null</c>,
+            <see cref="T:System.ArgumentException" /> is thrown.
+            </param>
+      <param name="remember">
+            Indicates whether <paramref name="filename" /> is to be used as the current working file.  If
+            <c>true</c>, <paramref name="filename" /> becomes the current file and the object should clear
+            its dirty flag after the save. If <c>false</c>, this save operation is a Save a Copy As operation.
+            In this case, the current file is unchanged and the object does not clear its dirty flag.
+            If <paramref name="filename" /> is <c>null</c>, <paramref name="remember" /> is ignored.
+            </param>
+      <param name="progress">The interface through which progress is reported.</param>
+      <returns>
+            A task representing the asynchronous operation.  The result of the returned task
+            will be <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncSaveResult" />.  The <see cref="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncSaveResult.FileName" />
+            property is unused.
+            </returns>
+      <remarks>
+            Implementers should be prepared for this method to be called on any thread.
+            </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IAsyncPersistFileFormat.LoadAsync(System.String,System.UInt32,System.Boolean,Microsoft.VisualStudio.Shell.Interop.IVsProgress)">
+      <summary>
+            Opens a specified file asynchronously and initializes an object from the file contents.
+            </summary>
+      <param name="filename">The name of the file to load.</param>
+      <param name="grfMode">
+            File format mode. If zero, the object uses the usual defaults as if the user had opened the file.
+            </param>
+      <param name="readOnly">
+            A value of <c>true</c> indicates that the file should be opened as read-only.
+            </param>
+      <param name="progress">The interface through which progress is reported.</param>
+      <returns>
+            A task representing the asynchronous operation.
+            </returns>
+      <remarks>
+            Implementers should be prepared for this method to be called on any thread.
+            </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IAsyncPersistFileFormat.SaveAsync(System.String,System.Boolean,System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsProgress)">
+      <summary>
+            Saves a copy of the object to the specified file, asynchronously.
+            </summary>
+      <param name="filename">
+            The file name. This parameter can be <c>null</c>, in which case the object is saved to its
+            current file. If the object is in the untitled state and <paramref name="filename" /> is <c>null</c>,
+            <see cref="T:System.ArgumentException" /> is thrown.
+            </param>
+      <param name="remember">
+            Indicates whether <paramref name="filename" /> is to be used as the current working file.  If
+            <c>true</c>, <paramref name="filename" /> becomes the current file and the object should clear
+            its dirty flag after the save. If <c>false</c>, this save operation is a Save a Copy As operation.
+            In this case, the current file is unchanged and the object does not clear its dirty flag.
+            If <paramref name="filename" /> is <c>null</c>, <paramref name="remember" /> is ignored.
+            </param>
+      <param name="formatIndex">
+            A value that indicates the format in which the file will be saved. The caller passes <c>DEF_FORMAT_INDEX</c>
+            if the object is to choose its default (current) format. Otherwise, the value is interpreted as the index
+            into the list of formats, as returned by a call to the <see cref="M:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat.GetFormatList(System.String@)" />
+            method. An index value of 0 indicates the first format, 1 the second format, and so on.
+            </param>
+      <param name="progress">The interface through which progress is reported.</param>
+      <returns>
+            A task representing the asynchronous operation.  The result of the returned task
+            will be <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncSaveResult" />.  The <see cref="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncSaveResult.FileName" />
+            property is unused.
+            </returns>
+      <remarks>
+            Implementers should be prepared for this method to be called on any thread.
+            </remarks>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Shell.Interop.__VSRDTSAVENOTIFICATIONFLAGS">
+      <summary>
+            A set of flags that describe attributes about a given save.
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable6.NotifyOnBeforeSave(System.UInt32,System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsTask)">
+      <summary>
+            Notifies event listeners that a save is about to occur.
+            </summary>
+      <param name="cookie">The document cookie.</param>
+      <param name="saveNotificationFlags">Provides additional information about the save.</param>
+      <param name="saveTask">A task representing the save operation.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable6.NotifyOnAfterSave(System.UInt32,System.UInt32)">
+      <summary>
+            Notifies event listeners that a save has occurred.
+            </summary>
+      <param name="cookie">The document cookie.</param>
+      <param name="saveNotificationFlags">Provides additional information about the save.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents7.OnBeforeSaveAsync(System.UInt32,System.UInt32,Microsoft.VisualStudio.Shell.Interop.IVsTask)">
+      <summary>
+            Called right before a save is about to occur.
+            </summary>
+      <param name="cookie">The document cookie.</param>
+      <param name="flags">Provides additional information about the save.</param>
+      <param name="saveTask">A task representing the save operation.</param>
+      <returns>
+            An optional task representing async work done by the event sink.  If this is non-null,
+            the RunningDocTable will await its completion before continuing the save.
+            </returns>
+      <remarks>
+            When the RunningDocTable notifies the event sink about save events, it will first check if the event implements this
+            interface and call this method. If not, it will check if it implements <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents3" />
+            and call <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents3.OnBeforeSave(System.UInt32)" />. Note that this means the RDT will not call both methods.
+            <para>
+            Implementers should be prepared for this method to be called on any thread.
+            </para></remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents7.OnAfterSaveAsync(System.UInt32,System.UInt32)">
+      <summary>
+            Called right after a save has occurred.
+            </summary>
+      <param name="cookie">The document cookie.</param>
+      <param name="flags">Provides additional information about the save.</param>
+      <returns>
+            An optional task representing async work done by the event sink.  If this is non-null,
+            the RunningDocTable will await its completion before continuing the save.
+            </returns>
+      <remarks>
+            When the RunningDocTable notifies the event sink about save events, it will first check if the event implements this
+            interface and call this method. If not, it will check if it implements <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents3" />
+            and call <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents3.OnAfterSave(System.UInt32)" />. Note that this means the RDT will not call both methods.
+            <para>
+            Implementers should be prepared for this method to be called on any thread.
+            </para></remarks>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Shell.Interop.__VSSTATUSBARANIMATIONINDEX">
+      <summary>
+            A set of built in status bar animation indices.
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID12.VSSPROPID_ShutdownStarting">
+      <summary>
+            This property will be set to true after any required pre-close checks have been passed (files saved),
+            but before any shutdown work has begun (like solution close)
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID13.VSSPROPID_EnableEnhancedTooltips">
+      <summary>
+            This property controls whether the enhanced tooltip behavior (tooltip will show on focus) is enabled in VS.
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID13.VSHPROPID_SlowEnumeration">
+      <summary>
+            This property indicates that a hierarchy and its nested items may be slow to be enumerated.
+            </summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncCommandParameters">
+      <summary>
+            An instance of this interface is sent as the input argument to commands with the <c>AsyncFromUIInvocation</c>,
+            when they are executed by a UI gesture such as a menu command, toolbar button, or key binding.
+            </summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncCommandParameters.ShouldRunAsync">
+      <summary>
+            Indicates whether the command should be run asynchronously
+            </summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncCommandParameters.OriginalArgument">
+      <summary>
+            The original argument to the command invocation, or <c>null</c> if none was specified.
+            </summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Shell.Interop.__FONTCOLORFLAGS2">
+      <summary>
+            Adds to the <see cref="T:Microsoft.VisualStudio.Shell.Interop.__FONTCOLORFLAGS" /> enumeration.
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Shell.Interop.__FONTCOLORFLAGS2.FCF_ONLYFIXEDPITCHFONTS">
+      <summary>
+            Restricts the Font dropdown box of the Fonts and Colors property page to presenting only Fixed Pitch fonts.
+            </summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS2">
+      <summary>
+            Adds to the <see cref="T:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS" /> enumaration.
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS2.FCSF_AVOIDPACKAGELOAD">
+      <summary>
+            Avoids loading packages when opening a category.
+            This is useful when retrieving font and color info that don't require package loads.
+            </summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Shell.Interop.IVsProjectAsyncOpen">
+      <summary>
+            Provides the ability to asynchronously open items in a project.
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsProjectAsyncOpen.OpenItemAsync(System.UInt32,System.Guid,System.Boolean,System.Object)">
+      <summary>
+             Asynchronously opens an item in the project.
+             </summary>
+      <param name="itemId">
+                 Identifier of the item to open.
+                 Should be <c>VSITEMID_ROOT</c> or other valid item identifier.
+                 See the <c>VSITEMID</c> enumeration.
+             </param>
+      <param name="logicalView">
+                 Unique identifier of the logical view.
+                 If not <c>GUID_NULL</c>, indicates a specific type of view to create.
+                 For more information, see the <c>LOGVIEWID</c>.
+             </param>
+      <param name="shouldGetDocDataFromRdt">
+                 If <c>true</c>, then the environment will use the doc data object obtained from the Running Document Table;
+                 otherwise, the service will open the document using the doc data passed in to <paramref name="docData" />.
+             </param>
+      <param name="docData">
+                 A reference to the document data object of the item to open or <c>null</c>. This value passed into this parameter is ignored
+                 if <paramref name="shouldGetDocDataFromRdt" /> is <c>true</c>.
+             </param>
+      <returns>
+                 A task representing the open operation. The result of the task is an <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult" /> for the opened item.
+             </returns>
+      <remarks>
+                 By implementing <c>IVsProjectSpecificEditorMap2</c> interface on your project object, you can do project-specific handling of files.
+                 That is, you can support either opening the file in a project-specific editor or allowing the global editor to open the item.
+                 Opening an item requires launching an editor using <c>OpenStandardEditorAsync(...)</c> or <c>OpenSpecificEditorAsync(...)</c>, depending on the handling you want to implement.
+                 For more information, see <c>GetSpecificEditorProperty</c>.
+            
+                 NOTE: In your implementation of <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsProjectAsyncOpen.OpenItemAsync(System.UInt32,System.Guid,System.Boolean,System.Object)" />, do not call <c>Show()</c> on the window frame you return.
+            
+                 Compare to <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsProjectAsyncOpen.ReopenItemAsync(System.UInt32,System.Guid,System.String,System.Guid,System.Boolean,System.Object)" />
+            
+                 The task returned by this method does not indicate that the document's view and docdata have been loaded. See <see cref="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult.DocumentLoadTask" /> for more details.
+             </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsProjectAsyncOpen.ReopenItemAsync(System.UInt32,System.Guid,System.String,System.Guid,System.Boolean,System.Object)">
+      <summary>
+             Asynchronously reopens an item in the project.
+             </summary>
+      <param name="itemId">
+                 Identifier of the item to open.
+                 Should be <c>VSITEMID_ROOT</c> or other valid item identifier.
+                 See the <c>VSITEMID</c> enumeration.
+             </param>
+      <param name="editorType">
+                 Unique identifier of the editor type.
+             </param>
+      <param name="physicalView">
+                  Name of the physical view. If set to null, <c>MapLogicalView</c> will be called.
+             </param>
+      <param name="logicalView">
+                 Unique identifier of the logical view.
+                 If not <c>GUID_NULL</c>, indicates a specific type of view to create.
+                 For more information, see the <c>LOGVIEWID</c>.
+             </param>
+      <param name="shouldGetDocDataFromRdt">
+                 If <c>true</c>, then the environment will use the doc data object obtained from the Running Document Table;
+                 otherwise, the service will open the document using the doc data passed in to <paramref name="docData" />.
+             </param>
+      <param name="docData">
+                 A reference to the document data object of the item to open or <c>null</c>. This value passed into this parameter is ignored
+                 if <paramref name="shouldGetDocDataFromRdt" /> is <c>true</c>.
+             </param>
+      <returns>
+                 A task representing the reopen operation. The result of the task is an <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult" /> for the reopened item.
+             </returns>
+      <remarks>
+                 Similar to <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsProjectAsyncOpen.OpenItemAsync(System.UInt32,System.Guid,System.Boolean,System.Object)" /> except that you call <c>OpenSpecificEditorAsync</c> (rather than the <c>OpenStandardEditorAsync</c>).
+            
+                 Implement <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsProjectAsyncOpen.ReopenItemAsync(System.UInt32,System.Guid,System.String,System.Guid,System.Boolean,System.Object)" /> to handle automatic reopening of files that belong to a project.
+                 For example, when a user adds files to a project type that you created, closes the project and later reopens it,
+                 implement <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsProjectAsyncOpen.ReopenItemAsync(System.UInt32,System.Guid,System.String,System.Guid,System.Boolean,System.Object)" /> to also open the files that belong to the new project type.
+            
+                 The task returned by this method does not indicate that the document's view and docdata have been loaded. See <see cref="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult.DocumentLoadTask" /> for more details.
+             </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsProjectAsyncOpen.OpenItemWithSpecificAsync(System.UInt32,System.UInt32,System.Guid,System.String,System.Guid,System.Boolean,System.Object)">
+      <summary>
+             Asynchronously opens an item using a specific editor.
+             </summary>
+      <param name="itemId">
+                 Identifier of the item to open.
+                 Should be <c>VSITEMID_ROOT</c> or other valid item identifier.
+                 See the <c>VSITEMID</c> enumeration.
+             </param>
+      <param name="editorFlags">
+                 Flags whose values are taken from the <c>__VSSPECIFICEDITORFLAGS</c> enumeration.
+             </param>
+      <param name="editorType">
+                 Unique identifier of the editor type.
+             </param>
+      <param name="physicalView">
+                  Name of the physical view. If set to null, <c>MapLogicalView</c> will be called.
+             </param>
+      <param name="logicalView">
+                 Unique identifier of the logical view.
+                 If not <c>GUID_NULL</c>, indicates a specific type of view to create.
+                 For more information, see the <c>LOGVIEWID</c>.
+             </param>
+      <param name="shouldGetDocDataFromRdt">
+                 If <c>true</c>, then the this method will use the doc data object obtained from the Running Document Table;
+                 otherwise, the service will open the document using the doc data passed in to <paramref name="docData" />.
+             </param>
+      <param name="docData">
+                 A reference to the document data object of the item to open or <c>null</c>. This value passed into this parameter is ignored
+                 if <paramref name="shouldGetDocDataFromRdt" /> is <c>true</c>.
+             </param>
+      <returns>
+                 A task representing the reopen operation. The result of the task is an <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult" /> for the reopened item.
+             </returns>
+      <remarks>
+                 This method is used to ask the project to open the item (document) using the specified editor information.
+                 It is an extension of <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsProjectAsyncOpen.OpenItemAsync(System.UInt32,System.Guid,System.Boolean,System.Object)" />.
+            
+                 It is implemented in conjunction with <c>OpenSpecificEditorAsync</c>.
+            
+                 The task returned by this method does not indicate that the document's view and docdata have been loaded. See <see cref="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult.DocumentLoadTask" /> for more details.
+             </remarks>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Shell.Interop.MARKERTYPE4">
+      <summary>
+            This enum continues from MARKERTYPE3. See MARKERTYPE3 for earlier values.
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID14.VSSPROPID_ShutdownReason">
+      <summary>
+            This property indicates the reason that the product is shutting down. e.g. by Windows restart.
+            </summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncShellOpenDocument">
+      <summary>
+            A service interface that provides a set of methods to asynchronously open documents.
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncShellOpenDocument.OpenSpecificEditorAsync(System.UInt32,System.String,System.Guid,System.String,System.Guid,System.String,Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy,System.UInt32,System.Boolean,System.Object,Microsoft.VisualStudio.OLE.Interop.IServiceProvider)">
+      <summary>
+             Asynchronously opens a document using the specified editor.
+             </summary>
+      <param name="openSpecificEditorFlags">
+                 Flags whose values are taken from the <see cref="T:Microsoft.VisualStudio.Shell.Interop.__VSOSPEFLAGS" /> enumeration.
+             </param>
+      <param name="documentMoniker">
+                 String form of the unique moniker identifier of the document in the project system, for example, the full path to the file.
+                 In non-file cases, this identifier is often in the form of a URL.
+             </param>
+      <param name="editorType">
+                 A <see cref="T:System.Guid" /> that identifies to editor be used to open the file.
+             </param>
+      <param name="physicalView">
+                 Name of the physical view or <c>null</c>.
+            
+                 If <c>null</c>, the environment calls <c>MapLogicalView(Guid, String)</c> on the editor factory to determine the physical view that corresponds to the logical view.
+                 In this case, <c>null</c> does not specify the primary view, but rather indicates that you do not know which view corresponds to the logical view.
+             </param>
+      <param name="logicalView">
+                 A <see cref="T:System.Guid" /> identifying the logical view. The default view is <c>VSConstants.LOGVIEWID_Primary</c> and every editor must support that view.
+            
+                 If the editor implements <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView" /> on the document view object, then the value passed to
+                 <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView.ActivateLogicalView(System.Guid@)" />, which determines which view is activated when the editor window is shown.
+            
+                 By specifying the logical view <see cref="T:System.Guid" />, you can request the specific view that matches the reason you are requesting the view.
+                 For example, specify <c>VSConstants.LOGVIEWID_Debugging</c> to get the view appropriate for debugging, or <c>VSConstants.LOGVIEWID_TextView</c> to get the view
+                 appropriate for the text editor (that is, a view that implements <see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow" />).
+             </param>
+      <param name="ownerCaption">
+                 Initial caption defined by the document owner (that is, the project) for the document window. This is often of the form: "ProjectName – ItemName."
+             </param>
+      <param name="hierarchy">
+                 A reference to the <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy" /> that owns the document.
+             </param>
+      <param name="itemId">
+                 The UI hierarchy item identifier of the standard editor. For more information see <c>VSConstants.VSITEMID</c>.
+             </param>
+      <param name="shouldGetDocDataFromRdt">
+                 If <c>true</c>, then the environment will use the doc data object obtained from the Running Document Table;
+                 otherwise, the service will open the document using the doc data passed in to <paramref name="docData" />.
+             </param>
+      <param name="docData">
+                 A reference to the document data object of the item to open or <c>null</c>. This value passed into this parameter is ignored
+                 if <paramref name="shouldGetDocDataFromRdt" /> is <c>true</c>.
+             </param>
+      <param name="serviceProvider">
+                 A reference to the <see cref="T:Microsoft.VisualStudio.OLE.Interop.IServiceProvider" />.
+             </param>
+      <returns>
+                 A task representing that the open operation has started.
+                 The result of the task is a reference to an <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult" />, if the document was opened within the environment; otherwise, <c>null</c>.
+             </returns>
+      <remarks>
+                 The task returned by this method does not indicate that the document's view and docdata have been loaded. See <see cref="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult.DocumentLoadTask" /> for more details.
+             </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncShellOpenDocument.OpenStandardEditorAsync(System.UInt32,System.String,System.Guid,System.String,Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy,System.UInt32,System.Boolean,System.Object,Microsoft.VisualStudio.OLE.Interop.IServiceProvider)">
+      <summary>
+                 Opens a file using the standard editor. It will first determine whether a default editor factory for the file is
+                 already configured. If a default is not already configured, then it will loop through a priority-sorted
+                 list of editor factories to find the first one that supports the document.
+                 An exception is thrown if the document cannot be opened.
+             </summary>
+      <param name="openStandardEditorFlags">
+                 Flags whose values are taken from the <see cref="T:Microsoft.VisualStudio.Shell.Interop.__VSOSEFLAGS" /> or <see cref="T:Microsoft.VisualStudio.Shell.Interop.__VSOSEFLAGS2" /> enumeration.
+             </param>
+      <param name="documentMoniker">
+                 String form of the unique moniker identifier of the document in the project system, for example, the full path to the file.
+                 In non-file cases, this identifier is often in the form of a URL.
+             </param>
+      <param name="logicalView">
+                 A <see cref="T:System.Guid" /> identifying the logical view. The default view is <c>VSConstants.LOGVIEWID_Primary</c> and every editor must support that view.
+            
+                 If the editor implements <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView" /> on the document view object, then the value passed to
+                 <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView.ActivateLogicalView(System.Guid@)" />, which determines which view is activated when the editor window is shown.
+            
+                 By specifying the logical view <see cref="T:System.Guid" />, you can request the specific view that matches the reason you are requesting the view.
+                 For example, specify <c>VSConstants.LOGVIEWID_Debugging</c> to get the view appropriate for debugging, or <c>VSConstants.LOGVIEWID_TextView</c> to get the view
+                 appropriate for the text editor (that is, a view that implements <see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow" />).
+             </param>
+      <param name="ownerCaption">
+                 Initial caption defined by the document owner (that is, the project) for the document window. This is often of the form: "ProjectName – ItemName."
+             </param>
+      <param name="hierarchy">
+                 A reference to the <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy" /> that owns the document.
+             </param>
+      <param name="itemId">
+                 The UI hierarchy item identifier of the standard editor. For more information see <c>VSConstants.VSITEMID</c>.
+             </param>
+      <param name="shouldGetDocDataFromRdt">
+                 If <c>true</c>, then the environment will use the doc data object obtained from the Running Document Table;
+                 otherwise, the service will open the document using the doc data passed in to <paramref name="docData" />.
+             </param>
+      <param name="docData">
+                 A reference to the document data object of the item to open or <c>null</c>. This value passed into this parameter is ignored
+                 if <paramref name="shouldGetDocDataFromRdt" /> is <c>true</c>.
+             </param>
+      <param name="serviceProvider">
+                 A reference to the <see cref="T:Microsoft.VisualStudio.OLE.Interop.IServiceProvider" />.
+             </param>
+      <returns>
+                 A task representing that the open operation has started.
+                 The result of the task is a reference to an <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult" />, if the document was opened within the environment; otherwise, <c>null</c>.
+             </returns>
+      <remarks>
+                 The task returned by this method does not indicate that the document's view and docdata have been loaded. See <see cref="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult.DocumentLoadTask" /> for more details.
+            
+                 This method uses the result of <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance(System.UInt32,System.String,System.String,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,System.IntPtr,System.IntPtr@,System.IntPtr@,System.String@,System.Guid@,System.Int32@)" /> to determine whether it should continue
+                 looping to the next editor in the list to find a supported editor factory. Specifically, it should return one of the following:
+                     1. <c>S_OK</c> to indicate that it should stop looping if the editor supports the file and was successfully initialized
+                     2. <c>"VS_E_UNSUPPORTEDFORMAT"</c> to indicate that it should continue looping if the editor does not support the provided doc data
+                     3. Any other error code to indicate that it should stop looping.
+             </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncShellOpenDocument.OpenDocumentViaProjectAsync(System.String,System.Guid,System.Boolean)">
+      <summary>
+                 Finds an appropriate project to open the document.
+             </summary>
+      <param name="documentMoniker">
+                  String form of the unique moniker identifier of the document in the project system, for example, the full path to the file. In non-file cases, this identifier is often in the form of a URL.
+             </param>
+      <param name="logicalView">
+                 A <see cref="T:System.Guid" /> identifying the logical view. The default view is <c>VSConstants.LOGVIEWID_Primary</c> and every editor must support that view.
+            
+                 If the editor implements <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView" /> on the document view object, then the value passed to
+                 <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView.ActivateLogicalView(System.Guid@)" />, which determines which view is activated when the editor window is shown.
+            
+                 By specifying the logical view <see cref="T:System.Guid" />, you can request the specific view that matches the reason you are requesting the view.
+                 For example, specify <c>VSConstants.LOGVIEWID_Debugging</c> to get the view appropriate for debugging, or <c>VSConstants.LOGVIEWID_TextView</c> to get the view
+                 appropriate for the text editor (that is, a view that implements <see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow" />).
+             </param>
+      <param name="supportExternalItems">
+        <c>true</c> if the project supports external items; otherwise, <c>false</c>.
+             </param>
+      <returns>
+                 A task representing the open operation.
+                 The result of the task is an <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult" /> object.
+             </returns>
+      <remarks>
+                 The task returned by this method does not indicate that the document's view and docdata have been loaded. See <see cref="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult.DocumentLoadTask" /> for more details.
+            
+                 This can be called to open any project that is opened through the New Project or Open Project dialog box.
+                 In addition, this method is also called to open a document in any project that is added to the solution through <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AddVirtualProject(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32)" /> or <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AddVirtualProjectEx(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,System.Guid@)" />.
+                 One example use of this is the DataView hierarchy, which is currently in Server Explorer.
+                 If a DataView hierarchy is added to the solution as a virtual project using <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AddVirtualProject(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32)" />, then this method can open items from DataView hierarchies.
+                 This functionality is important as it makes debugging of stored procedures possible.
+             </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncShellOpenDocument.OpenDocumentViaProjectWithSpecificAsync(System.String,System.UInt32,System.Guid,System.String,System.Guid)">
+      <summary>
+                 Finds a specified project to open this document.
+             </summary>
+      <param name="documentMoniker">
+                 String form of the unique moniker identifier of the document in the project system, for example, the full path to the file. In non-file cases, this identifier is often in the form of a URL.
+             </param>
+      <param name="specificEditorFlags">
+                 Flags whose values are taken from the __VSSPECIFICEDITORFLAGS enumeration.
+             </param>
+      <param name="editorType">
+                 Unique identifier of the editor type.
+             </param>
+      <param name="physicalView">
+                 Unique identifier of the physical view.
+             </param>
+      <param name="logicalView">
+                 A <see cref="T:System.Guid" /> identifying the logical view. The default view is <c>VSConstants.LOGVIEWID_Primary</c> and every editor must support that view.
+            
+                 If the editor implements <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView" /> on the document view object, then the value passed to
+                 <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView.ActivateLogicalView(System.Guid@)" />, which determines which view is activated when the editor window is shown.
+            
+                 By specifying the logical view <see cref="T:System.Guid" />, you can request the specific view that matches the reason you are requesting the view.
+                 For example, specify <c>VSConstants.LOGVIEWID_Debugging</c> to get the view appropriate for debugging, or <c>VSConstants.LOGVIEWID_TextView</c> to get the view
+                 appropriate for the text editor (that is, a view that implements <see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow" />).
+             </param>
+      <returns>
+                 A task representing the open operation.
+                 The result of the task is an <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult" /> object.
+             </returns>
+      <remarks>
+                 The task returned by this method does not indicate that the document's view and docdata have been loaded. See <see cref="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult.DocumentLoadTask" /> for more details.
+            
+                 This method is used by VSPackages that are not projects that need to open a document in a specific editor, but do not care which project opens the file.
+                 To call this method from your VSPackage, you need to know exactly which editor factory you want and exactly which window you want the editor factory to create (that is, the physical view).
+                 The logical view specified in the <paramref name="logicalView" /> parameter further allows you to specify which tab should be displayed by the editor if the editor implements <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView" />.
+            
+                 This method calls <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem(System.UInt32,System.Guid@,System.IntPtr,Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame@)" />. If no project can service the file and the Miscellaneous Files project is not already present,
+                 the environment then creates the Miscellaneous Files project and tries again.
+             </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncShellOpenDocument.OpenCopyOfStandardEditorAsync(Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame,System.Guid)">
+      <summary>
+                 Used to implement Window.NewWindow functionality.
+             </summary>
+      <param name="originalWindowFrame">
+                 Pointer to the original window frame to clone.
+             </param>
+      <param name="logicalView">
+                 A <see cref="T:System.Guid" /> identifying the logical view. The default view is <c>VSConstants.LOGVIEWID_Primary</c> and every editor must support that view.
+            
+                 If the editor implements <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView" /> on the document view object, then the value passed to
+                 <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView.ActivateLogicalView(System.Guid@)" />, which determines which view is activated when the editor window is shown.
+            
+                 By specifying the logical view <see cref="T:System.Guid" />, you can request the specific view that matches the reason you are requesting the view.
+                 For example, specify <c>VSConstants.LOGVIEWID_Debugging</c> to get the view appropriate for debugging, or <c>VSConstants.LOGVIEWID_TextView</c> to get the view
+                 appropriate for the text editor (that is, a view that implements <see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow" />).
+             </param>
+      <returns>
+                 A task representing the open operation.
+                 The result of the task is an <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult" /> object.
+                 The value of <see cref="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult.WindowFrame" /> is a reference to a new, cloned <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame" /> based on <paramref name="originalWindowFrame" />.
+             </returns>
+      <remarks>
+                 The task returned by this method does not indicate that the document's view and docdata have been loaded. See <see cref="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult.DocumentLoadTask" /> for more details.
+            
+                 Editors should handle cmdidNewWindow command by calling this method.
+             </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncShellOpenDocument.GetProvisionalViewingStatusForFileAsync(System.String,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,System.Guid)">
+      <summary>
+                Gets the provisional viewing status for a file.
+            </summary>
+      <param name="fileName">
+                The name of the file.
+            </param>
+      <param name="hierarchy">
+                The hierarchy of the item.
+            </param>
+      <param name="itemId">
+                The item identifier of the item.
+            </param>
+      <param name="logicalView">
+                The logical view to query.
+            </param>
+      <returns>
+                A task representing the query operation.
+                The result of the task is a member of the <see cref="T:Microsoft.VisualStudio.Shell.Interop.__VSPROVISIONALVIEWINGSTATUS" /> enumeration that describes how the file can be opened in the preview tab.
+                The default provisional viewing status is PVS_Disabled, but can be modified by the editor's "CommonPhysicalViewAttributes" registry value and the values under its "PhysicalViewAttributes" registry subkey.
+            </returns>
+      <remarks>
+                The physical view attributes – which declare if and how the physical view supports provisional viewing (that is, previewing) – are properties of the editor.
+                In addition to physical view attributes, editors also declare what file types they can edit (for example, *.cs, *.xml, and so on) and the relative “rank” of the editor.
+                Multiple editors can declare that they support the same file type and the environment then chooses the one with the highest rank to open the file.
+            </remarks>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncShellOpenDocument.GetProvisionalViewingStatusForEditorAsync(System.Guid,System.Guid)">
+      <summary>
+                Retrieves the provisional viewing status for an editor and logical view combination.
+            </summary>
+      <param name="editorType">
+                The editor to query.
+            </param>
+      <param name="logicalView">
+                The hierarchy of the item.
+            </param>
+      <returns>
+                A task representing the query operation.
+                The result of the task is a member of the <see cref="T:Microsoft.VisualStudio.Shell.Interop.__VSPROVISIONALVIEWINGSTATUS" /> enumeration that describes how the file can be opened in the preview tab.
+                The default provisional viewing status is PVS_Disabled, but can be modified by the editor's "CommonPhysicalViewAttributes" registry value and the values under its "PhysicalViewAttributes" registry subkey.
+            </returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult">
+      <summary>
+                Represents the result of an asynchronous open document operation.
+            </summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult.Hierarchy">
+      <summary>
+            Gets the hierarchy associated with the <see cref="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult.WindowFrame" />.
+            </summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult.ItemId">
+      <summary>
+            Gets the ID of the selected item in the associated <see cref="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult.Hierarchy" />.
+            </summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult.WindowFrame">
+      <summary>
+            Gets the <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame" /> associated with the opened document.
+            </summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult.DocumentLoadTask">
+      <summary>
+            Gets the task that represents the work of loading the <see cref="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncOpenDocumentResult.WindowFrame" />.
+            The docdata and docview are fully initialized when this task successfully runs to completion.
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncDeferredDocView.LoadDocViewAsync(System.Object)">
+      <summary>
+            Asynchronously loads the document view's after the environment has loaded the document data.
+            </summary>
+      <returns>
+            A task that represents the asynchronous operation of loading the document view. The result of the task is an <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsAsyncDocViewResult" />.
+            </returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncDocViewResult.LoadedDocView">
+      <summary>
+            Gets the document view that was created by the <see cref="M:Microsoft.VisualStudio.Shell.Interop.IVsAsyncDeferredDocView.LoadDocViewAsync(System.Object)" /> method.
+            </summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Shell.Interop.IVsAsyncDocViewResult.CmdUIGuid">
+      <summary>
+            Gets the GUID for the pane or editor factory for later use when you create the view.
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Shell.Interop.IVsSettingsStore3.GetStrings(System.String,System.String,System.Array@)">
+      <summary>
+            Returns an array of strings from a multi-string entry in the settings store.
+            </summary>
+      <param name="collectionPath">The collection path.</param>
+      <param name="propertyName">The property name.</param>
+      <param name="values">The strings from a multi-string entry.</param>
+      <returns>The HRESULT for the operation.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Designer.Interfaces.IVSMDPerPropertyBrowsing.GetPropertyAttributes(System.Int32,System.UInt32@,System.IntPtr,System.IntPtr)">
+      <summary>
+            Gets the list of attributes for the object.
+            </summary>
+      <param name="dispid">The dispid of the property to retrieve attributes</param>
+      <param name="pceltAttrs">the number of attribute type names in <paramref name="ppbstrTypeNames" /></param>
+      <param name="ppbstrTypeNames">Attribute type names, such as System.ComponentModel.BrowsableAttribute, or System.ComponentModel.DescriptionAttribute.  This can be the name of any type that derives from System.Attribute. The array is callee allocated and will be caller freed using <see cref="M:System.Runtime.InteropServices.Marshal.FreeCoTaskMem(System.IntPtr)" />. Strings themselves should be freed with <see cref="M:System.Runtime.InteropServices.Marshal.FreeBSTR(System.IntPtr)" />. It can also be a static instance name such as System.ComponentModel.BrowsableAttribute.No, which will cause the initializer value to be ignored.</param>
+      <param name="ppvarAttrValues">An array of variants to be used to initialize the given attributes.  If the attributes have a ctor that takes a parameter, the given argument will be used to iniitalize the attribute.  If the initializer is NULL, VT_EMPTY or VT_NULL, the default ctor will be called.  Variants will be caller freed individually by pInvoking VariantClear. The array must be freed calling <see cref="M:System.Runtime.InteropServices.Marshal.FreeCoTaskMem(System.IntPtr)" />.
+            </param>
+    </member>
+    <member name="T:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch">
+      <summary>
+             State of single reload batch. Include description of relevant [externally] changed files,
+             resulting project /solution actions (such reload).
+            
+             IVsSolutionReloadBatch is freethreaded object and can be used without switching to UI thread.
+             </summary>
+    </member>
+    <member name="M:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch.DisableChangeNotifications">
+      <summary>
+            Needed to support original solution external file changes handler behavoir. This will only apply while batch is active.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch.IsFilesChanged(System.UInt32,System.String[],System.Boolean[])">
+      <summary>
+            Check the requested files against batch state (based on aggregated changes files via TryAddChangedFiles).
+            </summary>
+    </member>
+    <member name="M:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch.GetProjectsAction(System.UInt32,System.Guid[],System.UInt32[])">
+      <summary>
+            Check the status of a projects
+            </summary>
+    </member>
+    <member name="M:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch.TryAddSolutionReload">
+      <summary>
+            Request solution reload
+            </summary>
+    </member>
+    <member name="M:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch.TryAddProjectsReload(System.UInt32,System.UInt32,System.Guid[])">
+      <summary>
+            Request specific projects reload, fForceReload applies to all specified projects. Note even if reloadAction = DRA_ReloadProject [some of] selected proejcts can still end up being forcefully reloaded (even if they support own reload)
+            if some other logic reqires that for same project[s]. If fForceRelad = DRA_ForceReloadProject, it is guarantee that they will be forcefully reloaded (unless solution is reloaded which will override any project reloads).
+            </summary>
+    </member>
+    <member name="M:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch.TryAddChangedFiles(System.UInt32,System.String[])">
+      <summary>
+            Add files changes hints (can be used by reload logic extender during compute stage).
+            </summary>
+    </member>
+    <member name="P:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch.BatchId">
+      <summary>
+            Batch id - unique withing solution open session.
+            </summary>
+    </member>
+    <member name="P:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch.LastChangeId">
+      <summary>
+            Last state change id. Each call to TryAddXXX might change the state if introduce a new reload action or new changed files hint.
+            </summary>
+    </member>
+    <member name="P:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch.Stage">
+      <summary>
+            Note if BatchStage != COMPLETED, the state can be changed at any time.
+            Only the IVsSolutionBatchUpdateManagerEvents event listeners are guaranteed to have stable data in this case
+            </summary>
+    </member>
+    <member name="P:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch.HandlerId">
+      <summary>
+            batch handler friendly id.
+            </summary>
+    </member>
+    <member name="P:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch.HasSolutionReload">
+      <summary>
+            batch require solution reload.
+            </summary>
+    </member>
+    <member name="P:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch.BatchTask">
+      <summary>
+            VS task tracking batch progress.
+            </summary>
+    </member>
+    <member name="P:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch.RequestComplete">
+      <summary>
+            VS request batch completion as soon as possible.
+            </summary>
+    </member>
+    <member name="P:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch.RequestCancel">
+      <summary>
+            VS request batch cancellation.
+            </summary>
+    </member>
+    <member name="T:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatchHandler">
+      <summary>
+            State of single reload batch. Include description of relevant [externally] changed files,
+            resulting project /solution actions (such reload).
+            </summary>
+    </member>
+    <member name="M:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatchHandler.CanGiveControl(Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatchHandler)">
+      <summary>
+            check current provider if it will allow giving up control to a different reload handler.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatchHandler.CanTakeControl(Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatchHandler)">
+      <summary>
+            check if provider can/want take control and handle the currently opened scope.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatchHandler.CanJoin(Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatchHandler)">
+      <summary>
+            check if provider is ok to join the currently opened scope and let existing handler drive it.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatchHandler.CanCommitBatch(Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch,System.UInt32,System.UInt32,System.UInt32@)">
+      <summary>
+            called on BG thread when a state changed, or handler instructed us (via timeout).
+            </summary>
+    </member>
+    <member name="M:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatchHandler.CanCommitBatchUI(Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch,System.UInt32,System.UInt32,System.UInt32@)">
+      <summary>
+            called on UI thread before commencing modal reload phase.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatchHandler.ExecuteReloadUI(Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatch,System.UInt32,System.Guid[],System.UInt32[])">
+      <summary>
+            comence the actual reload, once this is called no additional changes can be included in batch scope and it will be closed (one way or another) after this method finis.
+            In theory we can support async, but all current cases do require UI thread anyway (and it is unlikely we want to change that).
+            </summary>
+    </member>
+    <member name="P:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatchHandler.HandlerId">
+      <summary>
+            friendly HandlerId. it is string instead of usual guid for better readibility. We dont publish any predefined values.
+            this scenario is always an arm race, so if specific provider wants details they need to discover them.
+            </summary>
+    </member>
+    <member name="F:Microsoft.Internal.VisualStudio.Shell.Interop._DelayedReloadAction.DRA_ReloadProject">
+      <summary>
+            Project to be reload (closed and opened) if needed, Example: project file[s] change. If project can not handle external change, it will be reloaded by solution.
+            </summary>
+    </member>
+    <member name="F:Microsoft.Internal.VisualStudio.Shell.Interop._DelayedReloadAction.DRA_ForceReloadProject">
+      <summary>
+            Project to be reload (closed and opened) for this batch.
+            </summary>
+    </member>
+    <member name="F:Microsoft.Internal.VisualStudio.Shell.Interop._DelayedReloadAction.DRA_ReloadSolution">
+      <summary>
+            Force solution reload, superseeds any other actions.
+            </summary>
+    </member>
+    <member name="F:Microsoft.Internal.VisualStudio.Shell.Interop._DelayedReloadAction.DRA_AddProject">
+      <summary>
+            Project to be added to the solution for this batch.
+            </summary>
+    </member>
+    <member name="F:Microsoft.Internal.VisualStudio.Shell.Interop._DelayedReloadAction.DRA_RemoveProject">
+      <summary>
+            Project to be removed from the solution for this batch.
+            </summary>
+    </member>
+    <member name="F:Microsoft.Internal.VisualStudio.Shell.Interop._DelayedReloadAction.DRA_RenameProject">
+      <summary>
+            Project to be renamed in the solution for this batch.
+            </summary>
+    </member>
+    <member name="F:Microsoft.Internal.VisualStudio.Shell.Interop._DelayedReloadAction.DRA_UpdateProjectParent">
+      <summary>
+            Project parent to be changed in the solution for this batch.
+            </summary>
+    </member>
+    <member name="T:Microsoft.Internal.VisualStudio.Shell.Interop.SVsSolutionReloadManagerService">
+      <summary>
+            IVsSolutionReloadManager implementation service id.
+            </summary>
+    </member>
+    <member name="T:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadManager">
+      <summary>
+             Manages external changes that are resolved to project[s] reload.
+             Provides batching and ability to specialize reload logic.
+            
+             IVsSolutionReloadManager is freethreaded service and can be called from any thread without switching to UI thread.
+             </summary>
+    </member>
+    <member name="M:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadManager.Advise(System.Guid@,System.Object)">
+      <summary>
+            The IVsSolutionReloadManagerEvents can be used to both react on reload changes as well as influence the outcome.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadManager.Unadvise(System.UInt32)">
+      <summary>
+            The IVsSolutionReloadManagerEvents can be used to both react on reload changes as well as influence the outcome.
+            </summary>
+    </member>
+    <member name="M:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadManager.BeginBatch(Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadBatchHandler)">
+      <summary>
+            Start a reload batch scope
+            </summary>
+      <param name="pExecutor">pExecutor is the batch commit handler. can be null in which case we use the current or default one.</param>
+    </member>
+    <member name="M:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadManager.AddSolutionReload">
+      <summary>
+            A mechniasm for propagating "unbound" reload changes, aka where changes handler, just want to be included in any currently open batch.
+            if there is no such we will create a default batch for these.
+            Changes can still can be rejected from reload manager (for example if there is no open solution). In that case we return ppHandlingBatch==null;
+            </summary>
+    </member>
+    <member name="P:Microsoft.Internal.VisualStudio.Shell.Interop.IVsSolutionReloadManager.CurrentBatch">
+      <summary>
+            get the current reload batch (if any, can return null).
+            </summary>
+    </member>
+    <member name="M:EnvDTE90a.Process4.Attach2(System.Object)">
+      <summary>
+      </summary>
+      <param name="Engines">Single <see cref="T:System.String" /> or an array of either <see cref="T:System.String" /> or <see cref="T:EnvDTE80.Engine" /> objects</param>
+    </member>
+    <member name="M:EnvDTE90.Process3.Attach2(System.Object)">
+      <summary>
+      </summary>
+      <param name="Engines">Single <see cref="T:System.String" /> or an array of either <see cref="T:System.String" /> or <see cref="T:EnvDTE80.Engine" /> objects</param>
+    </member>
+    <member name="M:EnvDTE80.Process2.Attach2(System.Object)">
+      <summary>
+      </summary>
+      <param name="Engines">Single <see cref="T:System.String" /> or an array of either <see cref="T:System.String" /> or <see cref="T:EnvDTE80.Engine" /> objects</param>
+    </member>
+    <member name="M:EnvDTE80.TaskItems2.Add(System.String,System.String,System.String,EnvDTE.vsTaskPriority,System.Object,System.Boolean,System.String,System.Int32,System.Boolean,System.Boolean)">
+      <summary>
+      </summary>
+      <remarks>The <paramref name="Priority" /> defaults to <see cref="F:EnvDTE.vsTaskPriority.vsTaskPriorityMedium" /> in IDL but we can't default it here as the <paramref name="Icon" /> cannot be defaulted</remarks>
+    </member>
+    <member name="M:EnvDTE80.TaskItems2.Add2(System.String,System.String,System.String,EnvDTE.vsTaskPriority,System.Object,System.Boolean,System.String,System.Int32,System.Boolean,System.Boolean,System.Boolean)">
+      <summary>
+      </summary>
+      <remarks>The <paramref name="Priority" /> defaults to <see cref="F:EnvDTE.vsTaskPriority.vsTaskPriorityMedium" /> in IDL but we can't default it here as the <paramref name="Icon" /> cannot be defaulted</remarks>
+    </member>
+    <member name="M:EnvDTE80.EditPoint2.TryToShow(EnvDTE.vsPaneShowHow,System.Object)">
+      <summary>
+      </summary>
+      <remarks>The <paramref name="How" /> param defaults to <see cref="F:EnvDTE.vsPaneShowHow.vsPaneShowCentered" /> in IDL but we can't default it here because <paramref name="PointOrCount" /> can't be defaulted.</remarks>
+    </member>
+    <member name="M:EnvDTE80.TextPane2.TryToShow(EnvDTE.TextPoint,EnvDTE.vsPaneShowHow,System.Object)">
+      <summary>
+      </summary>
+      <remarks>The <paramref name="How" /> param defaults to <see cref="F:EnvDTE.vsPaneShowHow.vsPaneShowAsIs" /> in IDL but can't be defaulted here because <paramref name="PointOrCount" /> can't be defaulted.</remarks>
+    </member>
+    <member name="M:EnvDTE.TextPane.TryToShow(EnvDTE.TextPoint,EnvDTE.vsPaneShowHow,System.Object)">
+      <summary>
+      </summary>
+      <remarks>The <paramref name="How" /> param defaults to <see cref="F:EnvDTE.vsPaneShowHow.vsPaneShowAsIs" /> in IDL but can't be defaulted here because <paramref name="PointOrCount" /> can't be defaulted.</remarks>
+    </member>
+    <member name="M:EnvDTE.TaskItems.Add(System.String,System.String,System.String,EnvDTE.vsTaskPriority,System.Object,System.Boolean,System.String,System.Int32,System.Boolean,System.Boolean)">
+      <summary>
+      </summary>
+      <remarks>The <paramref name="Priority" /> defaults to <see cref="F:EnvDTE.vsTaskPriority.vsTaskPriorityMedium" /> in IDL but we can't default it here as the <paramref name="Icon" /> cannot be defaulted</remarks>
+    </member>
+  </members>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" /><DigestValue>N52hvpuNbm7PDHlYErMvU1wuXkJxWeEGL/8QPOF4L2c=</DigestValue></Reference></SignedInfo><SignatureValue>cdWnNXGQfigiJ8aNGoeWk7ZkXHzcB/KYVB9JNkUDhw+74kZMeeyiXexErZo1d0ntPt8fvqTUNY1BTgDvfBhMkPdHGv1W8G9kN0/mmt1remrrPO9+rjB1AT+WdJU4pvCD8KgKFkYwOBG2LIa17zwsSUfDWPEawtBa7G3HLQHhQ9ULUa+aCx+l4DiXxg/xKCe6SRy2R2KwsytRpT/TcFNCYhmKps7/2XGwZFg+VCPsLDRuNBVa+20z3F0dMKwaQkQhVAG8Egxc3zCNW4o1uathPlmNILO3I6uEYEVyw/ihfbQD7nwiO1PNKYT828/W/U7oGAMQpRYJK91OOY4kgSBEfw==</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>3QiojSOiARVrryVJn+lnTiamZiMGLORuwCQ+VG3C+rbAvhATw269+qRRqNW7FKed50chWJ53KDIPBStHfIy5cNJYHsQw6+4InH9szgRVqn7/50i8MyRTT+VtNwxf9daGddq0hahpZvjuOnEY0wxQaTEQmWRnXWZUQY4r28tHiNVYEw9U7wHXwWEHvNn4ZlkJGEf5VpgCvr1v9fmzu4x2sV0zQsSyAVtOxfDwY1HMBcccn23tphweIdS+FNDn2vh1/2kREO0qmGc+fbFzNskjn72MiI56kjvNDRgWs+Q78yBvPCdPgTYTrto5eg33Ko2ELNR/zzEkCCuhO5Vw10qV8w==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>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</X509Certificate><X509Certificate>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</X509Certificate><X509Certificate>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</X509Certificate></X509Data></KeyInfo><Object Id="ts-countersig"><X509Data><X509Certificate>MIIHJzCCBQ+gAwIBAgITMwAAAbJuQAN/bqmUkgABAAABsjANBgkqhkiG9w0BAQsFADB8MQswCQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UEChMVTWljcm9zb2Z0IENvcnBvcmF0aW9uMSYwJAYDVQQDEx1NaWNyb3NvZnQgVGltZS1TdGFtcCBQQ0EgMjAxMDAeFw0yMjA5MjAyMDIyMDFaFw0yMzEyMTQyMDIyMDFaMIHSMQswCQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UEChMVTWljcm9zb2Z0IENvcnBvcmF0aW9uMS0wKwYDVQQLEyRNaWNyb3NvZnQgSXJlbGFuZCBPcGVyYXRpb25zIExpbWl0ZWQxJjAkBgNVBAsTHVRoYWxlcyBUU1MgRVNOOjA4NDItNEJFNi1DMjlBMSUwIwYDVQQDExxNaWNyb3NvZnQgVGltZS1TdGFtcCBTZXJ2aWNlMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAyqJlMh17+VDisL4GaXl/9a6r/EpPGt9sbbceh+ZD6pkA3gbI7vc8XfL04B+m3tB/aNyV1Y4ZQH4fMG7CWVjI/d/HgxjzO+4C4HfsW+jK2c0LYMqdWtWUc5VwZQv0KeaEM0wDb+eySMh/YiiIb0nSotivx268d1An0uLY+r2C7JJv2a9QvrSiCyUI72CSHoWIQPAyvBSvxaNrqMWlROfLy2DQ3RycI3bDh8qSnmplxtRgViJwtJv/oDukcK1frGeOrCGYmiJve+QonJXFu4UtGFVfEf3lvQsd42GJ+feO+jaP7/hBXXSMSldVb6IL0GxO1Hr3G9ONTnVmA/sFHhgMRarsmzKVI6/kHlMdMNdF/XzhRHMWFPJvw5lApjuaoyHtzwnzDWwQzhcNQXZRk3Lzb01ULMba190RdlofEXxGbGlBgHHKFnBjWui24hL6B83Z6r6GQBPeKkafz8qYPAO3MBud+5eMCmB5mrCBxgnykMn7L/FTqi7MnPUG97lNOKGSIDvBCxB7pHrRmT10903PDQwrmeJHO5BkC3gYj3oWGOGVRZxRk4KS/8lcz84a7+uBKmVjB2Y8vPN8O1fK7L8YJTkjiXTyDqKJ9fKkyChiSRx44ADPi/HXHQE6dlZ8jd9LCo1S+g3udxNP4wHhWm9/VAGmmMEBBS6+6Lp4IbQwJU0CAwEAAaOCAUkwggFFMB0GA1UdDgQWBBSZ8ieAXNkRmU+SMM5WW4FIMNpqcTAfBgNVHSMEGDAWgBSfpxVdAF5iXYP05dJlpxtTNRnpcjBfBgNVHR8EWDBWMFSgUqBQhk5odHRwOi8vd3d3Lm1pY3Jvc29mdC5jb20vcGtpb3BzL2NybC9NaWNyb3NvZnQlMjBUaW1lLVN0YW1wJTIwUENBJTIwMjAxMCgxKS5jcmwwbAYIKwYBBQUHAQEEYDBeMFwGCCsGAQUFBzAChlBodHRwOi8vd3d3Lm1pY3Jvc29mdC5jb20vcGtpb3BzL2NlcnRzL01pY3Jvc29mdCUyMFRpbWUtU3RhbXAlMjBQQ0ElMjAyMDEwKDEpLmNydDAMBgNVHRMBAf8EAjAAMBYGA1UdJQEB/wQMMAoGCCsGAQUFBwMIMA4GA1UdDwEB/wQEAwIHgDANBgkqhkiG9w0BAQsFAAOCAgEA3Ee27cXMhptoNtaqzB0oGUCEpdEI37kJIyK/ZNhriLZC5Yib732mLACEOEAN9uqivXPIuL3ljoZCe8hZSB14LugvVm1nJ73bNgr4Qh/BhmaFL4IfiKd8DNS+xwdkXfCWslR89QgMZU/SUJhWx72aC68bR2qRjhrJA8Qc68m5uBllo52D83x0id3p8Z45z7QOgbMH4uJ45snZDQC0S3dc3eJfwKnr51lNfzHAT8u+FHA+lv/6cqyE7tNW696fB1PCoH8tPoI09oSXAV4rEqupFM8xsd6D6L4qcEt/CaERewyDazVBfskjF+9P3qZ3R6IyOIwQ7bYts7OYsw13csg2jACdEEAm1f7f97f3QH2wwYwen5rVX6GCzrYCikGXSn/TSWLfQM3nARDkh/flmTtv9PqkTHqslQNgK2LvMJuKSMpNqcGc5z33MYyV6Plf58L+TkTFQKs6zf9XMZEJm3ku9VBJ1aqr9AzNMSaKbixvMBIr2KYSSM21lnK8LUKxRwPW+gWS2V3iYoyMT64MRXch10P4OtGT3idXM09K5ld7B9U6dcdJ6obvEzdXt+XZovi/U6Evb4nA7VPHcHSKs7U72ps10mTfnlue13VFJUqAzbYoUEeegvsmzulGEGJoqZVNAag5v6PVBrur5yLEajjxWH2TfkEOwlL8MuhcVI8OXiY=</X509Certificate><X509Certificate>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</X509Certificate></X509Data><CounterSignature ts-format="cms-timestamp-message" xmlns="http://schemas.microsoft.com/xmldsig/timestamp/2003">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</CounterSignature></Object></Signature></doc>
