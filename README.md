@@ -16,6 +16,13 @@ Installation instructions
 -----------
 * Download the VSIX from [GitHub Releases](https://github.com/ChrisHammond/DNNTemplates/releases), or find the Project in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/bdd506ef-d5c3-4274-bf1d-9e673fb23484)
 
+V11.2 - DNN 9 Visual Studio 2022 (1/28/2026 - Not yet released) 
+-----------
+Updated VS project file format
+Updated some references to Nuget packages instead of direct DLL that might not be there
+Likely final DNN9 release.
+
+
 V11.1 - DNN 9 Visual Studio 2022 (2/24/2022) 
 -----------
 Correcting support for all editions of Visual Studio 2022
